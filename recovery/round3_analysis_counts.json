@@ -1,0 +1,116 @@
+{
+  "hviding25_A1": {
+    "rows": 36,
+    "matched_rows": 36,
+    "distinct_sources": 36
+  },
+  "barro25": {
+    "rows": 118,
+    "matched_rows": 106,
+    "distinct_sources": 106
+  },
+  "degraaff26": {
+    "rows": 134,
+    "matched_rows": 100,
+    "distinct_sources": 86
+  },
+  "dja_archive": {
+    "records_near_a_positive": 442,
+    "secure_records": 404,
+    "positives_with_a_secure_z": 139
+  },
+  "z_spec_source": {
+    "list": 149,
+    "archive": 2
+  },
+  "list_vs_archive": {
+    "n": 137,
+    "median_abs_diff": 0.0021,
+    "max_abs_diff": 0.07438
+  },
+  "perger_by_paper": {
+    "akins2024": {
+      "rows": 420,
+      "in_our_fields": 42
+    },
+    "barro2024": {
+      "rows": 3,
+      "in_our_fields": 3
+    },
+    "furtak2024": {
+      "rows": 1,
+      "in_our_fields": 0
+    },
+    "greene2024": {
+      "rows": 12,
+      "in_our_fields": 0
+    },
+    "harikane2023": {
+      "rows": 7,
+      "in_our_fields": 4
+    },
+    "killi2023": {
+      "rows": 1,
+      "in_our_fields": 0
+    },
+    "kocevski2024": {
+      "rows": 165,
+      "in_our_fields": 157
+    },
+    "kokorev2023": {
+      "rows": 1,
+      "in_our_fields": 0
+    },
+    "kokorev2024": {
+      "rows": 219,
+      "in_our_fields": 217
+    },
+    "labbe2023": {
+      "rows": 22,
+      "in_our_fields": 0
+    },
+    "labbe2023nat": {
+      "rows": 13,
+      "in_our_fields": 12
+    },
+    "maiolino2023": {
+      "rows": 6,
+      "in_our_fields": 6
+    },
+    "matthee2024": {
+      "rows": 19,
+      "in_our_fields": 6
+    },
+    "perezgonzalez2024": {
+      "rows": 17,
+      "in_our_fields": 17
+    },
+    "ubler2023": {
+      "rows": 1,
+      "in_our_fields": 1
+    },
+    "wang2024": {
+      "rows": 2,
+      "in_our_fields": 2
+    },
+    "williams2024": {
+      "rows": 10,
+      "in_our_fields": 10
+    }
+  },
+  "eprint_kokorev2024": {
+    "rows": 19,
+    "matched": 19
+  },
+  "eprint_akins2024": {
+    "rows": 33,
+    "matched": 0
+  },
+  "anchor_test_status": {
+    "rows": 5548,
+    "anchors": 5397,
+    "positives": 151,
+    "anchors_tested": 4838,
+    "anchors_untested": 559
+  }
+}

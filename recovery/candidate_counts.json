@@ -1,0 +1,36 @@
+{
+ "feature_set": "_v30",
+ "rows_above_high_recall_threshold": 2333,
+ "rows_above_equal_burden_threshold": 1133,
+ "excluded": {
+  "candidate": 1207,
+  "published-or-labelled": 723,
+  "rule-selected": 395,
+  "duplicate-sky-group": 8
+ },
+ "candidates_total": 1207,
+ "candidates_equal_burden_tier": 362,
+ "candidates_high_recall_tier": 845,
+ "status_counts": {
+  "untested": 1129,
+  "secure low-z": 42,
+  "secure z>3 (V untested)": 36
+ },
+ "status_counts_equal_burden": {
+  "untested": 337,
+  "secure z>3 (V untested)": 17,
+  "secure low-z": 8
+ },
+ "candidates_with_any_archive_record": 103,
+ "eligible_records_to_refit": 0,
+ "per_region_equal_burden": {
+  "UDS": 148,
+  "COSMOS": 91,
+  "GOODS-N": 47,
+  "CEERS": 46,
+  "GOODS-S": 30
+ },
+ "ood_flagged_equal_burden": 37,
+ "mag_f444w_median_equal_burden": 26.496225159017516,
+ "in_census_but_never_listed": 0
+}

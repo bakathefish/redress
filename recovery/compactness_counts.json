@@ -1,0 +1,25 @@
+{
+ "candidates": 1207,
+ "measured": 1196,
+ "measured_equal_burden": 359,
+ "compact_labbe_equal_burden": 189,
+ "compact_akins_equal_burden": 216,
+ "compact_labbe_all": 401,
+ "unmeasurable_reasons": {
+  "aperture d020 covers a NaN or non-finite pixel": 6,
+  "aperture d050 covers a NaN or non-finite pixel": 3,
+  "aperture d040 covers a NaN or non-finite pixel": 2
+ },
+ "followup_tier": 126,
+ "followup_tier_per_region": {
+  "primer-uds-south": 28,
+  "gdn": 19,
+  "primer-cosmos-west": 19,
+  "primer-uds-north": 18,
+  "primer-cosmos-east": 17,
+  "ceers-full": 13,
+  "gds-sw": 9,
+  "gds": 3
+ },
+ "c444_median_equal_burden": 0.5421896390375051
+}

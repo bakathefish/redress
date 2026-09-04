@@ -1,0 +1,77 @@
+{
+  "hviding25_A1": {
+    "rows": 36,
+    "in_fields": 36
+  },
+  "hviding25_B1": {
+    "rows": 80,
+    "in_fields": 80
+  },
+  "barro25": {
+    "rows": 118,
+    "in_fields": 106
+  },
+  "degraaff26": {
+    "rows": 134,
+    "in_fields": 86
+  },
+  "perger25": {
+    "rows": 919,
+    "in_fields": 477
+  },
+  "kocevski24": {
+    "rows": 341,
+    "in_fields": 316
+  },
+  "labels": {
+    "positives": 151,
+    "positives_strict32": 32,
+    "positives_with_bands": 147,
+    "negatives": 5397,
+    "negatives_with_bands": 4982,
+    "ambiguous_excluded": 67,
+    "unlabelled": 625254,
+    "positives_picked_by_any_rule": 107,
+    "positives_missed_by_all_rules": 44,
+    "strict32_missed": 7,
+    "deploy_rows_with_bands": 470333
+  },
+  "per_field": {
+    "ceers-full": {
+      "labelled": 1411,
+      "positives": 35
+    },
+    "gdn": {
+      "labelled": 629,
+      "positives": 17
+    },
+    "gds": {
+      "labelled": 820,
+      "positives": 12
+    },
+    "gds-sw": {
+      "labelled": 327,
+      "positives": 8
+    },
+    "ngdeep": {
+      "labelled": 1,
+      "positives": 0
+    },
+    "primer-cosmos-east": {
+      "labelled": 554,
+      "positives": 10
+    },
+    "primer-cosmos-west": {
+      "labelled": 386,
+      "positives": 18
+    },
+    "primer-uds-north": {
+      "labelled": 830,
+      "positives": 26
+    },
+    "primer-uds-south": {
+      "labelled": 590,
+      "positives": 25
+    }
+  }
+}

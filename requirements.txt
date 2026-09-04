@@ -1,0 +1,20 @@
+# Environment of the run (Python 3.13.3). torch was the CPU build; tabpfn was used with the
+# open Prior-Labs/TabPFN-v2-clf checkpoint and did not finish within the time budget.
+numpy==2.4.1
+scipy==1.17.0
+pandas==2.3.3
+pyarrow==22.0.0
+scikit-learn==1.8.0
+lightgbm==4.7.0
+joblib==1.5.3
+torch==2.9.1
+astropy==7.2.0
+photutils==3.0.0
+tabpfn==8.5.0
+
+# the figure scripts in paper/ additionally need, at the version they ran on:
+matplotlib==3.10.8
+
+# the unit tests in selections/ additionally need, at the versions they ran on:
+pytest==9.0.2
+hypothesis==6.165.0

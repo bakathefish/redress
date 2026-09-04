@@ -1,0 +1,938 @@
+{
+ "denominators": {
+  "positives_151": 151,
+  "positives_in_support_147": 147,
+  "positives_incomplete_bands": 4,
+  "rule_missed_44": 44,
+  "rule_missed_in_support_41": 41,
+  "strict_32": 32,
+  "strict_in_support": 32,
+  "strict_missed_7": 7,
+  "strict_missed_in_support": 7,
+  "union_selects_of_151": 107,
+  "negatives_5397": 5397,
+  "negatives_in_support": 4979,
+  "ambiguous_excluded": 67,
+  "complete_rows": 470333,
+  "support_rows": 466419,
+  "union_selected_in_support": 1133,
+  "union_burden_fraction_in_support": 0.0024291463255141834,
+  "positives_per_region": {
+   "CEERS": 35,
+   "COSMOS": 28,
+   "GOODS-N": 17,
+   "GOODS-S": 20,
+   "UDS": 51
+  },
+  "positives_in_support_per_region": {
+   "CEERS": 33,
+   "COSMOS": 28,
+   "GOODS-N": 17,
+   "GOODS-S": 18,
+   "UDS": 51
+  },
+  "rule_missed_in_support_per_region": {
+   "CEERS": 10,
+   "COSMOS": 6,
+   "GOODS-N": 7,
+   "GOODS-S": 5,
+   "UDS": 13
+  },
+  "negatives_in_support_per_region": {
+   "CEERS": 1280,
+   "COSMOS": 904,
+   "GOODS-N": 491,
+   "GOODS-S": 971,
+   "UDS": 1333
+  },
+  "support_rows_per_region": {
+   "CEERS": 70289,
+   "COSMOS": 124293,
+   "GOODS-N": 63871,
+   "GOODS-S": 73553,
+   "UDS": 134413
+  },
+  "union_in_support_per_region": {
+   "CEERS": 134,
+   "COSMOS": 254,
+   "GOODS-N": 129,
+   "GOODS-S": 127,
+   "UDS": 489
+  },
+  "positives_per_catalog": {
+   "hviding25_A1": 36,
+   "barro25": 106,
+   "degraaff26": 86
+  },
+  "positives_only_in_one_catalog": 87,
+  "positives_crowded_0p5": 12,
+  "positives_in_multi_row_sky_group": 12,
+  "sky_groups_total": 590816,
+  "sky_groups_crossing_regions": 0
+ },
+ "abstentions_missing_band": 4,
+ "union": {
+  "name": "union of seven rules",
+  "selected_total": 1133,
+  "selection_fraction": 0.00243,
+  "recall_147": 106,
+  "recall_147_pct": 72.1,
+  "recall_147_wilson": [
+   0.644,
+   0.787
+  ],
+  "recall_151_end_to_end": 107,
+  "recall_151_pct": 70.9,
+  "rule_missed_41": 0,
+  "rule_missed_44_end_to_end_pct": 0.0,
+  "strict_in_support": 25,
+  "strict_total_in_support": 32,
+  "strict_missed": 0,
+  "strict_missed_total": 7,
+  "neg_selected": 46,
+  "neg_total": 4979,
+  "neg_selection_rate_pct": 0.92,
+  "per_region_recall": {
+   "CEERS": "23/33",
+   "GOODS-N": "10/17",
+   "GOODS-S": "13/18",
+   "COSMOS": "22/28",
+   "UDS": "38/51"
+  },
+  "per_region_missed": {
+   "CEERS": "0/10",
+   "GOODS-N": "0/7",
+   "GOODS-S": "0/5",
+   "COSMOS": "0/6",
+   "UDS": "0/13"
+  },
+  "per_catalog_recall": {
+   "hviding25_A1": "33/36",
+   "barro25": "70/104",
+   "degraaff26": "71/83"
+  },
+  "recall_by_f444w_mag": {
+   "0-24": "7/10 (union 7)",
+   "24-25": "23/27 (union 23)",
+   "25-26": "32/45 (union 32)",
+   "26-27": "39/54 (union 39)",
+   "27-40": "5/11 (union 5)"
+  }
+ },
+ "primary_equal_burden": {
+  "name": "primary at equal burden",
+  "selected_total": 1098,
+  "selection_fraction": 0.00235,
+  "recall_147": 124,
+  "recall_147_pct": 84.4,
+  "recall_147_wilson": [
+   0.776,
+   0.893
+  ],
+  "recall_151_end_to_end": 124,
+  "recall_151_pct": 82.1,
+  "rule_missed_41": 20,
+  "rule_missed_44_end_to_end_pct": 45.5,
+  "strict_in_support": 30,
+  "strict_total_in_support": 32,
+  "strict_missed": 5,
+  "strict_missed_total": 7,
+  "neg_selected": 48,
+  "neg_total": 4979,
+  "neg_selection_rate_pct": 0.96,
+  "per_region_recall": {
+   "CEERS": "28/33",
+   "GOODS-N": "12/17",
+   "GOODS-S": "16/18",
+   "COSMOS": "24/28",
+   "UDS": "44/51"
+  },
+  "per_region_missed": {
+   "CEERS": "5/10",
+   "GOODS-N": "2/7",
+   "GOODS-S": "3/5",
+   "COSMOS": "2/6",
+   "UDS": "8/13"
+  },
+  "per_catalog_recall": {
+   "hviding25_A1": "33/36",
+   "barro25": "87/104",
+   "degraaff26": "77/83"
+  },
+  "recall_by_f444w_mag": {
+   "0-24": "7/10 (union 7)",
+   "24-25": "25/27 (union 23)",
+   "25-26": "39/45 (union 32)",
+   "26-27": "47/54 (union 39)",
+   "27-40": "6/11 (union 5)"
+  },
+  "case_control_prauc_pooled": 0.8619,
+  "chosen_settings_per_fold": {
+   "CEERS": [
+    0.5,
+    350
+   ],
+   "GOODS-N": [
+    0.5,
+    450
+   ],
+   "GOODS-S": [
+    0.25,
+    300
+   ],
+   "COSMOS": [
+    0.5,
+    250
+   ],
+   "UDS": [
+    0.5,
+    400
+   ]
+  },
+  "per_fold_selected_vs_union": {
+   "CEERS": "160 vs 134",
+   "GOODS-N": "139 vs 129",
+   "GOODS-S": "141 vs 127",
+   "COSMOS": "280 vs 254",
+   "UDS": "378 vs 489"
+  }
+ },
+ "primary_neg1pct": {
+  "name": "primary at inner 1% negative rate",
+  "selected_total": 1179,
+  "selection_fraction": 0.00253,
+  "recall_147": 125,
+  "recall_147_pct": 85.0,
+  "recall_147_wilson": [
+   0.784,
+   0.899
+  ],
+  "recall_151_end_to_end": 125,
+  "recall_151_pct": 82.8,
+  "rule_missed_41": 21,
+  "rule_missed_44_end_to_end_pct": 47.7,
+  "strict_in_support": 30,
+  "strict_total_in_support": 32,
+  "strict_missed": 5,
+  "strict_missed_total": 7,
+  "neg_selected": 52,
+  "neg_total": 4979,
+  "neg_selection_rate_pct": 1.04,
+  "per_region_recall": {
+   "CEERS": "28/33",
+   "GOODS-N": "12/17",
+   "GOODS-S": "17/18",
+   "COSMOS": "23/28",
+   "UDS": "45/51"
+  },
+  "per_region_missed": {
+   "CEERS": "5/10",
+   "GOODS-N": "2/7",
+   "GOODS-S": "4/5",
+   "COSMOS": "2/6",
+   "UDS": "8/13"
+  },
+  "per_catalog_recall": {
+   "hviding25_A1": "34/36",
+   "barro25": "88/104",
+   "degraaff26": "76/83"
+  },
+  "recall_by_f444w_mag": {
+   "0-24": "8/10 (union 7)",
+   "24-25": "25/27 (union 23)",
+   "25-26": "40/45 (union 32)",
+   "26-27": "47/54 (union 39)",
+   "27-40": "5/11 (union 5)"
+  }
+ },
+ "primary_0p5pct": {
+  "name": "primary at 0.5% of the catalog",
+  "selected_total": 2560,
+  "selection_fraction": 0.00549,
+  "recall_147": 135,
+  "recall_147_pct": 91.8,
+  "recall_147_wilson": [
+   0.863,
+   0.953
+  ],
+  "recall_151_end_to_end": 135,
+  "recall_151_pct": 89.4,
+  "rule_missed_41": 29,
+  "rule_missed_44_end_to_end_pct": 65.9,
+  "strict_in_support": 30,
+  "strict_total_in_support": 32,
+  "strict_missed": 5,
+  "strict_missed_total": 7,
+  "neg_selected": 185,
+  "neg_total": 4979,
+  "neg_selection_rate_pct": 3.72,
+  "per_region_recall": {
+   "CEERS": "30/33",
+   "GOODS-N": "13/17",
+   "GOODS-S": "17/18",
+   "COSMOS": "27/28",
+   "UDS": "48/51"
+  },
+  "per_region_missed": {
+   "CEERS": "7/10",
+   "GOODS-N": "3/7",
+   "GOODS-S": "4/5",
+   "COSMOS": "5/6",
+   "UDS": "10/13"
+  },
+  "per_catalog_recall": {
+   "hviding25_A1": "35/36",
+   "barro25": "95/104",
+   "degraaff26": "80/83"
+  },
+  "recall_by_f444w_mag": {
+   "0-24": "8/10 (union 7)",
+   "24-25": "26/27 (union 23)",
+   "25-26": "43/45 (union 32)",
+   "26-27": "50/54 (union 39)",
+   "27-40": "8/11 (union 5)"
+  }
+ },
+ "paired_vs_union": {
+  "positives_both": 104,
+  "positives_model_only": 20,
+  "positives_union_only": 2,
+  "positives_neither": 21,
+  "selected_both": 616,
+  "selected_model_only": 482,
+  "selected_union_only": 517,
+  "jaccard_selected": 0.381
+ },
+ "recovered_rule_missed_list": [
+  {
+   "field": "gdn",
+   "id": 6046,
+   "region": "GOODS-N",
+   "mag_f444w": 26.318670244616747,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": true,
+   "y_strict": true,
+   "score": 0.9886584816489865
+  },
+  {
+   "field": "ceers-full",
+   "id": 73652,
+   "region": "CEERS",
+   "mag_f444w": 26.159475505068418,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": true,
+   "y_strict": true,
+   "score": 0.9871267439685641
+  },
+  {
+   "field": "gdn",
+   "id": 24803,
+   "region": "GOODS-N",
+   "mag_f444w": 25.38216382594463,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": true,
+   "score": 0.9863232660316218
+  },
+  {
+   "field": "primer-uds-north",
+   "id": 74752,
+   "region": "UDS",
+   "mag_f444w": 25.62888775908902,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.9764317624585072
+  },
+  {
+   "field": "primer-uds-north",
+   "id": 25768,
+   "region": "UDS",
+   "mag_f444w": 24.844621723204995,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.9713060200209198
+  },
+  {
+   "field": "primer-cosmos-east",
+   "id": 37681,
+   "region": "COSMOS",
+   "mag_f444w": 26.25441671836995,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": true,
+   "y_strict": true,
+   "score": 0.9550832639906592
+  },
+  {
+   "field": "ceers-full",
+   "id": 54373,
+   "region": "CEERS",
+   "mag_f444w": 25.08370418118954,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.9547169269691067
+  },
+  {
+   "field": "primer-uds-north",
+   "id": 36569,
+   "region": "UDS",
+   "mag_f444w": 27.20818106866414,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.9516609432522044
+  },
+  {
+   "field": "gds",
+   "id": 24555,
+   "region": "GOODS-S",
+   "mag_f444w": 26.777346157675243,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.9491409004618335
+  },
+  {
+   "field": "primer-uds-south",
+   "id": 15006,
+   "region": "UDS",
+   "mag_f444w": 26.039733521171954,
+   "in_hviding25_A1": false,
+   "in_barro25": false,
+   "in_degraaff26": true,
+   "y_strict": false,
+   "score": 0.9428194409790759
+  },
+  {
+   "field": "primer-uds-south",
+   "id": 10036,
+   "region": "UDS",
+   "mag_f444w": 25.872484258391978,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.9350940318257862
+  },
+  {
+   "field": "primer-uds-south",
+   "id": 23438,
+   "region": "UDS",
+   "mag_f444w": 24.982351196760526,
+   "in_hviding25_A1": true,
+   "in_barro25": true,
+   "in_degraaff26": true,
+   "y_strict": true,
+   "score": 0.9346318126620293
+  },
+  {
+   "field": "ceers-full",
+   "id": 18848,
+   "region": "CEERS",
+   "mag_f444w": 25.74526616684587,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.9267399665787922
+  },
+  {
+   "field": "primer-uds-north",
+   "id": 46223,
+   "region": "UDS",
+   "mag_f444w": 26.372817404333702,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.9133008762048472
+  },
+  {
+   "field": "ceers-full",
+   "id": 20143,
+   "region": "CEERS",
+   "mag_f444w": 25.536535091662223,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.8954809707175468
+  },
+  {
+   "field": "gds-sw",
+   "id": 12551,
+   "region": "GOODS-S",
+   "mag_f444w": 23.816405544594176,
+   "in_hviding25_A1": false,
+   "in_barro25": false,
+   "in_degraaff26": true,
+   "y_strict": false,
+   "score": 0.8863133082893416
+  },
+  {
+   "field": "primer-cosmos-east",
+   "id": 79141,
+   "region": "COSMOS",
+   "mag_f444w": 26.864386837553347,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.8794262192503158
+  },
+  {
+   "field": "gds",
+   "id": 11107,
+   "region": "GOODS-S",
+   "mag_f444w": 26.386289401473174,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.8506021478002038
+  },
+  {
+   "field": "ceers-full",
+   "id": 58886,
+   "region": "CEERS",
+   "mag_f444w": 25.904358243992,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.8466685006721036
+  },
+  {
+   "field": "primer-uds-south",
+   "id": 65705,
+   "region": "UDS",
+   "mag_f444w": 26.36132564556421,
+   "in_hviding25_A1": false,
+   "in_barro25": true,
+   "in_degraaff26": false,
+   "y_strict": false,
+   "score": 0.8034466201828033
+  }
+ ],
+ "still_missed_list": [
+  {
+   "field": "gds",
+   "id": 49351,
+   "region": "GOODS-S",
+   "mag_f444w": 25.645132227270985,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.7905032448991157,
+   "score_rank_pct": 0.22
+  },
+  {
+   "field": "primer-uds-south",
+   "id": 50431,
+   "region": "UDS",
+   "mag_f444w": 23.510466927047645,
+   "picked": true,
+   "y_strict": false,
+   "score": 0.6946209345422628,
+   "score_rank_pct": 0.28
+  },
+  {
+   "field": "primer-uds-south",
+   "id": 33451,
+   "region": "UDS",
+   "mag_f444w": 26.931981090362225,
+   "picked": true,
+   "y_strict": false,
+   "score": 0.6829708891240257,
+   "score_rank_pct": 0.29
+  },
+  {
+   "field": "ceers-full",
+   "id": 55163,
+   "region": "CEERS",
+   "mag_f444w": 25.926023873414973,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.6665504167771742,
+   "score_rank_pct": 0.3
+  },
+  {
+   "field": "ceers-full",
+   "id": 19938,
+   "region": "CEERS",
+   "mag_f444w": 26.091133850070126,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.6546786651998043,
+   "score_rank_pct": 0.31
+  },
+  {
+   "field": "primer-cosmos-west",
+   "id": 89952,
+   "region": "COSMOS",
+   "mag_f444w": 27.45957576525569,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.646460174096621,
+   "score_rank_pct": 0.32
+  },
+  {
+   "field": "primer-cosmos-west",
+   "id": 65299,
+   "region": "COSMOS",
+   "mag_f444w": 25.19919192608636,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.626713674040812,
+   "score_rank_pct": 0.33
+  },
+  {
+   "field": "primer-cosmos-east",
+   "id": 83388,
+   "region": "COSMOS",
+   "mag_f444w": 26.711356092918784,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.6070085838055815,
+   "score_rank_pct": 0.34
+  },
+  {
+   "field": "gdn",
+   "id": 77875,
+   "region": "GOODS-N",
+   "mag_f444w": 27.175398475243604,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.5555818119147009,
+   "score_rank_pct": 0.4
+  },
+  {
+   "field": "primer-uds-north",
+   "id": 8768,
+   "region": "UDS",
+   "mag_f444w": 25.33134243396372,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.525119858908928,
+   "score_rank_pct": 0.43
+  },
+  {
+   "field": "primer-uds-north",
+   "id": 67741,
+   "region": "UDS",
+   "mag_f444w": 24.675965838252946,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.3990941263906666,
+   "score_rank_pct": 0.6
+  },
+  {
+   "field": "primer-uds-south",
+   "id": 37427,
+   "region": "UDS",
+   "mag_f444w": 25.758682979509313,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.38306835611416584,
+   "score_rank_pct": 0.64
+  },
+  {
+   "field": "ceers-full",
+   "id": 7491,
+   "region": "CEERS",
+   "mag_f444w": 27.848498684351597,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.3039081337615677,
+   "score_rank_pct": 1.01
+  },
+  {
+   "field": "ceers-full",
+   "id": 72397,
+   "region": "CEERS",
+   "mag_f444w": 28.61051032491447,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.2991655060544583,
+   "score_rank_pct": 1.05
+  },
+  {
+   "field": "primer-cosmos-west",
+   "id": 56264,
+   "region": "COSMOS",
+   "mag_f444w": 28.02316851448717,
+   "picked": false,
+   "y_strict": true,
+   "score": 0.2801689292598392,
+   "score_rank_pct": 1.23
+  },
+  {
+   "field": "ceers-full",
+   "id": 51045,
+   "region": "CEERS",
+   "mag_f444w": 26.41966027667957,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.24903927145921237,
+   "score_rank_pct": 1.6
+  },
+  {
+   "field": "primer-uds-north",
+   "id": 49209,
+   "region": "UDS",
+   "mag_f444w": 26.659453166122347,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.2419069401528252,
+   "score_rank_pct": 1.7
+  },
+  {
+   "field": "gdn",
+   "id": 67601,
+   "region": "GOODS-N",
+   "mag_f444w": 22.024331070682408,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.2092692793394051,
+   "score_rank_pct": 2.31
+  },
+  {
+   "field": "gdn",
+   "id": 27348,
+   "region": "GOODS-N",
+   "mag_f444w": 26.472568581337804,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.18561889742898793,
+   "score_rank_pct": 2.93
+  },
+  {
+   "field": "primer-uds-south",
+   "id": 38479,
+   "region": "UDS",
+   "mag_f444w": 26.79233690879052,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.13789066704601252,
+   "score_rank_pct": 4.64
+  },
+  {
+   "field": "gdn",
+   "id": 24477,
+   "region": "GOODS-N",
+   "mag_f444w": 25.005387223844014,
+   "picked": false,
+   "y_strict": true,
+   "score": 0.08429434152668146,
+   "score_rank_pct": 7.82
+  },
+  {
+   "field": "gdn",
+   "id": 54665,
+   "region": "GOODS-N",
+   "mag_f444w": 24.698359097838637,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.07894643158509031,
+   "score_rank_pct": 8.34
+  },
+  {
+   "field": "gds-sw",
+   "id": 12550,
+   "region": "GOODS-S",
+   "mag_f444w": 23.970988245842356,
+   "picked": false,
+   "y_strict": false,
+   "score": 0.012845774555748568,
+   "score_rank_pct": 51.26
+  }
+ ],
+ "baselines": {
+  "shuffled_labels_1": {
+   "recall_at_burden": 22,
+   "rule_missed_recovered": 3,
+   "strict_recovered": 6,
+   "strict_missed_recovered": 0,
+   "neg_selected_at_burden": 149,
+   "case_control_prauc_pooled": 0.0922,
+   "per_region_recall": {
+    "CEERS": 7,
+    "GOODS-N": 2,
+    "GOODS-S": 7,
+    "COSMOS": 5,
+    "UDS": 1
+   }
+  },
+  "shuffled_labels_2": {
+   "recall_at_burden": 26,
+   "rule_missed_recovered": 8,
+   "strict_recovered": 10,
+   "strict_missed_recovered": 1,
+   "neg_selected_at_burden": 160,
+   "case_control_prauc_pooled": 0.1217,
+   "per_region_recall": {
+    "CEERS": 11,
+    "GOODS-N": 1,
+    "GOODS-S": 9,
+    "COSMOS": 4,
+    "UDS": 1
+   }
+  }
+ },
+ "sanity": {
+  "field_adversary": {
+   "accuracy_mean": 0.7729,
+   "chance": 0.2,
+   "top_features_gain_share": [
+    [
+     "asnr_f115w",
+     0.114
+    ],
+    [
+     "m_f115w",
+     0.087
+    ],
+    [
+     "m_f277w",
+     0.082
+    ],
+    [
+     "asnr_f277w",
+     0.07
+    ],
+    [
+     "asnr_f090w",
+     0.065
+    ],
+    [
+     "log_rh",
+     0.062
+    ]
+   ]
+  },
+  "primary_score_std": {
+   "median_all": 0.0009289656884345417,
+   "median_positives": 0.0032065286874082073,
+   "median_selected_at_burden": 0.00809586511974797
+  },
+  "shuffled_labels_recall_at_burden": [
+   22,
+   26
+  ],
+  "shuffled_labels_expected_if_random": 0.36
+ },
+ "mlp_equal_burden": {
+  "name": "mlp at equal burden",
+  "selected_total": 1161,
+  "selection_fraction": 0.00249,
+  "recall_147": 123,
+  "recall_147_pct": 83.7,
+  "recall_147_wilson": [
+   0.769,
+   0.888
+  ],
+  "recall_151_end_to_end": 123,
+  "recall_151_pct": 81.5,
+  "rule_missed_41": 25,
+  "rule_missed_44_end_to_end_pct": 56.8,
+  "strict_in_support": 28,
+  "strict_total_in_support": 32,
+  "strict_missed": 5,
+  "strict_missed_total": 7,
+  "neg_selected": 65,
+  "neg_total": 4979,
+  "neg_selection_rate_pct": 1.31,
+  "per_region_recall": {
+   "CEERS": "29/33",
+   "GOODS-N": "14/17",
+   "GOODS-S": "16/18",
+   "COSMOS": "22/28",
+   "UDS": "42/51"
+  },
+  "per_region_missed": {
+   "CEERS": "7/10",
+   "GOODS-N": "4/7",
+   "GOODS-S": "3/5",
+   "COSMOS": "1/6",
+   "UDS": "10/13"
+  },
+  "per_catalog_recall": {
+   "hviding25_A1": "31/36",
+   "barro25": "88/104",
+   "degraaff26": "73/83"
+  },
+  "recall_by_f444w_mag": {
+   "0-24": "5/10 (union 7)",
+   "24-25": "24/27 (union 23)",
+   "25-26": "40/45 (union 32)",
+   "26-27": "48/54 (union 39)",
+   "27-40": "6/11 (union 5)"
+  },
+  "case_control_prauc_pooled": 0.8352
+ },
+ "mlp_promotion": {
+  "gain_positives": -1,
+  "gain_rule_missed": 5,
+  "regions_won": 2,
+  "neg_rate_change_points": 0.35,
+  "promoted": false
+ },
+ "blend_rank_average_equal_burden": {
+  "name": "rank-average blend (trees + MLP) at equal burden",
+  "selected_total": 1085,
+  "selection_fraction": 0.00233,
+  "recall_147": 125,
+  "recall_147_pct": 85.0,
+  "recall_147_wilson": [
+   0.784,
+   0.899
+  ],
+  "recall_151_end_to_end": 125,
+  "recall_151_pct": 82.8,
+  "rule_missed_41": 24,
+  "rule_missed_44_end_to_end_pct": 54.5,
+  "strict_in_support": 29,
+  "strict_total_in_support": 32,
+  "strict_missed": 5,
+  "strict_missed_total": 7,
+  "neg_selected": 55,
+  "neg_total": 4979,
+  "neg_selection_rate_pct": 1.1,
+  "per_region_recall": {
+   "CEERS": "29/33",
+   "GOODS-N": "12/17",
+   "GOODS-S": "17/18",
+   "COSMOS": "24/28",
+   "UDS": "43/51"
+  },
+  "per_region_missed": {
+   "CEERS": "7/10",
+   "GOODS-N": "2/7",
+   "GOODS-S": "4/5",
+   "COSMOS": "3/6",
+   "UDS": "8/13"
+  },
+  "per_catalog_recall": {
+   "hviding25_A1": "33/36",
+   "barro25": "88/104",
+   "degraaff26": "77/83"
+  },
+  "recall_by_f444w_mag": {
+   "0-24": "8/10 (union 7)",
+   "24-25": "24/27 (union 23)",
+   "25-26": "39/45 (union 32)",
+   "26-27": "48/54 (union 39)",
+   "27-40": "6/11 (union 5)"
+  }
+ }
+}

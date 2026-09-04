@@ -1,0 +1,71 @@
+{
+  "positives_151": 151,
+  "positives_in_support_147": 147,
+  "positives_incomplete_bands": 4,
+  "rule_missed_44": 44,
+  "rule_missed_in_support_41": 41,
+  "strict_32": 32,
+  "strict_in_support": 32,
+  "strict_missed_7": 7,
+  "strict_missed_in_support": 7,
+  "union_selects_of_151": 107,
+  "negatives_5397": 5397,
+  "negatives_in_support": 4979,
+  "ambiguous_excluded": 67,
+  "complete_rows": 470333,
+  "support_rows": 466419,
+  "union_selected_in_support": 1133,
+  "union_burden_fraction_in_support": 0.0024291463255141834,
+  "positives_per_region": {
+    "CEERS": 35,
+    "COSMOS": 28,
+    "GOODS-N": 17,
+    "GOODS-S": 20,
+    "UDS": 51
+  },
+  "positives_in_support_per_region": {
+    "CEERS": 33,
+    "COSMOS": 28,
+    "GOODS-N": 17,
+    "GOODS-S": 18,
+    "UDS": 51
+  },
+  "rule_missed_in_support_per_region": {
+    "CEERS": 10,
+    "COSMOS": 6,
+    "GOODS-N": 7,
+    "GOODS-S": 5,
+    "UDS": 13
+  },
+  "negatives_in_support_per_region": {
+    "CEERS": 1280,
+    "COSMOS": 904,
+    "GOODS-N": 491,
+    "GOODS-S": 971,
+    "UDS": 1333
+  },
+  "support_rows_per_region": {
+    "CEERS": 70289,
+    "COSMOS": 124293,
+    "GOODS-N": 63871,
+    "GOODS-S": 73553,
+    "UDS": 134413
+  },
+  "union_in_support_per_region": {
+    "CEERS": 134,
+    "COSMOS": 254,
+    "GOODS-N": 129,
+    "GOODS-S": 127,
+    "UDS": 489
+  },
+  "positives_per_catalog": {
+    "hviding25_A1": 36,
+    "barro25": 106,
+    "degraaff26": 86
+  },
+  "positives_only_in_one_catalog": 87,
+  "positives_crowded_0p5": 12,
+  "positives_in_multi_row_sky_group": 12,
+  "sky_groups_total": 590816,
+  "sky_groups_crossing_regions": 0
+}

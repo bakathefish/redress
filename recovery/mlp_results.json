@@ -1,0 +1,643 @@
+{
+ "folds": {
+  "CEERS": {
+   "networks": [
+    {
+     "prior": 0.003,
+     "seed": 0,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.9015,
+     "epochs": 98
+    },
+    {
+     "prior": 0.003,
+     "seed": 1,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7498,
+     "epochs": 52
+    },
+    {
+     "prior": 0.003,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8927,
+     "epochs": 48
+    },
+    {
+     "prior": 0.003,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.7818,
+     "epochs": 85
+    },
+    {
+     "prior": 0.003,
+     "seed": 4,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.8832,
+     "epochs": 61
+    },
+    {
+     "prior": 0.005,
+     "seed": 0,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.8713,
+     "epochs": 77
+    },
+    {
+     "prior": 0.005,
+     "seed": 1,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7947,
+     "epochs": 63
+    },
+    {
+     "prior": 0.005,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8787,
+     "epochs": 69
+    },
+    {
+     "prior": 0.005,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.7656,
+     "epochs": 51
+    },
+    {
+     "prior": 0.005,
+     "seed": 4,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.892,
+     "epochs": 70
+    },
+    {
+     "prior": 0.008,
+     "seed": 0,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.8801,
+     "epochs": 52
+    },
+    {
+     "prior": 0.008,
+     "seed": 1,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7728,
+     "epochs": 60
+    },
+    {
+     "prior": 0.008,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8826,
+     "epochs": 55
+    },
+    {
+     "prior": 0.008,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.7669,
+     "epochs": 47
+    },
+    {
+     "prior": 0.008,
+     "seed": 4,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.8932,
+     "epochs": 76
+    }
+   ],
+   "union_burden_train": 0.0025218993764673215,
+   "frac_for_neg1pct": 0.002286666666666667,
+   "t_burden": 0.08763743937015533,
+   "t_neg1": 0.11551308631896973,
+   "t_05": 0.01986076682806015,
+   "selected_at_burden": 187,
+   "union_selected_in_region": 134,
+   "positives": 33,
+   "recall_at_burden": 29,
+   "union_recall": 23,
+   "rule_missed": 10,
+   "rule_missed_recovered": 7,
+   "negatives": 1280,
+   "neg_selected_at_burden": 16,
+   "case_control_prauc": 0.8943,
+   "seconds": 381
+  },
+  "GOODS-N": {
+   "networks": [
+    {
+     "prior": 0.003,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.8859,
+     "epochs": 107
+    },
+    {
+     "prior": 0.003,
+     "seed": 1,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7658,
+     "epochs": 48
+    },
+    {
+     "prior": 0.003,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8865,
+     "epochs": 55
+    },
+    {
+     "prior": 0.003,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.7738,
+     "epochs": 69
+    },
+    {
+     "prior": 0.003,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.8898,
+     "epochs": 65
+    },
+    {
+     "prior": 0.005,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.8964,
+     "epochs": 60
+    },
+    {
+     "prior": 0.005,
+     "seed": 1,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7915,
+     "epochs": 49
+    },
+    {
+     "prior": 0.005,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8898,
+     "epochs": 56
+    },
+    {
+     "prior": 0.005,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.7482,
+     "epochs": 62
+    },
+    {
+     "prior": 0.005,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.9026,
+     "epochs": 78
+    },
+    {
+     "prior": 0.008,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.8894,
+     "epochs": 56
+    },
+    {
+     "prior": 0.008,
+     "seed": 1,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.8056,
+     "epochs": 41
+    },
+    {
+     "prior": 0.008,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8905,
+     "epochs": 51
+    },
+    {
+     "prior": 0.008,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.7572,
+     "epochs": 70
+    },
+    {
+     "prior": 0.008,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.9117,
+     "epochs": 69
+    }
+   ],
+   "union_burden_train": 0.002494112503353637,
+   "frac_for_neg1pct": 0.0022666666666666673,
+   "t_burden": 0.10382336378097534,
+   "t_neg1": 0.13222400844097137,
+   "t_05": 0.020340237766504288,
+   "selected_at_burden": 134,
+   "union_selected_in_region": 129,
+   "positives": 17,
+   "recall_at_burden": 14,
+   "union_recall": 10,
+   "rule_missed": 7,
+   "rule_missed_recovered": 4,
+   "negatives": 491,
+   "neg_selected_at_burden": 4,
+   "case_control_prauc": 0.879,
+   "seconds": 744
+  },
+  "GOODS-S": {
+   "networks": [
+    {
+     "prior": 0.003,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.9205,
+     "epochs": 74
+    },
+    {
+     "prior": 0.003,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.8707,
+     "epochs": 50
+    },
+    {
+     "prior": 0.003,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8802,
+     "epochs": 63
+    },
+    {
+     "prior": 0.003,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.8219,
+     "epochs": 96
+    },
+    {
+     "prior": 0.003,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.8936,
+     "epochs": 77
+    },
+    {
+     "prior": 0.005,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.9123,
+     "epochs": 61
+    },
+    {
+     "prior": 0.005,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.8865,
+     "epochs": 86
+    },
+    {
+     "prior": 0.005,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8747,
+     "epochs": 74
+    },
+    {
+     "prior": 0.005,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.8105,
+     "epochs": 82
+    },
+    {
+     "prior": 0.005,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.9006,
+     "epochs": 145
+    },
+    {
+     "prior": 0.008,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.9111,
+     "epochs": 105
+    },
+    {
+     "prior": 0.008,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.8609,
+     "epochs": 41
+    },
+    {
+     "prior": 0.008,
+     "seed": 2,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8771,
+     "epochs": 45
+    },
+    {
+     "prior": 0.008,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.7896,
+     "epochs": 65
+    },
+    {
+     "prior": 0.008,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.8949,
+     "epochs": 59
+    }
+   ],
+   "union_burden_train": 0.002560669541268524,
+   "frac_for_neg1pct": 0.0027366666666666663,
+   "t_burden": 0.08384019136428833,
+   "t_neg1": 0.07460004091262817,
+   "t_05": 0.019975965842604637,
+   "selected_at_burden": 160,
+   "union_selected_in_region": 127,
+   "positives": 18,
+   "recall_at_burden": 16,
+   "union_recall": 13,
+   "rule_missed": 5,
+   "rule_missed_recovered": 3,
+   "negatives": 971,
+   "neg_selected_at_burden": 18,
+   "case_control_prauc": 0.7495,
+   "seconds": 1161
+  },
+  "COSMOS": {
+   "networks": [
+    {
+     "prior": 0.003,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.8763,
+     "epochs": 64
+    },
+    {
+     "prior": 0.003,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.8878,
+     "epochs": 64
+    },
+    {
+     "prior": 0.003,
+     "seed": 2,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7771,
+     "epochs": 95
+    },
+    {
+     "prior": 0.003,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.6902,
+     "epochs": 39
+    },
+    {
+     "prior": 0.003,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.8817,
+     "epochs": 67
+    },
+    {
+     "prior": 0.005,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.9088,
+     "epochs": 72
+    },
+    {
+     "prior": 0.005,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.887,
+     "epochs": 53
+    },
+    {
+     "prior": 0.005,
+     "seed": 2,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7807,
+     "epochs": 41
+    },
+    {
+     "prior": 0.005,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.7724,
+     "epochs": 125
+    },
+    {
+     "prior": 0.005,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.8713,
+     "epochs": 107
+    },
+    {
+     "prior": 0.008,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.9032,
+     "epochs": 76
+    },
+    {
+     "prior": 0.008,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.897,
+     "epochs": 85
+    },
+    {
+     "prior": 0.008,
+     "seed": 2,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.8084,
+     "epochs": 71
+    },
+    {
+     "prior": 0.008,
+     "seed": 3,
+     "val_region": "UDS",
+     "val_prauc": 0.787,
+     "epochs": 115
+    },
+    {
+     "prior": 0.008,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.8965,
+     "epochs": 59
+    }
+   ],
+   "union_burden_train": 0.0025692288805878537,
+   "frac_for_neg1pct": 0.0021666666666666666,
+   "t_burden": 0.09717506915330887,
+   "t_neg1": 0.13743330538272858,
+   "t_05": 0.02745978534221649,
+   "selected_at_burden": 282,
+   "union_selected_in_region": 254,
+   "positives": 28,
+   "recall_at_burden": 22,
+   "union_recall": 22,
+   "rule_missed": 6,
+   "rule_missed_recovered": 1,
+   "negatives": 904,
+   "neg_selected_at_burden": 5,
+   "case_control_prauc": 0.8793,
+   "seconds": 1584
+  },
+  "UDS": {
+   "networks": [
+    {
+     "prior": 0.003,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.8872,
+     "epochs": 125
+    },
+    {
+     "prior": 0.003,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.9004,
+     "epochs": 174
+    },
+    {
+     "prior": 0.003,
+     "seed": 2,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7194,
+     "epochs": 49
+    },
+    {
+     "prior": 0.003,
+     "seed": 3,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8795,
+     "epochs": 144
+    },
+    {
+     "prior": 0.003,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.8696,
+     "epochs": 50
+    },
+    {
+     "prior": 0.005,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.8908,
+     "epochs": 116
+    },
+    {
+     "prior": 0.005,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.9187,
+     "epochs": 151
+    },
+    {
+     "prior": 0.005,
+     "seed": 2,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.7819,
+     "epochs": 43
+    },
+    {
+     "prior": 0.005,
+     "seed": 3,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8775,
+     "epochs": 106
+    },
+    {
+     "prior": 0.005,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.9141,
+     "epochs": 93
+    },
+    {
+     "prior": 0.008,
+     "seed": 0,
+     "val_region": "CEERS",
+     "val_prauc": 0.8956,
+     "epochs": 111
+    },
+    {
+     "prior": 0.008,
+     "seed": 1,
+     "val_region": "GOODS-N",
+     "val_prauc": 0.9079,
+     "epochs": 133
+    },
+    {
+     "prior": 0.008,
+     "seed": 2,
+     "val_region": "GOODS-S",
+     "val_prauc": 0.824,
+     "epochs": 55
+    },
+    {
+     "prior": 0.008,
+     "seed": 3,
+     "val_region": "COSMOS",
+     "val_prauc": 0.8854,
+     "epochs": 98
+    },
+    {
+     "prior": 0.008,
+     "seed": 4,
+     "val_region": "CEERS",
+     "val_prauc": 0.905,
+     "epochs": 111
+    }
+   ],
+   "union_burden_train": 0.0019397239808919115,
+   "frac_for_neg1pct": 0.0027233333333333332,
+   "t_burden": 0.14498263597488403,
+   "t_neg1": 0.06095697358250618,
+   "t_05": 0.019453711807727814,
+   "selected_at_burden": 398,
+   "union_selected_in_region": 489,
+   "positives": 51,
+   "recall_at_burden": 42,
+   "union_recall": 38,
+   "rule_missed": 13,
+   "rule_missed_recovered": 10,
+   "negatives": 1333,
+   "neg_selected_at_burden": 22,
+   "case_control_prauc": 0.7907,
+   "seconds": 1866
+  }
+ },
+ "pooled": {
+  "recall_at_burden": 123,
+  "union_recall": 106,
+  "rule_missed_recovered": 25,
+  "rule_missed": 41,
+  "strict_recovered": 28,
+  "strict_missed_recovered": 5,
+  "neg_selected_at_burden": 65,
+  "negatives": 4979,
+  "selected_at_burden": 1161,
+  "recall_at_05": 135,
+  "case_control_prauc_pooled": 0.8352,
+  "seconds_total": 1867
+ }
+}

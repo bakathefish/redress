@@ -1,0 +1,17 @@
+{
+ "eligible_spectra": 0,
+ "spectrum_verdicts": {},
+ "object_verdicts": {},
+ "status_counts": {
+  "untested": 1129,
+  "secure low-z": 42,
+  "secure z>3 (V untested)": 36
+ },
+ "status_counts_equal_burden": {
+  "untested": 337,
+  "secure z>3 (V untested)": 17,
+  "secure low-z": 8
+ },
+ "engine": "public clone harness/refit/census3.py + slopefit.py (frozen)",
+ "eligibility": "PRISM, grade>=3, z_best>3 (paper mask)"
+}

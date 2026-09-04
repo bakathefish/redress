@@ -1,0 +1,2 @@
+# keep every released table, weight file and script byte-exact on checkout (the model card states a sha256 of the concatenated weight files)
+* -text
