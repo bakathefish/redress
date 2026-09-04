@@ -43,7 +43,7 @@ rerun after steps 1 to 3 have been rerun.
 
 | step | script (arguments) | where | produces |
 |---|---|---|---|
-| 1 | `build_labels.py` | laptop | `labels.parquet` (not released) |
+| 1 | `build_labels.py` | laptop | `labels.parquet` (not released), `label_counts.json` |
 | 2 | `v4_features.py` | laptop | `features.parquet` (not released), `feature_manifest.json`, `denominators.json`, `label_audit.csv` |
 | 3 | `v4_train_lgbm.py` (uses `v4lib.py`) | laptop | `oof_scores.parquet` (not released), `train_results.json`, `baseline_scores.parquet` (not released) |
 | 4 | `vm_extract_shape.py` | staging VM | `v4_shape_columns.csv.gz` (not released) |
