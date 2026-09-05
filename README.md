@@ -28,7 +28,7 @@ macroregion, and every threshold was fixed on the other four regions. The thresh
 fold-specific and trained to target the union's burden; pooled over the five folds the model
 selects 1115 rows against the union's 1133:
 
-| selection | rows selected | spectroscopic LRDs recovered (of 151) | of the 44 missed by all rules | strict 32 | strict misses (7) | targeted spectroscopic non-LRD anchors selected (of 4979) |
+| selection | rows selected | spectroscopic LRDs recovered (of 151) | of the 44 missed by all rules | strict 32 | strict misses (7) | spectroscopic comparison objects not established as LRDs (anchors) selected (of 4979) |
 |---|---|---|---|---|---|---|
 | union of seven published rules | 1133 | 107 (70.9%) | 0 | 25 | 0 | 46 (0.92%) |
 | this model, thresholds targeting the union burden | 1115 | 123 (81.5%) | 20 | 30 | 5 | 70 (1.41%) |
@@ -91,11 +91,11 @@ were inspected for a variant model during model selection (next paragraph), so t
 comparison is not an independent test of the deployed model; an independent archival test
 needs observations that were not consulted here.
 
-**Model selection.** Challengers were held to a pre-stated rule: promoted only with at least three more positives (or two more rule-missed) at the union-targeted burden, in at least four of five regions, without raising the targeted-negative selection rate by more than 0.3 points. Out of fold (recovered of 147, rule-missed of 41, targeted non-LRD anchors selected of 4,979): trees on the 30-feature set of the plan of record 123, 20, 70; trees on a 34-feature set (adding F444W and F200W aperture concentrations, log r90/r20 and axis ratio) 124, 20, 48, regions won 3 of 5, so one more positive and no more rule-missed: fails the rule; nnPU multilayer perceptron (30 features, 15 networks) 123, 25, 65, regions won 2 of 5: fails the rule; rank-average blend of trees and MLP 125, 24, 61, regions won 3 of 5: fails the rule. TabPFN v2 and TabICL did not complete within the time budget. The 30-feature model stays deployed because no challenger met the rule. Two further comparisons were made after that and are exploratory, not part of the rule: the 34-feature set's lower targeted-negative rate (which counts only z > 3 targets), and the photo-z and archival-redshift make-up of the two candidate lists (34-feature equal-burden tier: catalog photo-z < 3 for 34.9% against 21.5%; secure archival z <= 3 for 21 of 390 against 8 of 362; secure z > 3 for 15 of 390 against 17 of 362). During the build the 34-feature model was briefly chosen on the first of these and reverted on the second; that sequence is recorded in `recovery/model_selection.json`, and because the archive comparison was consulted in it, the archive paragraph above is post hoc and selection-influenced, not an independent test. The 34-feature out-of-fold tables are in `recovery/evaluation_v34.md`.
+**Model selection.** Challengers were held to a pre-stated rule: promoted only with at least three more positives (or two more rule-missed) at the union-targeted burden, in at least four of five regions, without raising the targeted-negative selection rate by more than 0.3 points. Out of fold (recovered of 147, rule-missed of 41, comparison objects not established as LRDs (anchors) selected of 4,979): trees on the 30-feature set of the plan of record 123, 20, 70; trees on a 34-feature set (adding F444W and F200W aperture concentrations, log r90/r20 and axis ratio) 124, 20, 48, regions won 3 of 5, so one more positive and no more rule-missed: fails the rule; nnPU multilayer perceptron (30 features, 15 networks) 123, 25, 65, regions won 2 of 5: fails the rule; rank-average blend of trees and MLP 125, 24, 61, regions won 3 of 5: fails the rule. TabPFN v2 and TabICL did not complete within the time budget. The 30-feature model stays deployed because no challenger met the rule. Two further comparisons were made after that and are exploratory, not part of the rule: the 34-feature set's lower targeted-negative rate (which counts only z > 3 targets), and the photo-z and archival-redshift make-up of the two candidate lists (34-feature equal-burden tier: catalog photo-z < 3 for 34.9% against 21.5%; secure archival z <= 3 for 21 of 390 against 8 of 362; secure z > 3 for 15 of 390 against 17 of 362). During the build the 34-feature model was briefly chosen on the first of these and reverted on the second; that sequence is recorded in `recovery/model_selection.json`, and because the archive comparison was consulted in it, the archive paragraph above is post hoc and selection-influenced, not an independent test. The 34-feature out-of-fold tables are in `recovery/evaluation_v34.md`.
 
 **Model.** 48 bagged LightGBM classifiers (7 leaves, depth 3, 350 trees, learning rate 0.025),
 each bag = all positives + 20 unlabelled rows per positive (half uniform, half matched in
-region, F444W bin and S/N quartile) + the targeted spectroscopic non-LRD anchors at total
+region, F444W bin and S/N quartile) + the spectroscopic comparison objects not established as LRDs (anchors) at total
 weight 0.1 of the positives; settings chosen by an inner one-standard-error rule.
 Features (30): m_f090w, m_f115w, m_f150w, m_f200w, m_f277w, m_f356w, m_f444w, asnr_f090w, asnr_f115w, asnr_f150w, asnr_f200w, asnr_f277w, asnr_f356w, asnr_f444w, c_f090w_f115w, c_f115w_f150w, c_f150w_f200w, c_f200w_f277w, c_f277w_f356w, c_f356w_f444w, c_f115w_f200w, c_f200w_f356w, c_f277w_f444w, slope_blue, slope_red, v_curv, log_rh, log_rh_over_rstar, n_snr_ge1, n_snr_ge3.
 Weights: `recovery/models/bag_*.txt` (sha256 of the concatenation dd03f0d8467e37c0...).
@@ -171,14 +171,15 @@ python -m pytest selections -q
 
 ```
 recovery/       the released run: every script that ran, the 48 LightGBM weight files
-                under models/, and every table of record (.md, .json, .csv)
-paper/          the six scripts that turn the tables of record into the paper's numbers,
-                sixteen figures and three appendix tables, plus numbers.json
-selections/     the seven published photometric selections re-implemented, the shared
-                fail-closed comparators, the compactness, slope-fitting and fold modules
-                (package redress), the frozen spectral-refit engine (spectra/), and the
-                unit tests that pin all of them
+                under models/, and every table of record (.md, .json, .csv, .parquet)
+paper/          the scripts that turn the tables of record into the paper's numbers,
+                figures and appendix tables, plus numbers.json and numbers.tex
+selections/     the seven published photometric selections re-implemented, the Barro et al.
+                (2024b) comparator added in revision, the shared fail-closed comparators,
+                the compactness, slope-fitting and fold modules (package redress), the frozen
+                spectral-refit engine (spectra/), and the unit tests that pin all of them
 tools/          the cleanliness scan run over this tree before publication
+CITATION.cff    how to cite this repository
 ```
 
 Some things are named in the code but are not files in this repository. Module docstrings
@@ -188,18 +189,42 @@ it is; those documents are the author's working records and are not released. Th
 manifest lists the data files that are likewise not released, and where they belong if
 you want to rerun the chain.
 
+## Added in the revision of 2026-09-06
+
+Four things a reader of the first release will not find in it. `recovery/labelled_rows.csv`
+carries every labelled or ambiguous row with its label, list memberships, the seven rule
+flags of record, its region and sky group and its out-of-fold score and outcomes, so every
+per-rule and paired count can be recomputed from released files. `recovery/rule_flags.parquet`
+carries the seven flags of record for all 630869 catalog rows. `recovery/candidates.csv`
+carries, next to the in-sample ranking score, the out-of-fold score of the fold model that
+never saw the candidate's region and that fold's thresholds (`oof_*` columns); a reader who
+prefers the validated ranking can define the tiers on those. And the Barro et al. (2024b)
+two-color selection with its aperture compactness is coded in
+`selections/redress/cuts/barro24b.py`, measured in `recovery/v4_barro24b_apertures.py` on DJA
+F444W cutouts, and reported as a separate eighth comparator (`redress.cuts.COMPARATORS`); it
+is not one of the seven of record and no union or burden above includes it. The counts of all
+of this are in `recovery/referee_compute_2026_09_06.json`, and `RUN_MANIFEST.md` lists the
+files with their sha256.
+
 ## Errata and record notes
 
 Facts about the released files that a reader reproducing from them needs and that the model
 card above does not carry.
 
-**`recovery/build_labels.py`'s docstring is wrong about Hviding table B1.** The docstring
-says a positive is a source in "Hviding 2025 A1 or B1, Barro 2025 or de Graaff 2026". The
-code does not use B1 that way. It sets `in_spec_list` to `in_hviding25_A1 | in_barro25 |
-in_degraaff26`, so B1 never makes a positive; instead a B1 member that is not already a
-positive by another route is marked ambiguous and excluded from the positives and from the
-negatives alike. The comment beside that line states the rule correctly, and every count in
-this repository is read from the columns the code writes, so no number is affected.
+**`recovery/build_labels.py`'s docstring and comment are wrong about Hviding table B1.** The
+docstring says a positive is a source in "Hviding 2025 A1 or B1, Barro 2025 or de Graaff
+2026". The code does not use B1 that way: `in_spec_list` is `in_hviding25_A1 | in_barro25 |
+in_degraaff26`, so B1 never makes a positive. The comment beside the negative mask says B1
+members "are excluded from the negatives"; that is also not what the code does. The negative
+mask is `neg = notv & ~in_any_list`, and table B1 is not in `in_any_list`, so a B1 member that
+the spectral test does not establish as V-shaped carries `y = 0` and is an anchor in training
+and in every anchor rate: 19 sources, 16 of them with complete seven-band photometry, 2 of them
+selected by the union of the rules. The `ambiguous` flag is set on the same rows, but that flag
+only removes a row from the unlabelled pool; it does not mask `y`. `label_counts.json` counts
+these 19 in `negatives` (5397) and, with the 48 photometric-list sources that are ambiguous and
+unlabelled, in `ambiguous_excluded` (67). Every count in this repository is read from the columns
+the code writes, so no number is affected; the labelled-row table `recovery/labelled_rows.csv`
+carries `y`, `ambiguous` and `in_hviding25_B1` per row so the treatment can be checked.
 
 **`recovery/archive_purity.json` does not report purity.** Every rate in it is a selection
 rate on targeted spectroscopic objects: the share of a candidate set that the archive
@@ -243,4 +268,5 @@ The other fourteen figures are drawn from the tables in `recovery/` alone.
 
 ## Citation
 
-Paper in preparation, 2026. Please cite the repository until it appears.
+Paper in preparation, 2026. Please cite the repository until it appears; `CITATION.cff` carries
+the author and title fields and will carry the arXiv identifier once the manuscript is posted.

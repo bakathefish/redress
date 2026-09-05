@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, the released tables or the trained weights, please cite the repository and the paper when it appears."
+title: "REDRESS: a learned selection for JWST Little Red Dots"
+type: software
+authors:
+  - family-names: Puri
+    given-names: Rudra
+    email: rudrapuri082610@gmail.com
+repository-code: "https://github.com/bakathefish/redress"
+license: MIT
+keywords:
+  - JWST
+  - Little Red Dots
+  - photometric selection
+  - positive-unlabeled learning
+abstract: "Seven published photometric selections of Little Red Dots re-implemented as tested code, a positive-unlabeled gradient-boosted ranker trained on catalog quantities and evaluated with whole sky regions held out, the released weights, the out-of-fold evaluation tables and a ranked catalog of candidates not matched to any input list at the catalog freeze."
+preferred-citation:
+  type: article
+  title: "How complete are photometric selections of Little Red Dots? Seven published criteria and a learned selection tested against 151 spectroscopic LRDs"
+  authors:
+    - family-names: Puri
+      given-names: Rudra
+  year: 2026
+  notes: "In preparation; the arXiv identifier will be added here when the manuscript is posted."

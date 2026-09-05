@@ -49,6 +49,7 @@ exactly is what makes the completeness atlas mean something.
 from redress.cuts import (
     akins24,
     barro23,
+    barro24b,
     greene24,
     kocevski24,
     kokorev24,
@@ -66,4 +67,12 @@ CUTS = {
     "barro23": barro23.select,
     "greene24": greene24.select,
     "akins24": akins24.select,
+}
+
+#: Comparators added AFTER the benchmark was fixed (revision, 2026-09-06). Kept out of
+#: ``CUTS`` on purpose: the seven above are the pre-stated benchmark of record and every
+#: released union, burden and paired count is computed over them alone. Anything here is
+#: reported separately, as an eighth line, never folded into the union of record.
+COMPARATORS = {
+    "barro24b": barro24b.select,
 }

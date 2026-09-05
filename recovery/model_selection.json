@@ -1,6 +1,6 @@
 {
  "rule_prestated": "a challenger is promoted only if it recovers at least three more positives (or two more of the rule-missed) at equal burden, in at least four of five regions, without raising the confirmed-negative selection rate by more than 0.3 points (V4_RECOVERY_PLAN_2026-09-04.md, Model paragraph)",
- "tie_break_post_hoc": "superseded by rule_outcome after the external verdict round: the earlier framing of a tie and a negative-rate tie-break is kept in decision_sequence as history only",
+ "tie_break_post_hoc": "superseded by rule_outcome: the earlier framing of a tie and a negative-rate tie-break is kept in decision_sequence as history only",
  "trees_30_features": {
   "selected_total": 1115,
   "recall_147": 123,
@@ -194,6 +194,5 @@
  },
  "rule_outcome": "no challenger met the pre-stated rule: the 34-feature trees gain one positive and no rule-missed and win 3 of 5 regions; the MLP wins 2 of 5; the blend wins 3 of 5. The 30-feature incumbent of the plan of record therefore stays deployed by the rule itself, not by a tie-break.",
  "exploratory_comparisons": "two comparisons made after the rule, both exploratory and not part of it: (1) the 34-feature set's lower targeted-negative selection rate (48 vs 70), which counts only z > 3 targets; (2) the photo-z and archival-redshift make-up of the two candidate lists. During the build the 34-feature model was briefly chosen on (1) and reverted on (2); the sequence is in decision_sequence. Because (2) was consulted, the archive comparison of the deployed candidates is post hoc and selection-influenced, not an independent test.",
- "archive_comparison_status": "post hoc and selection-influenced",
- "verdict_r1": "CONCUR WITH AMENDMENTS (2026-09-04 IST): the 34-feature challenger failed promotion, so there was no protocol-level tie; retain the 30-feature model by the rule; describe both later comparisons as exploratory; label the archive comparison post hoc and selection-influenced. Applied in this record and in the model card."
+ "archive_comparison_status": "post hoc and selection-influenced"
 }

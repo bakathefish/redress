@@ -1414,3 +1414,89 @@ def test_kocevski24_combinator_arm_toggles():
 
     blue_opt = make_phot([_koc_row(beta_opt=-2.0)], _KOC_BANDS)
     assert not kocevski24.select(blue_opt, [5.0], [0.08], PIVOTS)["selected"][0]
+
+
+# --------------------------------------------------------------- Barro 2024b (comparator)
+
+def test_barro24b_is_a_comparator_not_one_of_the_seven():
+    # added in revision; the benchmark of record is the seven of CUTS and stays that way
+    from redress.cuts import barro24b
+    assert "barro24b" not in cuts.CUTS
+    assert cuts.COMPARATORS == {"barro24b": barro24b.select}
+
+
+def test_barro24b_thresholds_verbatim():
+    from redress.cuts import barro24b
+    # Sec. 2.2 (i)-(iv) and the Sec. 2.3 aperture ratio, radii 0.5"/0.2"
+    assert barro24b.COLOR_F200W_F444W_MIN == 1.0
+    assert barro24b.DIAGONAL_OFFSET == 0.25
+    assert barro24b.COLOR_F115W_F200W_MIN == -0.5
+    assert barro24b.M_F444W_MAX == 27.0
+    assert barro24b.COMPACT_RATIO_MAX == 1.5
+
+
+_B24_BANDS = ("f115w", "f200w", "f444w")
+
+
+def _b24_row(m115=26.6, m200=26.5, m444=25.0):
+    return {"mags": {"f115w": m115, "f200w": m200, "f444w": m444}}
+
+
+def test_barro24b_each_criterion_toggles_independently():
+    from redress.cuts import barro24b
+    rows = [
+        _b24_row(),                       # 115-200=0.1, 200-444=1.5: pass
+        _b24_row(m444=25.6),              # 200-444=0.9 <= 1: fails (i)
+        _b24_row(m115=27.8),              # 115-200=1.3; 1.5 > 1.55 false: fails (ii)
+        _b24_row(m115=25.9),              # 115-200=-0.6 <= -0.5: fails (iii)
+        _b24_row(m115=28.7, m200=28.6, m444=27.1),  # colors pass, F444W=27.1: fails (iv)
+        _b24_row(),                       # ratio 1.6: fails compactness
+    ]
+    phot = make_phot(rows, _B24_BANDS)
+    out = barro24b.select(phot, [1.2, 1.2, 1.2, 1.2, 1.2, 1.6])
+    assert out["selected"].tolist() == [True, False, False, False, False, False]
+    assert out["red"].tolist()[:2] == [True, False]
+    assert not out["diagonal"][2] and out["red"][2] and out["blue_floor"][2]
+    assert not out["blue_floor"][3]
+    assert not out["mag_gate"][4]
+    assert out["colors"].tolist() == [True, False, False, False, True, True]
+    assert not out["compact"][5] and out["compact_valid"][5]
+
+
+def test_barro24b_exact_thresholds_fail_as_printed():
+    from redress.cuts import barro24b
+    # single-quantity thresholds can be hit exactly; a color is a difference of two
+    # flux-derived magnitudes, so its strictness is tested a hair on the failing side
+    rows = [
+        _b24_row(m115=28.6, m200=28.5, m444=27.0),  # F444W == 27 exactly -> fails (iv)
+        _b24_row(),                                  # ratio == 1.5 exactly -> fails compactness
+        _b24_row(m444=25.501),                       # 200-444 = 0.999 -> fails (i)
+        _b24_row(m115=25.251),                       # 1.5 vs 1.249 + 0.25 -> fails (ii)
+        _b24_row(m115=25.999),                       # 115-200 = -0.501 -> fails (iii)
+    ]
+    phot = make_phot(rows, _B24_BANDS)
+    out = barro24b.select(phot, [1.5, 1.5, 1.2, 1.2, 1.2])
+    assert not out["selected"].any()
+    assert out["colors"].tolist()[:2] == [True, True]
+    assert out["mag_gate"].tolist() == [False, True, True, True, True]
+
+
+def test_barro24b_fails_closed_on_missing_band_and_unmeasurable_ratio():
+    from redress.cuts import barro24b
+    rows = [
+        {"mags": {"f200w": 26.5, "f444w": 25.0}},   # F115W uncovered
+        _b24_row(),                                  # ratio NaN (aperture unmeasurable)
+        _b24_row(),                                  # ratio <= 0 (non-positive flux)
+    ]
+    phot = make_phot(rows, _B24_BANDS)
+    out = barro24b.select(phot, [1.2, np.nan, -0.3])
+    assert not out["selected"].any()
+    assert not out["colors"][0]
+    assert out["compact_valid"].tolist() == [True, False, False]
+
+
+def test_barro24b_requires_its_three_bands():
+    from redress.cuts import barro24b
+    phot = make_phot([_b24_row()], ("f200w", "f444w"))
+    with pytest.raises(ValueError):
+        barro24b.select(phot, [1.2])

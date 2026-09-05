@@ -149,14 +149,14 @@ plt.rcParams.update(
     }
 )
 
-# base is black and grey; exactly two accents, used the same way on every figure
+# base is black and gray; exactly two accents, used the same way on every figure
 K = "#000000"
 C_UNION = "#666666"
 C_MODEL = "#1a5a8a"  # accent 1, the learned selection
 C_MISS = "#c0532a"  # accent 2, missed by every rule
 C_CAND = "#e0a06a"  # tint of accent 2, unlisted candidates
 C_NEG = "#a0a0a0"  # spectroscopic non-LRD anchors
-C_CAT = "#dcdcdc"  # the catalogue as a whole
+C_CAT = "#dcdcdc"  # the catalog as a whole
 GREY_TXT = "#7f7f7f"
 
 # ------------------------------------------------------------------ the seven rules
@@ -225,7 +225,7 @@ def save(fig, name, width_mm=178.0):
     Round 3 stopped cropping to a tight bounding box. main.tex includes each of these three
     at \\textwidth, so LaTeX scales whatever it is given to 178 mm; a tight box gave an
     arbitrary width and therefore an arbitrary scale factor. fig_fields had drifted to
-    197.9 mm, which LaTeX was shrinking by ten per cent, taking its 8 pt lettering to 7.2 pt
+    197.9 mm, which LaTeX was shrinking by ten percent, taking its 8 pt lettering to 7.2 pt
     on the page. The canvas is now the final size and the scale factor is 1.
     """
     w_in, h_in = fig.get_size_inches()
@@ -424,7 +424,7 @@ def show_stamp(ax, im, rgb=False, edge=K, bar=True):
 def scale_bar(ax, fontsize=FS):
     """The one 0.5 arcsec bar an object carries, white, lower left of the composite."""
     n = CROP.stop - CROP.start
-    x0 = 0.15 * n  # inset far enough that the centred label clears the left border
+    x0 = 0.15 * n  # inset far enough that the centered label clears the left border
     ax.plot(
         [x0, x0 + BAR_PIX],
         [0.085 * n, 0.085 * n],
@@ -467,7 +467,7 @@ def load_bands6(path):
 def gray_panel(im):
     """The one asinh rule every single-band panel uses, in every band and every object.
 
-    It is the frozen R1b grey rule (inputs/r1b_calibration.json, key
+    It is the frozen R1b gray rule (inputs/r1b_calibration.json, key
     gray_f444w) that the F444W panel has always used, applied unchanged to the other five
     bands: divide by the same normalisation T, clip below at zero, then
     arcsinh(x/a) / arcsinh(1/a) with the same softening a. T and a never change from panel
@@ -663,7 +663,7 @@ print(f"support rows {N_SUPPORT:,}")
 
 
 def ab_colour(row, blue, red):
-    """Ordinary AB colour from the catalogue fluxes, the convention every threshold uses."""
+    """Ordinary AB color from the catalog fluxes, the convention every threshold uses."""
     fb, fr = float(row[f"f_{blue}"]), float(row[f"f_{red}"])
     if not (np.isfinite(fb) and np.isfinite(fr) and fb > 0 and fr > 0):
         return np.nan
@@ -709,7 +709,7 @@ def draw_sed(ax, row, letter=None):
     lam = np.array([LAM_UM[b] for b in BANDS])
     err = np.clip(sig, 0, 1.5)
     # Round 3, style rule 9: the two windows the V shape is measured in are shaded behind
-    # the points, the way Barro et al. (2026) Fig. 3 shades the ranges his optical colour is
+    # the points, the way Barro et al. (2026) Fig. 3 shades the ranges his optical color is
     # computed over. The bands are the ones the features already use; nothing is refitted.
     for cols in (UV_COLS, OPT_COLS):
         ax.axvspan(
@@ -849,12 +849,12 @@ THR_277_444 = {
 
 
 def colour_terms(row, phot=None, i=0):
-    """Every colour term of every rule, evaluated on this row from the modules' constants.
+    """Every color term of every rule, evaluated on this row from the modules' constants.
 
-    Ordinary AB colours are used, which is the convention the published thresholds are
-    written in, with one exception: Kokorev+24 defines its colours through a per-colour
+    Ordinary AB colors are used, which is the convention the published thresholds are
+    written in, with one exception: Kokorev+24 defines its colors through a per-color
     detection rule with a 2 sigma upper-limit substitution, so its terms are evaluated
-    with that module's own colour function rather than with plain AB colours.
+    with that module's own color function rather than with plain AB colors.
     """
 
     def c(blue, red):
@@ -938,14 +938,14 @@ AUDIT_MASKS = {
 CRIT_NAME = {
     "detection": "F444W detection gate",
     "mag_gate": "F444W magnitude gate",
-    "red_color": "F277W$-$F444W colour",
-    "red1": "red1 colours",
-    "red2": "red2 colours",
+    "red_color": "F277W$-$F444W color",
+    "red1": "red1 colors",
+    "red2": "red2 colors",
     "vshape_blue": "F115W$-$F200W window",
-    "vshape_red": "F277W$-$F444W colour",
-    "blue_color": "F150W$-$F200W colour",
-    "bd_retention": "F115W$-$F150W colour",
-    "bd_removal": "F115W$-$F200W colour",
+    "vshape_red": "F277W$-$F444W color",
+    "blue_color": "F150W$-$F200W color",
+    "bd_retention": "F115W$-$F150W color",
+    "bd_removal": "F115W$-$F200W color",
     "beta_uv_window": "UV slope window",
     "beta_opt_red": "optical slope sign",
     "size": "half-light radius",
@@ -985,7 +985,7 @@ def rule_ladder(row_frame, i):
         thr = THR_277_444[k]
         # does the object fail THIS rule on the F277W-F444W axis the ladder draws?
         on_axis = thr is not None and not bool(sh.gt(np.array([obs]), thr)[0])
-        # the criterion actually named: the colour term that fails, else the mask name
+        # the criterion actually named: the color term that fails, else the mask name
         bad_terms = [t for t, ok in terms[k] if not ok]
         if on_axis:
             why = f"F277W$-$F444W $\\leq$ {thr:g}"
@@ -1034,8 +1034,8 @@ def draw_ladder(ax, rows, letter=None):
                 zorder=2,
             )
             # round 3: the threshold tick and the rule's name carry the rule's palette
-            # colour, the same colour that names it in fig_recall_burden and edges its
-            # shaded region in fig_colour_planes. The bar keeps its meaning colour, so the
+            # color, the same color that names it in fig_recall_burden and edges its
+            # shaded region in fig_colour_planes. The bar keeps its meaning color, so the
             # reader still reads off why the rule rejects the object.
             ax.plot(
                 [r["thr"], r["thr"]],
@@ -1065,7 +1065,7 @@ def draw_ladder(ax, rows, letter=None):
             va="center",
         )
     # the rule names live inside this panel, so they can never run into the panel at its
-    # left; the colour axis occupies 0.35 to 2.2 and the strip right of it carries the
+    # left; the color axis occupies 0.35 to 2.2 and the strip right of it carries the
     # criterion the rule actually rejects the object on
     for j, r in enumerate(rows):
         ax.text(
@@ -1084,7 +1084,7 @@ def draw_ladder(ax, rows, letter=None):
     # 8 pt and the widest rule name 22.8 mm, both measured, and under the old geometry the
     # criterion strip was 28 mm and the tight bounding box was quietly growing the canvas to
     # 175.6 mm to hide the overflow. Nothing plotted moved; only the empty margins either
-    # side of the colour axis, whose bounds stay 0.35 to 2.2.
+    # side of the color axis, whose bounds stay 0.35 to 2.2.
     ax.set_xlim(-2.05, 5.95)
     ax.set_xticks([0.5, 1.0, 1.5, 2.0])
     ax.set_xlabel("F277W$-$F444W (AB)", x=0.413, ha="center", labelpad=2.0)
@@ -1203,7 +1203,7 @@ gs = fig.add_gridspec(
 ims = load_bands(n1_stamp)
 rgb, gray = render(ims)
 ims6 = load_bands6(n1_stamp6)
-# (a) the strip: six single-band panels and the composite, in the footprint the colour and
+# (a) the strip: six single-band panels and the composite, in the footprint the color and
 # F444W stamps used to fill between them
 draw_strip(fig, gs[0, 0], ims6, rgb, edge=C_MODEL, letter="a")
 axc = fig.add_subplot(gs[0, 1])
@@ -1226,7 +1226,7 @@ if spec_ok:
     # The archival extraction is a slit spectrum and the photometry is a total flux, so the
     # two sit at different levels; the extraction carries no slit-loss correction. For the
     # display the spectrum is multiplied by one constant, the median over the six broad
-    # bands of the strip of the ratio of the catalogue flux to the spectrum's synthetic
+    # bands of the strip of the ratio of the catalog flux to the spectrum's synthetic
     # flux in that band. One constant cannot remove a wavelength-dependent loss, and the
     # residual per-band spread is printed below so the caption can be honest about it.
     _sb = [
@@ -1351,7 +1351,7 @@ ladders = [rule_ladder(rows3, i) for i in range(len(rows3))]
 
 N2_LEFT = 0.040
 # Round 3 reallocated the columns from measured string widths: the ladder needs 81 mm to
-# hold a 22.8 mm rule name, the 0.35 to 2.2 colour axis and a 34.6 mm criterion, and used
+# hold a 22.8 mm rule name, the 0.35 to 2.2 color axis and a 34.6 mm criterion, and used
 # to have 65 mm and overflow the canvas.
 fig = plt.figure(figsize=(COL2, 5.85))
 gs = fig.add_gridspec(
@@ -1373,7 +1373,7 @@ for i in range(len(rows3)):
     ims = load_bands(os.path.join(STAMPS, stem + ".fits"))
     rgb, gray = render(ims)
     ims6 = load_bands6(os.path.join(STAMPS, stem + "_6band.fits"))
-    # the strip takes exactly the footprint the colour and F444W stamps used to fill, so the
+    # the strip takes exactly the footprint the color and F444W stamps used to fill, so the
     # figure keeps its height while showing six bands instead of one
     draw_strip(fig, gs[i, 0:2], ims6, rgb, edge=C_MISS, letter="a" if i == 0 else None)
     a2 = fig.add_subplot(gs[i, 2])
@@ -1458,7 +1458,7 @@ for j, reg in enumerate(REGIONS):
     show = g if len(g) <= 50000 else g.iloc[rng.choice(len(g), 50000, replace=False)]
     # round 3: each region's density is drawn in its own tint, and the outline of every
     # field in it is traced, the way a survey-footprint figure draws its pointings. The
-    # outline is the boundary of the sky cells that actually hold catalogue rows, on a
+    # outline is the boundary of the sky cells that actually hold catalog rows, on a
     # 44 x 44 grid over the region, so it states coverage and does not invent a hull.
     tint = REGION_TINT[reg]
     ax.hexbin(
@@ -1549,7 +1549,7 @@ handles = [
         mfc="#b0b0b0",
         mec="none",
         ms=5,
-        label="catalogue rows in support",
+        label="catalog rows in support",
     ),
     Line2D(
         [],
@@ -1683,7 +1683,7 @@ print(f"smallest font on every figure: {FS} pt; widths {COL2} in (178 mm)")
 
 # ================================================================== the second schematic
 # fig_architecture.tex is a TikZ standalone like fig_pipeline.tex, but nothing recompiled it
-# when its colours changed. Round 3 compiles it here, so one command rebuilds the three
+# when its colors changed. Round 3 compiles it here, so one command rebuilds the three
 # explanatory figures and the schematic that shares their palette.
 if shutil.which("pdflatex"):
     _r = subprocess.run(

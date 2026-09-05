@@ -1,0 +1,905 @@
+{
+  "repoInventory": [
+    {
+      "file": "Barro25_LRD_NIRSpec_MBB_properties.fits",
+      "bytes": 34560,
+      "rows": 118,
+      "columns": [
+        "DJA_ID",
+        "ra",
+        "dec",
+        "zspec",
+        "uv_slope",
+        "uv_slope_err",
+        "uv_opt_color",
+        "uv_opt_color_err",
+        "logM",
+        "logM_err",
+        "Av_star",
+        "Av_star_err",
+        "T_MBB",
+        "T_MBB_err",
+        "beta_MBB",
+        "beta_MBB_err",
+        "F_lambda_peak",
+        "F_lambda_peak_err",
+        "L_BH_host_ratio",
+        "L_BH_host_ratio_err"
+      ],
+      "n_columns": 20
+    },
+    {
+      "file": "Barro25_LRD_NIRSpec_bestfit_properties.fits",
+      "bytes": 28800,
+      "rows": 118,
+      "columns": [
+        "DJA_ID",
+        "ra",
+        "dec",
+        "zspec",
+        "uv_slope",
+        "uv_slope_err",
+        "uv_opt_color",
+        "uv_opt_color_err",
+        "logM",
+        "logM_err",
+        "Av_star",
+        "Av_star_err",
+        "Av_BH",
+        "Av_BH_err"
+      ],
+      "n_columns": 14
+    },
+    {
+      "file": "README.md",
+      "bytes": 72
+    }
+  ],
+  "repoSentinelRows": [
+    {
+      "row": 32,
+      "mbb_dja_id": "-99--99",
+      "mbb_zspec": -99.0,
+      "bestfit_dja_id": "rubies-uds23-v3-147411",
+      "bestfit_zspec": 3.9638
+    }
+  ],
+  "repoRows": 118,
+  "repoHasPhotometricSample": false,
+  "repoManualAdditionFlagColumn": null,
+  "labelledObjects": 5548,
+  "repoRowsMatched": 106,
+  "repoRowsUnmatched": 12,
+  "repoMatchMaxSepArcsec": 0.1999,
+  "repoMatchMinUnmatchedSepArcsec": 137531.5,
+  "repoUnmatchedRows": [
+    {
+      "row": 90,
+      "dja_id": "uncover-v4-45924",
+      "ra": 3.584757,
+      "dec": -30.343625,
+      "zspec": 4.5195,
+      "nearest_labelled_arcsec": 137531.5
+    },
+    {
+      "row": 91,
+      "dja_id": "uncover-v4-41225",
+      "ra": 3.533994,
+      "dec": -30.353307,
+      "zspec": 6.7725,
+      "nearest_labelled_arcsec": 137680.8
+    },
+    {
+      "row": 92,
+      "dja_id": "uncover-v4-38108",
+      "ra": 3.530005,
+      "dec": -30.358017,
+      "zspec": 4.9685,
+      "nearest_labelled_arcsec": 137700.7
+    },
+    {
+      "row": 93,
+      "dja_id": "uncover-61-v4-27114",
+      "ra": 3.545783,
+      "dec": -30.395726,
+      "zspec": 5.1957,
+      "nearest_labelled_arcsec": 137738.0
+    },
+    {
+      "row": 94,
+      "dja_id": "uncover-61-v4-24968",
+      "ra": 3.620612,
+      "dec": -30.399949,
+      "zspec": 6.3468,
+      "nearest_labelled_arcsec": 137556.1
+    },
+    {
+      "row": 95,
+      "dja_id": "uncover-v4-13123",
+      "ra": 3.579833,
+      "dec": -30.401568,
+      "zspec": 7.037,
+      "nearest_labelled_arcsec": 137663.3
+    },
+    {
+      "row": 96,
+      "dja_id": "uncover-61-v4-21547",
+      "ra": 3.550837,
+      "dec": -30.406602,
+      "zspec": 5.0579,
+      "nearest_labelled_arcsec": 137747.5
+    },
+    {
+      "row": 97,
+      "dja_id": "uncover-v4-4286",
+      "ra": 3.619197,
+      "dec": -30.423267,
+      "zspec": 5.8352,
+      "nearest_labelled_arcsec": 137607.8
+    },
+    {
+      "row": 98,
+      "dja_id": "abell2744-castellano1-v4-23628",
+      "ra": 3.451975,
+      "dec": -30.326586,
+      "zspec": 7.4318,
+      "nearest_labelled_arcsec": 137835.5
+    },
+    {
+      "row": 99,
+      "dja_id": "uncover-v4-49702",
+      "ra": 3.5477,
+      "dec": -30.3337,
+      "zspec": 4.8667,
+      "nearest_labelled_arcsec": 137605.6
+    },
+    {
+      "row": 100,
+      "dja_id": "uncover-v4-28876",
+      "ra": 3.56959,
+      "dec": -30.373221,
+      "zspec": 7.0362,
+      "nearest_labelled_arcsec": 137631.0
+    },
+    {
+      "row": 101,
+      "dja_id": "uncover-61-v4-10065",
+      "ra": 3.592416,
+      "dec": -30.432824,
+      "zspec": 6.7467,
+      "nearest_labelled_arcsec": 137695.6
+    }
+  ],
+  "nPos": 151,
+  "nFlaggedInBarro25": 106,
+  "nMatchedToBarroTable": 106,
+  "flaggedNotMatched": [],
+  "matchedNotFlagged": [],
+  "manualAdditions": [
+    {
+      "key": "blagn1",
+      "name": "RUBIES-BLAGN-1 (RUBIES-UDS-BLAGN1)",
+      "barro_citation": "wang24_lrd",
+      "anchor_kind": "prefix_z",
+      "anchor": "rubies-uds",
+      "barro_row": 42,
+      "dja_id": "rubies-uds1-v4-40579",
+      "barro_zspec": 3.1136,
+      "quoted_zspec": 3.11,
+      "dz_quoted_minus_table": -0.0036,
+      "uv_opt_color": 4.68,
+      "source_id": 18015,
+      "sep_arcsec": 0.1424
+    },
+    {
+      "key": "jades12402",
+      "name": "JADES-1180-12402",
+      "barro_citation": "setton24/williams23",
+      "anchor_kind": "token",
+      "anchor": "12402",
+      "barro_row": 74,
+      "dja_id": "jades-gds-wide-v4-12402",
+      "barro_zspec": 3.1927,
+      "quoted_zspec": 3.19,
+      "dz_quoted_minus_table": -0.0027,
+      "uv_opt_color": 3.77,
+      "source_id": 209262,
+      "sep_arcsec": 0.013
+    },
+    {
+      "key": "rosetta",
+      "name": "the \"Rosetta\" AGN (1181-28074)",
+      "barro_citation": "juodzbalis24a",
+      "anchor_kind": "token",
+      "anchor": "28074",
+      "barro_row": 108,
+      "dja_id": "jades-gdn2-v4-28074",
+      "barro_zspec": 2.2735,
+      "quoted_zspec": 2.26,
+      "dz_quoted_minus_table": -0.0135,
+      "uv_opt_color": 2.91,
+      "source_id": 465479,
+      "sep_arcsec": 0.0122
+    },
+    {
+      "key": "uds144195",
+      "name": "RUBIES-UDS-144195",
+      "barro_citation": "hviding25",
+      "anchor_kind": "token",
+      "anchor": "144195",
+      "barro_row": 33,
+      "dja_id": "rubies-uds23-v4-144195",
+      "barro_zspec": 3.3548,
+      "quoted_zspec": 3.404,
+      "dz_quoted_minus_table": 0.0492,
+      "uv_opt_color": 3.66,
+      "source_id": 59037,
+      "sep_arcsec": 0.0666
+    },
+    {
+      "key": "cliff",
+      "name": "The Cliff (RUBIES-UDS-154183)",
+      "barro_citation": "degraaff25",
+      "anchor_kind": "token",
+      "anchor": "154183",
+      "barro_row": 29,
+      "dja_id": "rubies-uds31-v4-154183",
+      "barro_zspec": 3.6048,
+      "quoted_zspec": 3.55,
+      "dz_quoted_minus_table": -0.0548,
+      "uv_opt_color": 4.66,
+      "source_id": 101065,
+      "sep_arcsec": 0.0621
+    },
+    {
+      "key": "mombhstar",
+      "name": "MoM-BH*-1",
+      "barro_citation": "naidu25",
+      "anchor_kind": "prefix_color",
+      "anchor": "mom",
+      "barro_row": 54,
+      "dja_id": "mom-uds01-v4-150135",
+      "barro_zspec": 7.9132,
+      "quoted_zspec": 7.76,
+      "dz_quoted_minus_table": -0.1532,
+      "uv_opt_color": 4.55,
+      "source_id": 94497,
+      "sep_arcsec": 0.0688
+    },
+    {
+      "key": "capersbhstar",
+      "name": "CAPERS-BH*-1 (CAPERS-119334)",
+      "barro_citation": "taylor25",
+      "anchor_kind": "token",
+      "anchor": "119334",
+      "barro_row": 88,
+      "dja_id": "capers-cos10-v4-119334",
+      "barro_zspec": 9.2675,
+      "quoted_zspec": 9.29,
+      "dz_quoted_minus_table": 0.0225,
+      "uv_opt_color": 4.1,
+      "source_id": 393440,
+      "sep_arcsec": 0.0254
+    }
+  ],
+  "nManualAdditions": 7,
+  "nManualAdditionsInFields": 7,
+  "bhStarColours": {
+    "cliff": 4.66,
+    "mombhstar": 4.55,
+    "capersbhstar": 4.1
+  },
+  "checks": [
+    {
+      "quantity": "positives",
+      "numbers_json_key": "nPos",
+      "value": 151,
+      "published": 151
+    },
+    {
+      "quantity": "rule-missed",
+      "numbers_json_key": "nRuleMissed",
+      "value": 44,
+      "published": 44
+    },
+    {
+      "quantity": "union recovery end to end",
+      "numbers_json_key": "unionRecallEnd",
+      "value": 107,
+      "published": 107
+    },
+    {
+      "quantity": "union recovery in support",
+      "numbers_json_key": "unionRecallSupport",
+      "value": 106,
+      "published": 106
+    },
+    {
+      "quantity": "floor",
+      "numbers_json_key": "nNoSelection",
+      "value": 33,
+      "published": 33
+    },
+    {
+      "quantity": "floor in GOODS-North",
+      "numbers_json_key": "nFloorInGOODSN",
+      "value": 4,
+      "published": 4
+    },
+    {
+      "quantity": "Barro list members among the positives",
+      "numbers_json_key": "barroListN",
+      "value": 106,
+      "published": 106
+    },
+    {
+      "quantity": "learned recovery end to end",
+      "numbers_json_key": "modelRecallEnd",
+      "value": 123,
+      "published": 123
+    },
+    {
+      "quantity": "paired both",
+      "numbers_json_key": "pairedBoth",
+      "value": 103,
+      "published": 103
+    },
+    {
+      "quantity": "paired learned only",
+      "numbers_json_key": "pairedModelOnly",
+      "value": 20,
+      "published": 20
+    },
+    {
+      "quantity": "paired rules only end to end",
+      "numbers_json_key": "pairedUnionOnlyEnd",
+      "value": 4,
+      "published": 4
+    },
+    {
+      "quantity": "paired neither end to end",
+      "numbers_json_key": "pairedNeitherEnd",
+      "value": 24,
+      "published": 24
+    },
+    {
+      "quantity": "positives, ZgeFour",
+      "numbers_json_key": "nPosZgeFour",
+      "value": 123,
+      "published": 123
+    },
+    {
+      "quantity": "published floor, ZgeFour",
+      "numbers_json_key": "floorZgeFour",
+      "value": 23,
+      "published": 23
+    },
+    {
+      "quantity": "positives, ZinRange",
+      "numbers_json_key": "nPosZinRange",
+      "value": 147,
+      "published": 147
+    },
+    {
+      "quantity": "published floor, ZinRange",
+      "numbers_json_key": "floorZinRange",
+      "value": 31,
+      "published": 31
+    },
+    {
+      "quantity": "positives, TwoPlus",
+      "numbers_json_key": "nPosTwoPlus",
+      "value": 58,
+      "published": 58
+    },
+    {
+      "quantity": "published floor, TwoPlus",
+      "numbers_json_key": "floorTwoPlus",
+      "value": 5,
+      "published": 5
+    },
+    {
+      "quantity": "rule-missed recovered by the learned selection",
+      "numbers_json_key": "modelRuleMissed",
+      "value": 20,
+      "published": 20
+    }
+  ],
+  "nPosInBarroPhot": 99,
+  "nPosInBarroPhotPct": 65.6,
+  "nPosInBarroPhotExtra": null,
+  "nPosInBarroPhotExtraNote": "not computable: the public repository contains the 118-row spectroscopic table only, not the roughly one thousand photometric LRDs of Barro et al. Section 3.1",
+  "nRuleMissedInBarroPhot": 34,
+  "nRuleMissedInBarroPhotPct": 77.3,
+  "floorBarro": 8,
+  "floorBarroPct": 5.3,
+  "floorPublished": 33,
+  "floorMovedByBarro": 25,
+  "nPosDenAll": 151,
+  "nPosZgeFour": 123,
+  "floorBarroZgeFour": 6,
+  "floorBarroZgeFourPct": 4.9,
+  "floorPublishedZgeFour": 23,
+  "floorMovedByBarroZgeFour": 17,
+  "nPosDenZgeFour": 123,
+  "nPosZinRange": 147,
+  "floorBarroZinRange": 6,
+  "floorBarroZinRangePct": 4.1,
+  "floorPublishedZinRange": 31,
+  "floorMovedByBarroZinRange": 25,
+  "nPosDenZinRange": 147,
+  "nPosTwoPlus": 58,
+  "floorBarroTwoPlus": 1,
+  "floorBarroTwoPlusPct": 1.7,
+  "floorPublishedTwoPlus": 5,
+  "floorMovedByBarroTwoPlus": 4,
+  "nPosDenTwoPlus": 58,
+  "floorBarroInGOODSN": 1,
+  "floorPublishedInGOODSN": 4,
+  "floorBarroByRegion": {
+    "CEERS": 2,
+    "COSMOS": 2,
+    "GOODS-N": 1,
+    "GOODS-S": 1,
+    "UDS": 2
+  },
+  "specCrit": {
+    "nPosSpecCrit": 92,
+    "nPosSpecCritSupport": 89,
+    "unionRecallEnd": 77,
+    "unionRecallEndPct": 83.7,
+    "unionRecallSupport": 76,
+    "unionRecallSupportPct": 85.4,
+    "nRuleMissed": 15,
+    "nRuleMissedPct": 16.3,
+    "nRuleMissedSupport": 13,
+    "floorPublished": 11,
+    "floorPublishedPct": 12.0,
+    "floorBarro": 7,
+    "floorBarroPct": 7.6,
+    "modelRecallEnd": 79,
+    "modelRecallEndPct": 85.9,
+    "modelRecallSupport": 79,
+    "modelGainEnd": 2,
+    "pairedBothEnd": 74,
+    "pairedLearnedOnlyEnd": 5,
+    "pairedRulesOnlyEnd": 3,
+    "pairedNeitherEnd": 10,
+    "pairedBothSupport": 74,
+    "pairedLearnedOnlySupport": 5,
+    "pairedRulesOnlySupport": 2,
+    "pairedNeitherSupport": 8,
+    "nInHvidingA1": 36,
+    "nInDeGraaff": 86,
+    "nInBoth": 30,
+    "nAlsoInBarro": 49,
+    "nAlsoInBarroPhot": 42
+  },
+  "numbers": {
+    "nPos": 151,
+    "nRuleMissed": 44,
+    "nRuleMissedRecoveredByModel": 20,
+    "nRuleMissedNotRecoveredByModel": 24,
+    "nPosInBarroPhot": 99,
+    "nRuleMissedInBarroPhot": 34,
+    "nRuleMissedNotInBarroPhot": 10,
+    "nRuleMissedRecoveredInBarroPhot": 19,
+    "nRuleMissedRecoveredNotInBarroPhot": 1,
+    "nRuleMissedNotRecoveredInBarroPhot": 15,
+    "nRuleMissedNotRecoveredNotInBarroPhot": 9,
+    "nRuleMissedRecoveredInBarroPhotPct": 95.0,
+    "nRuleMissedNotRecoveredInBarroPhotPct": 62.5,
+    "floorPublished": 33,
+    "floorBarro": 8,
+    "floorBarroRecoveredByModel": 1,
+    "floorBarroNotRecoveredByModel": 7,
+    "floorPublishedRecoveredByModel": 15,
+    "floorBarroNotRecoveredByModelPct": 4.6
+  },
+  "floorBarroObjects": [
+    {
+      "source_id": 583031,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 66131,
+      "ra": 214.895545,
+      "dec": 52.906722,
+      "z_spec": 4.8042,
+      "z_spec_source": "list",
+      "lists": [
+        "de Graaff"
+      ],
+      "n_lists": 1,
+      "in_hviding25_A1": false,
+      "in_barro25": false,
+      "in_degraaff26": true,
+      "is_barro_manual_addition": false,
+      "in_support": false,
+      "learned_selected": false
+    },
+    {
+      "source_id": 589379,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 72397,
+      "ra": 214.917988,
+      "dec": 52.93725,
+      "z_spec": 4.8926,
+      "z_spec_source": "list",
+      "lists": [
+        "de Graaff"
+      ],
+      "n_lists": 1,
+      "in_hviding25_A1": false,
+      "in_barro25": false,
+      "in_degraaff26": true,
+      "is_barro_manual_addition": false,
+      "in_support": true,
+      "learned_selected": false
+    },
+    {
+      "source_id": 389457,
+      "field": "primer-cosmos-west",
+      "region": "COSMOS",
+      "catalogue_id": 89952,
+      "ra": 150.132193,
+      "dec": 2.380442,
+      "z_spec": 5.205,
+      "z_spec_source": "list",
+      "lists": [
+        "de Graaff"
+      ],
+      "n_lists": 1,
+      "in_hviding25_A1": false,
+      "in_barro25": false,
+      "in_degraaff26": true,
+      "is_barro_manual_addition": false,
+      "in_support": true,
+      "learned_selected": false
+    },
+    {
+      "source_id": 309737,
+      "field": "primer-cosmos-west",
+      "region": "COSMOS",
+      "catalogue_id": 56264,
+      "ra": 150.064929,
+      "dec": 2.278061,
+      "z_spec": 5.5801,
+      "z_spec_source": "archive",
+      "lists": [],
+      "n_lists": 0,
+      "in_hviding25_A1": false,
+      "in_barro25": false,
+      "in_degraaff26": false,
+      "is_barro_manual_addition": false,
+      "in_support": true,
+      "learned_selected": false
+    },
+    {
+      "source_id": 465479,
+      "field": "gdn",
+      "region": "GOODS-N",
+      "catalogue_id": 67601,
+      "ra": 189.064581,
+      "dec": 62.27382,
+      "z_spec": 2.2735,
+      "z_spec_source": "list",
+      "lists": [
+        "Barro",
+        "de Graaff"
+      ],
+      "n_lists": 2,
+      "in_hviding25_A1": false,
+      "in_barro25": true,
+      "in_degraaff26": true,
+      "is_barro_manual_addition": true,
+      "in_support": true,
+      "learned_selected": false
+    },
+    {
+      "source_id": 184343,
+      "field": "gds",
+      "region": "GOODS-S",
+      "catalogue_id": 67753,
+      "ra": 53.089,
+      "dec": -27.738203,
+      "z_spec": 4.8245,
+      "z_spec_source": "list",
+      "lists": [
+        "de Graaff"
+      ],
+      "n_lists": 1,
+      "in_hviding25_A1": false,
+      "in_barro25": false,
+      "in_degraaff26": true,
+      "is_barro_manual_addition": false,
+      "in_support": false,
+      "learned_selected": false
+    },
+    {
+      "source_id": 27975,
+      "field": "primer-uds-south",
+      "region": "UDS",
+      "catalogue_id": 15006,
+      "ra": 34.268266,
+      "dec": -5.295208,
+      "z_spec": 2.5857,
+      "z_spec_source": "list",
+      "lists": [
+        "de Graaff"
+      ],
+      "n_lists": 1,
+      "in_hviding25_A1": false,
+      "in_barro25": false,
+      "in_degraaff26": true,
+      "is_barro_manual_addition": false,
+      "in_support": true,
+      "learned_selected": true
+    },
+    {
+      "source_id": 27181,
+      "field": "primer-uds-south",
+      "region": "UDS",
+      "catalogue_id": 38479,
+      "ra": 34.266438,
+      "dec": -5.256396,
+      "z_spec": 6.63,
+      "z_spec_source": "list",
+      "lists": [
+        "Hviding A1"
+      ],
+      "n_lists": 1,
+      "in_hviding25_A1": true,
+      "in_barro25": false,
+      "in_degraaff26": false,
+      "is_barro_manual_addition": false,
+      "in_support": true,
+      "learned_selected": false
+    }
+  ],
+  "floorRemovedByBarro": [
+    {
+      "source_id": 569893,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 55163,
+      "z_spec": 3.5259,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 563101,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 20143,
+      "z_spec": 3.6865,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 575904,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 51045,
+      "z_spec": 5.106,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 606709,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 58886,
+      "z_spec": 5.2002,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 607094,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 19938,
+      "z_spec": 5.2325,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 597534,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 74332,
+      "z_spec": 5.6204,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 618550,
+      "field": "ceers-full",
+      "region": "CEERS",
+      "catalogue_id": 18848,
+      "z_spec": 7.198,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 414231,
+      "field": "primer-cosmos-east",
+      "region": "COSMOS",
+      "catalogue_id": 83388,
+      "z_spec": 3.7151,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 381318,
+      "field": "primer-cosmos-east",
+      "region": "COSMOS",
+      "catalogue_id": 37681,
+      "z_spec": 4.4422,
+      "in_hviding25_A1": false,
+      "in_degraaff26": true
+    },
+    {
+      "source_id": 519713,
+      "field": "gdn",
+      "region": "GOODS-N",
+      "catalogue_id": 24477,
+      "z_spec": 3.4361,
+      "in_hviding25_A1": false,
+      "in_degraaff26": true
+    },
+    {
+      "source_id": 506785,
+      "field": "gdn",
+      "region": "GOODS-N",
+      "catalogue_id": 54665,
+      "z_spec": 3.9213,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 519381,
+      "field": "gdn",
+      "region": "GOODS-N",
+      "catalogue_id": 6046,
+      "z_spec": 4.8523,
+      "in_hviding25_A1": false,
+      "in_degraaff26": true
+    },
+    {
+      "source_id": 189430,
+      "field": "gds-sw",
+      "region": "GOODS-S",
+      "catalogue_id": 12550,
+      "z_spec": 5.0744,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 215176,
+      "field": "gds",
+      "region": "GOODS-S",
+      "catalogue_id": 49351,
+      "z_spec": 5.9221,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 206765,
+      "field": "gds",
+      "region": "GOODS-S",
+      "catalogue_id": 24555,
+      "z_spec": 5.9431,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 202262,
+      "field": "gds",
+      "region": "GOODS-S",
+      "catalogue_id": 11107,
+      "z_spec": 7.6508,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 134898,
+      "field": "primer-uds-north",
+      "region": "UDS",
+      "catalogue_id": 25768,
+      "z_spec": 3.4724,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 66039,
+      "field": "primer-uds-south",
+      "region": "UDS",
+      "catalogue_id": 23438,
+      "z_spec": 3.686,
+      "in_hviding25_A1": true,
+      "in_degraaff26": true
+    },
+    {
+      "source_id": 149161,
+      "field": "primer-uds-north",
+      "region": "UDS",
+      "catalogue_id": 8768,
+      "z_spec": 3.7009,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 2583,
+      "field": "primer-uds-north",
+      "region": "UDS",
+      "catalogue_id": 74752,
+      "z_spec": 6.0457,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 31845,
+      "field": "primer-uds-south",
+      "region": "UDS",
+      "catalogue_id": 65705,
+      "z_spec": 6.1099,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 11111,
+      "field": "primer-uds-north",
+      "region": "UDS",
+      "catalogue_id": 36569,
+      "z_spec": 6.6317,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 145455,
+      "field": "primer-uds-south",
+      "region": "UDS",
+      "catalogue_id": 37427,
+      "z_spec": 6.9629,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 47582,
+      "field": "primer-uds-north",
+      "region": "UDS",
+      "catalogue_id": 49209,
+      "z_spec": 7.2385,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    },
+    {
+      "source_id": 78552,
+      "field": "primer-uds-north",
+      "region": "UDS",
+      "catalogue_id": 46223,
+      "z_spec": 8.2842,
+      "in_hviding25_A1": false,
+      "in_degraaff26": false
+    }
+  ],
+  "nRuleMissedRecovered": 20,
+  "nRuleMissedNotRecovered": 24,
+  "nRuleMissedRecoveredInBarroPhot": 19,
+  "nRuleMissedNotRecoveredInBarroPhot": 15,
+  "nRuleMissedRecoveredInMatchedCat": 5,
+  "nRuleMissedRecoveredInAnyPublished": 19,
+  "floorBarroRecoveredByModel": 1,
+  "floorBarroInSupport": 6,
+  "nPosInAnyMatchedSelection": 132,
+  "nPosInNoMatchedSelection": 19,
+  "_provenance": {
+    "repo_url": "https://github.com/guillermobc/Barro25",
+    "repo_commit": "e70d8ac577a2e33680d9d27557b5b7ced598a900",
+    "repo_path": "inputs/barro25_repo (the Barro et al. 2025 GitHub repository as cloned)",
+    "match_radius_arcsec": 0.5,
+    "manual_addition_source": "Barro et al. (2025) arXiv source ms.tex lines 299, 520, 529, 550",
+    "definitions_from": "paper_recovery/build_numbers.py (line numbers cited in the source)"
+  }
+}

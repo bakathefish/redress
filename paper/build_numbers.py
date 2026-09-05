@@ -526,8 +526,8 @@ N["randRedSlopePct"] = round(100 * float((rand.slope_red < 0).mean()), 0)
 N["followupMedianMag"] = round(float(c[c.followup_tier].mag_f444w.median()), 1)
 
 # ================================================================ round 1 review additions
-# Everything below was added for the round 1 referee reports of the author's review record
-# (not released), rulings R1 to R11. Nothing above this line changed. Each macro
+# Everything below was added for the round 1 referee reports (paper/reviews/
+# DIRECTOR_round1.md, rulings R1 to R11). Nothing above this line changed. Each macro
 # carries the table of record it is read from and the exact expression that defines it.
 
 
@@ -734,21 +734,22 @@ N["modelAnchorExtraWithAmb"] = (N["modelAnchors"] + N["ambModelSelected"]) - (
 # --- what the negative anchors actually are (A4, R6) ------------------------------------
 # The anchor rule in recovery/build_labels.py is
 #     notv = d.vshaped_spec.astype("boolean").eq(False).fillna(False); neg = notv & ~d.in_any_list
-# so an anchor is a source whose v3 `vshaped_spec` is exactly False. That column is built by
-# the census code of the author's earlier work (not released) as an OR of the per-record
-# `v_shaped` verdict over the source's frozen eligible records, NA where the source holds
-# none; every frozen eligible record is an unlensed secure (grade >= 3) PRISM spectrum at
-# z > 3. That code sets `v_shaped` False whenever `testable` is False, so vshaped_spec False
-# mixes "tested and failed" with "eligible but the fit was refused". The v3 `testable` column
-# splits the two. (The features/labels columns spec_tested, in_census and has_spec come from
-# a different, row-level cross-match in the same earlier work and do not gate the anchors.)
+# so an anchor is a source whose v3 `vshaped_spec` is exactly False. That column is built in
+# src/ember/v3/sources.py gate_labels as an OR of lambda_results `v_shaped` over the source's
+# frozen eligible records, NA where the source holds none; every frozen eligible record is an
+# unlensed secure (grade >= 3) PRISM spectrum at z > 3. src/ember/spectral_labels.py
+# vshape_verdict sets v_shaped False whenever `testable` is False, so vshaped_spec False mixes
+# "tested and failed" with "eligible but the fit was refused". The v3 `testable` column splits
+# the two. (The features/labels columns spec_tested, in_census and has_spec come from a
+# different, row-level match in the author's private cross-match script and do not gate the
+# anchors; see paper/reviews/round1_facts.md.)
 #
 # ROUND 3, Reviewer C finding 4: the split is now read from recovery/anchor_test_status.csv,
 # a released table built by recovery/v4_round3_analysis.py, so a reader can reproduce these
 # six macros from the release alone. The v3 parquet is still read here and the two are asserted
 # equal, so the export can never drift from the table it was cut from.
 s3 = pd.read_csv(
-    os.path.join(V, "anchor_test_status.csv"),
+    os.path.join(ROOT, "recovery", "anchor_test_status.csv"),
     usecols=["source_id", "testable"],
 ).set_index("source_id")
 _s3v3 = pd.read_parquet(
@@ -1008,7 +1009,8 @@ N["setUnionRows"] = N["setBoth"] + N["setModelOnly"] + N["setUnionOnly"]
 # written above: nCensusSpectra (the sources the V-shape test was run on) = nVshapePass +
 # nVshapeFail, and nVshapeFail = nVshapeFailInList + nNeg, both asserted at their definition.
 # An earlier draft of this block defined a second, identical set of names; they were removed
-# so the paper cannot quote two macros for one quantity.
+# so the paper cannot quote two macros for one quantity
+# (paper/reviews/round1_facts.md sections 1.4 and 9.1).
 
 # --- the ambiguous sources counted as anchors, as totals (A7, ruling R7) -----------------
 N["unionAnchorsWithAmb"] = N["unionAnchors"] + N["ambUnionSelected"]
@@ -1082,7 +1084,7 @@ N["unionBurdenRegionMax"] = round(max(_ubf), 3)
 
 # --- the inner selection band and the argmax cell (B6, B30) ------------------------------
 # train_results.json folds[region]: best_anchor and best_trees are the argmax cell, one_se the
-# width of the band the rule admits, in case-control PR-AUC over the four inner folds.
+# width of the band the rule admits, in precision-recall area over the four inner folds.
 _fj = [tr["folds"][r] for r in REG]
 N["innerBestAnchor"] = sorted({x["best_anchor"] for x in _fj})[0]
 assert len({x["best_anchor"] for x in _fj}) == 1, "argmax anchor differs between folds"
@@ -1704,8 +1706,7 @@ N["floorNotInDeGraaffVtest"] = int((~_flt.in_degraaff26.astype(bool)).sum())
 
 # --- T3. the published-catalogue census ---------------------------------------------------
 # Perger et al. 2025 Sect. 2 names the seventeen catalogues its 919 objects were collected
-# from, and its machine-readable table carries, per object, the ADS bibcode of the paper it
-# was first published in.
+# from, and its machine-readable table carries the discovery paper's ADS bibcode per object.
 # Kokorev et al. 2024 and Akins et al. 2024 are both among them, so the compilation already
 # carries the two catalogues Reviewer A asked for. pergerSources is the list, in the order
 # the paper prints it.
@@ -1719,7 +1720,7 @@ N["pergerSources"] = (
 )
 _pcount = J("round3_analysis_counts.json")["perger_by_paper"]
 # rows of the 919 the compilation attributes to each catalogue, and how many of those fall
-# inside the nine fields. The compilation lists each object once under one originating paper,
+# inside the nine fields. The compilation lists each object once under one discovery paper,
 # so these are lower bounds on what each catalogue contributes, which is why the floor is
 # reported as an upper bound on the count in no published selection.
 N["pergerRowsKokorev"] = int(_pcount["kokorev2024"]["rows"])
@@ -1856,7 +1857,7 @@ assert (
 N["matchedGapPrimaryUnion"] = N["primaryMatchedRecall"] - N["unionRecallSupport"]
 N["matchedGapImitationUnion"] = N["imitationMatchedRecall"] - N["unionRecallSupport"]
 
-# --- B3-12. the base rate of the case-control PR-AUC --------------------------------------
+# --- B3-12. the base rate of the average precision ----------------------------------------
 # modelPrAuc is computed between the in-support positives and the in-support anchors, so its
 # base rate is nPosSupport of nPosSupport + nNegSupport.
 N["prAucBaseRatePct"] = round(
@@ -1988,6 +1989,158 @@ assert N["kocevskiCatAboveN"] == 207, N["kocevskiCatAboveN"]
 assert N["kocevskiCatAboveSel"] == 98, N["kocevskiCatAboveSel"]
 
 # ---------------------------------------------------------------- write
+# --- round 5 (publication rewrite) ---
+# Subset counts and tests computed by paper/round5_subsets.py and the corrected
+# floor computed by paper/round5_barro_membership.py, both deterministic scripts
+# over the tables of record (rulings: paper/DIRECTOR_round5.md). Every value
+# that must agree with a macro above is asserted against it here.
+_R5 = json.load(open(os.path.join(ROOT, "recovery", "round5", "subsets.json")))["numbers"]
+assert _R5["hvA1Rows"] == N["listHvidingA"]
+assert _R5["hvA1AllKocevski"] == N["kocevskiModuleOfHviding"]
+assert _R5["hvA1AllKokorev"] == N["kokorevModuleOfHviding"]
+assert _R5["hvA1AllBarro"] == N["barroModuleOfHviding"]
+assert _R5["hvA1AllUnion"] == N["unionCatalogHvidingA"]
+assert _R5["mcnemarModelUnionBCheck"] == N["mcnemarModelUnionB"]
+assert _R5["mcnemarModelUnionCCheck"] == N["mcnemarModelUnionC"]
+assert _R5["blReplicaMatchedRecallCheck"] == N["blReplicaMatchedRecall"]
+assert _R5["blAblateSizeMatchedRecallCheck"] == N["blAblateSizeMatchedRecall"]
+assert (
+    _R5["mcnemarReplicaNoSizeB"] - _R5["mcnemarReplicaNoSizeC"]
+    == N["blReplicaMatchedRecall"] - N["blAblateSizeMatchedRecall"]
+)
+assert _R5["unionSixSelected"] + _R5["unionSixSelectedFewer"] == N["unionSelected"]
+# Hviding et al. (2025) table A1 objects at their own magnitude limit, F444W < 26.5
+N["hvidingBrightN"] = _R5["hvA1BrightN"]
+N["hvidingBrightKocevski"] = _R5["hvA1BrightKocevski"]
+N["hvidingBrightKokorev"] = _R5["hvA1BrightKokorev"]
+N["hvidingBrightBarro"] = _R5["hvA1BrightBarro"]
+N["hvidingBrightUnion"] = _R5["hvA1BrightUnion"]
+for _k in ("Kocevski", "Kokorev", "Barro", "Union"):
+    N["hvidingBright%sPct" % _k] = round(100.0 * N["hvidingBright%s" % _k] / N["hvidingBrightN"], 1)
+# positives brighter than F444W = 26, and on the footing of Pan et al. (2026)
+N["nPosBrightTwentySix"] = _R5["nPosBrightTwentySix"]
+N["unionRecallBrightTwentySix"] = _R5["unionRecallBrightTwentySix"]
+N["nRuleMissedBrightTwentySix"] = _R5["nRuleMissedBrightTwentySix"]
+N["modelRecallBrightTwentySix"] = _R5["modelRecallBrightTwentySix"]
+N["unionRecallBrightTwentySixPct"] = round(100.0 * _R5["unionRecallBrightTwentySix"] / _R5["nPosBrightTwentySix"], 1)
+N["modelRecallBrightTwentySixPct"] = round(100.0 * _R5["modelRecallBrightTwentySix"] / _R5["nPosBrightTwentySix"], 1)
+N["nPosBrightPan"] = _R5["nPosBrightPan"]
+N["unionRecallBrightPan"] = _R5["unionRecallBrightPan"]
+N["modelRecallBrightPan"] = _R5["modelRecallBrightPan"]
+N["unionRecallBrightPanPct"] = round(100.0 * _R5["unionRecallBrightPan"] / _R5["nPosBrightPan"], 1)
+# the union without kocevski24, and with the published Kocevski catalogue in its place
+N["unionSixSelected"] = _R5["unionSixSelected"]
+N["unionSixSelectedFewer"] = _R5["unionSixSelectedFewer"]
+N["unionSixRecallEnd"] = _R5["unionSixRecallEnd"]
+N["unionSixRecallSupport"] = _R5["unionSixRecallSupport"]
+N["unionSixAnchors"] = _R5["unionSixAnchors"]
+N["modelAtUnionSixBurden"] = _R5["modelAtUnionSixBurden"]
+N["unionKocCatSelected"] = _R5["unionKocCatSelected"]
+N["unionKocCatRecallEnd"] = _R5["unionKocCatRecallEnd"]
+# paired test, eight-bag replica against the no-size ablation, both at matched burden
+N["mcnemarReplicaNoSizeB"] = _R5["mcnemarReplicaNoSizeB"]
+N["mcnemarReplicaNoSizeC"] = _R5["mcnemarReplicaNoSizeC"]
+N["mcnemarReplicaNoSizeP"] = pfmt(mcnemar_p(_R5["mcnemarReplicaNoSizeB"], _R5["mcnemarReplicaNoSizeC"]))
+assert N["mcnemarReplicaNoSizeP"] == _R5["mcnemarReplicaNoSizeP"]
+# the two pairings of Reviewer B's rulings M1 and M3, printed as counts only (no p value)
+N["mcnemarAnchorHalfPrimaryB"] = _R5["mcnemarAnchorHalfPrimaryB"]
+N["mcnemarAnchorHalfPrimaryC"] = _R5["mcnemarAnchorHalfPrimaryC"]
+N["mcnemarNonCompactB"] = _R5["mcnemarNonCompactB"]
+N["mcnemarNonCompactC"] = _R5["mcnemarNonCompactC"]
+assert (
+    N["mcnemarAnchorHalfPrimaryB"] - N["mcnemarAnchorHalfPrimaryC"]
+    == N["blAnchorHalfMatchedRecall"] - N["primaryMatchedRecall"]
+)
+assert (
+    N["mcnemarNonCompactB"] - N["mcnemarNonCompactC"]
+    == N["modelRecallNonCompact"] - N["unionRecallNonCompact"]
+)
+# the pooled out-of-fold ranking cut at the union's own row count (Reviewer B, m11)
+N["modelPooledAtUnionBurden"] = _R5["modelAtUnionBurdenPooled"]
+# The Bonferroni family is every hypothesis test the paper prints a p value for: six exact
+# McNemar tests, two Fisher exact tests, the sign test and the three Mann-Whitney tests of
+# Section 3.5. The blue-bin McNemar of Section 5.2, the anchor-weight pairing of Section
+# 4.3, the non-compact pairing of Section 7.3 and the spectroscopic-criterion pairing of
+# Section 3.4 are printed as counts only and are not in it.
+_R5_TESTS = [
+    "mcnemar primary: learned vs union, in support",
+    "mcnemar imitation vs union, matched",
+    "mcnemar primary vs imitation, matched",
+    "mcnemar primary vs imitation, rule-missed, matched",
+    "mcnemar primary vs positives-against-anchors",
+    "mcnemar replica vs no-size, matched",
+    "fisher compactness, missed vs kept",
+    "fisher V-shape pass, missed vs kept",
+    "sign test, five regions",
+    "mann-whitney colour",
+    "mann-whitney magnitude",
+    "mann-whitney colour on compact",
+]
+N["bonferroniFamily"] = len(_R5_TESTS)
+N["bonferroniFamilyWord"] = {12: "twelve"}[len(_R5_TESTS)]
+N["bonferroniHeadlineP"] = pfmt(min(1.0, len(_R5_TESTS) * mcnemar_p(N["mcnemarModelUnionB"], N["mcnemarModelUnionC"])))
+assert float(N["bonferroniHeadlineP"]) == float(_R5["bonferroniHeadlinePTwelve"])
+# the corrected floor (round5_barro_membership.py), asserted against the record it reads
+_R5B = json.load(open(os.path.join(ROOT, "recovery", "round5", "barro_membership.json")))
+assert _R5B["floorPublished"] == N["nNoSelection"]
+assert _R5B["floorPublishedZgeFour"] == N["floorZgeFour"]
+assert _R5B["floorPublishedZinRange"] == N["floorZinRange"]
+assert _R5B["floorPublishedTwoPlus"] == N["floorTwoPlus"]
+assert _R5B["floorPublishedInGOODSN"] == N["nFloorInGOODSN"]
+assert _R5B["nFlaggedInBarro25"] == N["listBarro"]
+assert _R5B["nPosZgeFour"] == N["nPosZgeFour"] and _R5B["nPosTwoPlus"] == N["nPosTwoPlus"]
+assert _R5B["nPosInBarroPhot"] == N["listBarro"] - _R5B["nManualAdditionsInFields"]
+for _k in (
+    "nPosInBarroPhot", "nPosInBarroPhotPct", "nRuleMissedInBarroPhot",
+    "nRuleMissedInBarroPhotPct", "floorBarro", "floorBarroPct", "floorMovedByBarro",
+    "floorBarroZgeFour", "floorBarroZgeFourPct", "floorBarroZinRange", "floorBarroZinRangePct",
+    "floorBarroTwoPlus", "floorBarroTwoPlusPct", "floorBarroInGOODSN", "nManualAdditions",
+    "nRuleMissedRecovered", "nRuleMissedRecoveredInBarroPhot",
+    "nRuleMissedRecoveredInMatchedCat", "nRuleMissedRecoveredInAnyPublished",
+    "floorBarroRecoveredByModel", "floorBarroInSupport", "nPosInAnyMatchedSelection",
+    "nPosInNoMatchedSelection",
+):
+    N[_k] = _R5B[_k]
+assert N["nRuleMissedRecovered"] == N["modelRuleMissed"]
+assert N["nRuleMissedRecoveredInAnyPublished"] + N["floorBarroRecoveredByModel"] == N["modelRuleMissed"]
+assert N["nPosInAnyMatchedSelection"] + N["nPosInNoMatchedSelection"] == N["nPos"]
+assert N["nPosInNoMatchedSelection"] >= N["floorBarro"]
+assert N["floorMovedByBarro"] + N["floorBarro"] == N["nNoSelection"]
+# the two lists with a spectroscopic LRD criterion (Hviding et al. 2025 table A1 and
+# de Graaff et al. 2026), read the same way as the full positive set
+_S = _R5B["specCrit"]
+N["nPosSpecCrit"] = _S["nPosSpecCrit"]
+N["nPosSpecCritSupport"] = _S["nPosSpecCritSupport"]
+N["unionRecallSpecCrit"] = _S["unionRecallEnd"]
+N["unionRecallSpecCritPct"] = _S["unionRecallEndPct"]
+N["unionRecallSpecCritSupport"] = _S["unionRecallSupport"]
+N["nRuleMissedSpecCrit"] = _S["nRuleMissed"]
+N["nRuleMissedSpecCritPct"] = _S["nRuleMissedPct"]
+N["floorPublishedSpecCrit"] = _S["floorPublished"]
+N["floorBarroSpecCrit"] = _S["floorBarro"]
+N["floorBarroSpecCritPct"] = _S["floorBarroPct"]
+N["modelRecallSpecCrit"] = _S["modelRecallEnd"]
+N["modelRecallSpecCritPct"] = _S["modelRecallEndPct"]
+N["pairedBothSpecCrit"] = _S["pairedBothEnd"]
+N["pairedModelOnlySpecCrit"] = _S["pairedLearnedOnlyEnd"]
+N["pairedUnionOnlySpecCrit"] = _S["pairedRulesOnlyEnd"]
+N["pairedNeitherSpecCrit"] = _S["pairedNeitherEnd"]
+N["pairedModelOnlySpecCritSupport"] = _S["pairedLearnedOnlySupport"]
+N["pairedUnionOnlySpecCritSupport"] = _S["pairedRulesOnlySupport"]
+N["nSpecCritAlsoInBarro"] = _S["nAlsoInBarro"]
+N["nSpecCritInBarroPhot"] = _S["nAlsoInBarroPhot"]
+assert _S["pairedBothEnd"] + _S["pairedLearnedOnlyEnd"] + _S["pairedRulesOnlyEnd"] + _S["pairedNeitherEnd"] == _S["nPosSpecCrit"]
+assert _S["nInHvidingA1"] == N["listHvidingA"] and _S["nInDeGraaff"] == N["listDeGraaff"]
+assert _S["unionRecallEnd"] + _S["nRuleMissed"] == _S["nPosSpecCrit"]
+# words for the three headline fractions, each asserted against the percentage it stands for
+assert 27.0 <= N["unionMissPct"] <= 32.0
+N["unionMissFractionWords"] = "three in ten"
+assert 4.0 <= N["floorBarroPct"] <= 6.0
+N["floorBarroFractionWords"] = "one in twenty"
+assert 15.0 <= N["nRuleMissedSpecCritPct"] <= 18.0
+N["specCritMissFractionWords"] = "one in six"
+# --- end round 5 ---
+
 json.dump(N, open(os.path.join(OUT, "numbers.json"), "w"), indent=1, default=float)
 
 

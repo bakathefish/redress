@@ -3,3 +3,4 @@ __pycache__/
 .pytest_cache/
 .hypothesis/
 recovery/degraaff2026_zenodo_21977747_v2.fits
+inputs/

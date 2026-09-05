@@ -1,6 +1,6 @@
 # v4 recovery classifier: out-of-fold evaluation_v34
 
-Positives: 151 spectroscopic LRDs, 147 inside the seven-band support (4 abstentions counted as misses end to end). Rule-missed: 44 (41 in support). Confirmed non-LRDs in support: 4979. Support rows: 466419. Union burden: 1133 selections (0.243%).
+Positives: 151 spectroscopic LRDs, 147 inside the seven-band support (4 abstentions counted as misses end to end). Rule-missed: 44 (41 in support). Spectroscopic comparison objects not established as LRDs (anchors) in support: 4979. Support rows: 466419. Union burden: 1133 selections (0.243%).
 
 | selection | selected | recall of 147 | end-to-end recall | rule-missed | strict 32 | strict missed | targeted-negative selection rate |
 |---|---|---|---|---|---|---|---|

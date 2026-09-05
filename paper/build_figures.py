@@ -1,7 +1,7 @@
 """Every figure of the recovery paper, drawn from the tables of record in recovery and
 from paper/numbers.json. Nothing is typed in by hand; every count on a figure is
 read from the same records the text quotes. Author labels carry the journal year of the
-bibliography entry, not the arXiv year.
+bibliography entry (paper/bib/references.bib), not the arXiv year.
 
 Run from the repository root: python paper/build_figures.py
 Writes paper/figures/fig_*.pdf and .png, plus figures/contact_sheet.png and
@@ -13,14 +13,14 @@ script runs pdflatex on it from inside the figures directory, so one command reb
 eleven figures and the schematic cannot go stale against the numbers.
 
 House style (MNRAS/ApJ): serif text through STIX with mathtext to match the LaTeX body,
-8 pt everywhere at output size, 0.6 to 1.0 pt rules, black and grey as the base with one
+8 pt everywhere at output size, 0.6 to 1.0 pt rules, black and gray as the base with one
 blue and one vermillion accent, ticks inward on all four sides, bold panel letters instead
 of titles.
 
 Sizing rule, and the reason the round-1 figures printed at 5 to 6.5 pt: main.tex includes
 every figure at \\columnwidth or \\textwidth, so LaTeX scales whatever it is given to that
 width. Saving with bbox_inches="tight" cropped each canvas to an arbitrary width, and the
-scale factor that followed shrank or grew the lettering by up to 20 per cent in either
+scale factor that followed shrank or grew the lettering by up to 20 percent in either
 direction. Here every figure is laid out inside its exact final canvas and saved with no
 bounding-box cropping, so the scale factor is 1 and the point sizes below are the point
 sizes on the page.
@@ -119,14 +119,14 @@ plt.rcParams.update(
     }
 )
 
-# base is black and grey; exactly two accents, used the same way on every figure
+# base is black and gray; exactly two accents, used the same way on every figure
 K = "#000000"
 C_UNION = "#666666"  # the seven published rules
 C_MODEL = "#1a5a8a"  # accent 1, the learned selection
 C_MISS = "#c0532a"  # accent 2, missed by every rule / shuffled labels
 C_CAND = "#e0a06a"  # tint of accent 2, unlisted candidates
 C_NEG = "#a0a0a0"  # spectroscopic non-LRD anchors
-C_CAT = "#dcdcdc"  # the catalogue as a whole
+C_CAT = "#dcdcdc"  # the catalog as a whole
 C_ALT = "#b0b0b0"  # robustness variants
 C_LOCO = "#666666"  # leave-one-list-out runs
 GREY_TXT = "#7f7f7f"  # secondary lettering (threshold and literature labels)
@@ -137,7 +137,7 @@ GREY_TXT = "#7f7f7f"  # secondary lettering (threshold and literature labels)
 # fig_colour_planes, its bar in the fig_miss_anatomy ladder. The set is Paul Tol's "muted"
 # qualitative scheme (Tol 2021, SRON/EPS/TN/09-002 issue 3.2), which is designed to stay
 # distinguishable under deuteranopia, protanopia and tritanopia; none of the seven is close
-# to the two reserved accents #1a5a8a and #c0532a. A rule's colour is carried redundantly by
+# to the two reserved accents #1a5a8a and #c0532a. A rule's color is carried redundantly by
 # its own dash pattern, so a greyscale print still separates the lines.
 RULE_COLOUR = {
     "labbe23": "#332288",  # indigo
@@ -164,7 +164,7 @@ def _dark(hexcol, target=0.16):
 
     Tol's muted set is designed for filled areas and markers, where a light cyan or olive
     reads perfectly well against a dark edge. As lettering on white, the lighter members
-    fall under the 4.5:1 contrast a small serif face needs. This scales the colour towards
+    fall under the 4.5:1 contrast a small serif face needs. This scales the color towards
     black until its relative luminance (WCAG 2.1) is at most `target`, which is 4.5:1
     against white, and leaves the hue where it was, so a label still matches its marker.
     """
@@ -186,9 +186,9 @@ def _dark(hexcol, target=0.16):
     return "#%02x%02x%02x" % tuple(int(round(255 * v)) for v in rgb * lo)
 
 
-# the lettering twin of each rule colour: same hue, dark enough to read at 8 pt on white
+# the lettering twin of each rule color: same hue, dark enough to read at 8 pt on white
 RULE_TEXT = {r: _dark(c) for r, c in RULE_COLOUR.items()}
-# a truncated Greys, so the densest catalogue cell stays lighter than any plotted marker
+# a truncated Greys, so the densest catalog cell stays lighter than any plotted marker
 # (Labbe et al. 2025 Fig. 2 and Hviding et al. 2025 Fig. 6 both keep the density map light)
 DENS_CMAP = LinearSegmentedColormap.from_list(
     "greys_light", plt.get_cmap("Greys")(np.linspace(0.0, 0.58, 256))
@@ -263,12 +263,12 @@ oof = pd.read_parquet(os.path.join(V, "oof_scores.parquet")).set_index("source_i
 sup["score"] = oof.loc[sup.index, "score_mean"].values
 sup["sel_burden"] = oof.loc[sup.index, "sel_burden"].values
 sup["t_burden"] = oof.loc[sup.index, "t_burden"].values
-# The seven rules impose their F277W-F444W thresholds on ordinary AB colours, while the
+# The seven rules impose their F277W-F444W thresholds on ordinary AB colors, while the
 # model feature c_f277w_f444w is a difference of inverse-hyperbolic-sine magnitudes, which
-# keeps an undetected band finite. Every colour bin and every threshold line below is drawn
-# on the AB colour, computed from the catalogue fluxes in labels.parquet exactly as
-# build_numbers.py does. A source with
-# a non-positive flux in either band has no AB colour and is dropped from those panels.
+# keeps an undetected band finite. Every color bin and every threshold line below is drawn
+# on the AB color, computed from the catalog fluxes in labels.parquet exactly as
+# build_numbers.py does (paper/reviews/round1_facts.md section 9.5). A source with
+# a non-positive flux in either band has no AB color and is dropped from those panels.
 _lab = pd.read_parquet(
     os.path.join(V, "labels.parquet"), columns=["source_id", "f_f277w", "f_f444w"]
 ).set_index("source_id")
@@ -285,7 +285,7 @@ cand["c_ab_f277w_f444w"] = _lab.reindex(cand.source_id.values)[
 ].values
 eb = cand[cand.tier == "equal_burden"]
 fu = cand[cand.followup_tier]
-assert np.isfinite(pos.c_ab_f277w_f444w).all(), "a positive has no finite AB colour"
+assert np.isfinite(pos.c_ab_f277w_f444w).all(), "a positive has no finite AB color"
 ev = J("evaluation.json")
 rules = [
     "labbe23",
@@ -328,8 +328,8 @@ RULE_LABEL_SHORT = {
 # key in the empty region under the curve with a hairline leader; and the six-entry key of
 # the series sits under the axes in two columns, where it can cover neither the shuffled
 # band nor the literature points.
-fig, ax = plt.subplots(figsize=(COL1, 86 * MM))
-fig.subplots_adjust(left=0.145, right=0.975, top=0.985, bottom=0.315)
+fig, ax = plt.subplots(figsize=(COL2, 92 * MM))
+fig.subplots_adjust(left=0.07, right=0.985, top=0.985, bottom=0.24)
 sc = sup.score.values
 ys = (sup.y == 1).values
 order = np.argsort(-sc)
@@ -369,7 +369,7 @@ ax.scatter(
     label="learned, 0.5% threshold",
 )
 bi = ev["baselines"]["rules_reproduction"]
-# round 2 of round 1: the imitation's realised catalogue burden is measured
+# round 2 of round 1: the imitation's realised catalog burden is measured
 # (baseline_burden.json), so the triangle sits at the burden it actually spends rather than
 # at the union's.
 ax.scatter(
@@ -407,10 +407,10 @@ rule_xy = {
     r: (N["rule" + RTAG[r] + "Selected"], int(pos["sel_" + r].astype(bool).sum()))
     for r in rules
 }
-# Round 3: each rule takes its palette colour here, and the same colour names it in the key,
+# Round 3: each rule takes its palette color here, and the same color names it in the key,
 # edges its shaded region in fig_colour_planes and fills its bar on the fig_miss_anatomy
-# ladder. The marker is filled in that colour with a dark edge (style rule 11), so a point
-# and its name are matched by colour and not only by a leader line. The key also carries the
+# ladder. The marker is filled in that color with a dark edge (style rule 11), so a point
+# and its name are matched by color and not only by a leader line. The key also carries the
 # published author name in place of the internal rule key.
 for r in rules:
     x, y = rule_xy[r]
@@ -446,7 +446,7 @@ for r, ky in zip(key_order, key_y):
 ax.set_xscale("log")
 ax.set_xlim(100, 30000)
 ax.set_ylim(0, 162)
-ax.set_xlabel("catalogue rows selected (burden)")
+ax.set_xlabel("catalog rows selected (burden)")
 ax.set_ylabel("spectroscopic LRDs recovered")
 h, lb = ax.get_legend_handles_labels()
 fig.legend(
@@ -454,13 +454,13 @@ fig.legend(
     lb,
     loc="lower center",
     bbox_to_anchor=(0.5, 0.005),
-    ncol=2,
+    ncol=4,
     fontsize=BASE,
     handletextpad=0.4,
     columnspacing=1.0,
     labelspacing=0.35,
 )
-save(fig, "fig_recall_burden", 84.0)
+save(fig, "fig_recall_burden", 178.0)
 
 # ================================================================== Figure 3: where the gain is
 fig, axes = plt.subplots(1, 2, figsize=(COL2, 62 * MM), layout="constrained")
@@ -551,18 +551,18 @@ fig.legend(
 )
 save(fig, "fig_gain_by_colour_mag", 178.0)
 
-# ================================================================== Figure 4: colour-magnitude and colour-colour
+# ================================================================== Figure 4: color-magnitude and color-color
 # Round 3 rebuilds this figure to the literature's grammar (reviews/FIGURE_STYLE_LITERATURE.md
-# rules 3, 4, 5, 11, 20): the catalogue is a log-density greyscale with a labelled colour bar,
+# rules 3, 4, 5, 11, 20): the catalog is a log-density greyscale with a labeled color bar,
 # as Labbe et al. (2025) Fig. 2 and Hviding et al. (2025) Fig. 6 draw theirs; each published
 # rule's selection region is a translucent band named at the axis edge in the rule's own
-# colour, as Barro et al. (2026) Fig. 5 names his colour bins; and every plotted point carries
+# color, as Barro et al. (2026) Fig. 5 names his color bins; and every plotted point carries
 # a dark edge. The geometry is placed by hand in figure fractions, as fig_confusion's is, so
-# that the two panels are provably the same size once a colour bar is attached to one of them.
+# that the two panels are provably the same size once a color bar is attached to one of them.
 #
 # Nothing plotted changes. The thresholds are the same three values Table 1 lists, the same
-# rows are drawn, and the same two colour axes are used: panel (a) is the ordinary AB colour,
-# in which every published threshold is written, and panel (b) is the pair of asinh colours
+# rows are drawn, and the same two color axes are used: panel (a) is the ordinary AB color,
+# in which every published threshold is written, and panel (b) is the pair of asinh colors
 # the model actually sees. That is why the shaded regions appear on panel (a) only: drawing a
 # threshold published in AB magnitudes onto an asinh axis would misstate it.
 CP_W, CP_H = 178.0, 88.0
@@ -571,9 +571,9 @@ CP_L, CP_PW, CP_MID = (
     68.0,
     14.0,
 )  # left label strip, panel width, gap + b's y label
-CP_CGAP, CP_CW, CP_R = 2.0, 3.0, 10.0  # colour-bar gap, bar width, right tick strip
+CP_CGAP, CP_CW, CP_R = 2.0, 3.0, 10.0  # color-bar gap, bar width, right tick strip
 assert abs(CP_L + CP_PW + CP_MID + CP_PW + CP_CGAP + CP_CW + CP_R - CP_W) < 1e-9, (
-    "colour-plane geometry does not add up to 178 mm"
+    "color-plane geometry does not add up to 178 mm"
 )
 CP_PH, CP_BOT = 60.0, 23.0  # panel height, and the height of the strip below the panels
 fig = plt.figure(figsize=(COL2, CP_H * MM))
@@ -604,7 +604,7 @@ rand = sup.sample(60000, random_state=1)
 hit = pos[pos.picked.astype(bool)]
 mis = pos[~pos.picked.astype(bool)]
 
-# the catalogue, as one log-density greyscale shared by both panels so that a shade means
+# the catalog, as one log-density greyscale shared by both panels so that a shade means
 # the same number of rows in each
 hba = axa.hexbin(
     rand.mag_f444w,
@@ -631,7 +631,7 @@ _dnorm = LogNorm(vmin=1.0, vmax=_vmax)
 hba.set_norm(_dnorm)
 hbb.set_norm(_dnorm)
 cb = fig.colorbar(hba, cax=cbax)
-cb.set_label("catalogue rows per hexagon", fontsize=BASE, labelpad=3)
+cb.set_label("catalog rows per hexagon", fontsize=BASE, labelpad=3)
 cb.ax.tick_params(labelsize=BASE, width=0.6, length=2.4, direction="in")
 cb.outline.set_linewidth(0.6)
 
@@ -639,7 +639,7 @@ cb.outline.set_linewidth(0.6)
 # The seven rules impose three distinct F277W-F444W thresholds, so their selection regions
 # nest. Each is washed at the same low alpha, which makes the shade darken step by step with
 # the number of rules that accept, and the rules that own each boundary are named in the key,
-# every name in that rule's palette colour.
+# every name in that rule's palette color.
 THR_RULES = [
     (1.5, ["barro23", "akins24"]),
     (1.0, ["labbe23", "perezgonzalez24", "greene24"]),
@@ -684,7 +684,7 @@ axa.add_artist(
 axa.text(
     21.16,
     -1.34,
-    "Kocevski+24 selects on continuum slope: no colour threshold",
+    "Kocevski+24 selects on continuum slope: no color threshold",
     fontsize=SMALL,
     color=RULE_TEXT["kocevski24"],
     ha="left",
@@ -711,7 +711,7 @@ h_hit = axa.scatter(
     edgecolor=K,
     lw=0.3,
     zorder=4,
-    label="confirmed LRDs selected by a rule (%d)" % len(hit),
+    label="spectroscopic LRDs selected by a rule (%d)" % len(hit),
 )
 h_mis = axa.scatter(
     mis.mag_f444w,
@@ -722,7 +722,7 @@ h_mis = axa.scatter(
     edgecolor=K,
     lw=0.45,
     zorder=5,
-    label="confirmed LRDs missed by every rule (%d)" % len(mis),
+    label="spectroscopic LRDs missed by every rule (%d)" % len(mis),
 )
 axa.set_xlim(21, 29)
 axa.set_ylim(-1.5, CP_YTOP)
@@ -730,7 +730,7 @@ axa.set_xlabel("F444W (AB mag)")
 axa.set_ylabel("F277W $-$ F444W (AB mag)")
 panel(axa, "a")
 
-# ------------------------------------------------------------------ panel (b): the model's colours
+# ------------------------------------------------------------------ panel (b): the model's colors
 axb.scatter(
     eb.c_f277w_f444w,
     eb.c_f200w_f356w,
@@ -778,8 +778,8 @@ fig.legend(
 save(fig, "fig_colour_planes", 178.0)
 
 # ================================================================== Figure 5: per region
-fig, ax = plt.subplots(figsize=(COL1, 68 * MM))
-fig.subplots_adjust(left=0.135, right=0.975, top=0.985, bottom=0.20)
+fig, ax = plt.subplots(figsize=(COL2, 66 * MM))
+fig.subplots_adjust(left=0.07, right=0.975, top=0.985, bottom=0.20)
 x = np.arange(5)
 u = [N["unionRegion" + r.replace("-", "")] for r in REG]
 m = [N["modelRegion" + r.replace("-", "")] for r in REG]
@@ -813,7 +813,7 @@ ax.set_ylabel("LRDs recovered, equal burden")
 ax.legend(
     handles=[h_t, b_u, b_m],
     labels=[
-        "confirmed LRDs in region",
+        "spectroscopic LRDs in region",
         "union of seven rules",
         "learned selection (region held out)",
     ],
@@ -822,7 +822,7 @@ ax.legend(
     handletextpad=0.5,
     borderaxespad=0.7,
 )
-save(fig, "fig_regions", 84.0)
+save(fig, "fig_regions", 178.0)
 
 # ================================================================== Figure 6: feature importance
 imp = J("feature_importance_gain.json")
@@ -859,7 +859,7 @@ cols = [
 ax.barh(names, vals, color=cols, height=0.66, edgecolor=K, lw=0.3)
 for i, v in enumerate(vals):
     ax.text(v + 0.6, i, "%.1f" % v, va="center", fontsize=SMALL, color=GREY_TXT)
-ax.set_xlabel("share of split gain, mean over %d bags (per cent)" % N["nBags"])
+ax.set_xlabel("share of split gain, mean over %d bags (percent)" % N["nBags"])
 ax.set_xlim(0, max(vals) * 1.20)
 ax.set_ylim(-0.7, len(names) - 0.3)
 ax.yaxis.set_minor_locator(NullLocator())
@@ -948,7 +948,7 @@ tiles(
         [N["unionAnchors"], N["nNegSupport"] - N["unionAnchors"]],
     ],
     [
-        "confirmed\nLRDs (%d)" % N["nPos"],
+        "spectroscopic\nLRDs (%d)" % N["nPos"],
         "non-LRD\nanchors (%s)" % "{:,}".format(N["nNegSupport"]),
     ],
     ["selected", "not selected"],
@@ -999,7 +999,7 @@ ax.hist(
     lw=0,
     label="{:,} non-LRD anchors".format(len(neg)),
 )
-ax.hist(pos.score, bins=bins, color=C_MODEL, lw=0, label="%d confirmed LRDs" % len(pos))
+ax.hist(pos.score, bins=bins, color=C_MODEL, lw=0, label="%d spectroscopic LRDs" % len(pos))
 tb = np.unique(sup.t_burden)
 ax.axvspan(tb.min(), tb.max(), color=C_MISS, alpha=0.15, lw=0)
 ax.text(
@@ -1097,7 +1097,7 @@ def render(ims):
 def gray_panel(im):
     """The one asinh rule every single-band panel uses, in every band and every object.
 
-    It is the frozen R1b grey rule (inputs/r1b_calibration.json, key
+    It is the frozen R1b gray rule (inputs/r1b_calibration.json, key
     gray_f444w) that the F444W panel has always used, applied unchanged to the other five
     bands: the image is divided by the same normalisation T, clipped below at zero, and put
     through arcsinh(x/a) / arcsinh(1/a) with the same softening a. Because T and a never
@@ -1117,11 +1117,11 @@ assert len(_red) + len(_blue) == len(_rec), (
     "the recovered block no longer splits in two"
 )
 # the three sections, in the order they have always stood in, with the recovered block's two
-# colour halves now separate sub-blocks so that each starts on a row of its own
+# color halves now separate sub-blocks so that each starts on a row of its own
 SECTIONS = [
     dict(
         key="recovered",
-        title="Confirmed LRDs missed by every rule and recovered by the learned selection",
+        title="Spectroscopic LRDs missed by every rule and recovered by the learned selection",
         parts=[
             ("F277W$-$F444W above 1.0", _red),
             ("F277W$-$F444W below 0.5", _blue),
@@ -1129,7 +1129,7 @@ SECTIONS = [
     ),
     dict(
         key="missed",
-        title="Confirmed LRDs the learned selection still misses at equal burden",
+        title="Spectroscopic LRDs the learned selection still misses at equal burden",
         parts=[(None, man[man.group == "missed"])],
     ),
     dict(
@@ -1141,7 +1141,7 @@ SECTIONS = [
 GCOL = {"recovered": C_MODEL, "missed": C_MISS, "candidate": C_CAND}
 
 # ------------------------------------------------------------------ geometry, in millimetres
-# Round 3 presents each object as a strip of six single-band panels and the colour composite,
+# Round 3 presents each object as a strip of six single-band panels and the color composite,
 # the way Akins et al. (2025) Fig. 4 and Labbe et al. (2025) Fig. 4 present theirs. Seven
 # panels per object is three and a half times the panel count of round 2, so two objects fit
 # across 178 mm instead of three, and each panel is 11.4 mm rather than 25.1 mm. That is the
@@ -1168,7 +1168,7 @@ G_TOP, G_BOT = 1.0, 1.0
 # The cutout service is asked for size=5, which is a radius: it returns 200 x 200 pixels at
 # 0.05 arcsec per pixel, a 10 arcsec field, as the CD1_1 = -1.388889e-05 deg of every stamp
 # header says. Round 1 and round 2 read that as 5 arcsec across and so used half the true
-# pixel scale, which made the crop 2.0 arcsec on paper when it is 4.0, and the bar labelled
+# pixel scale, which made the crop 2.0 arcsec on paper when it is 4.0, and the bar labeled
 # 0.5 arcsec 1.0 arcsec long. The scale below is the header's. build_figures_extra.py
 # already uses it, so the two sets of stamps now agree.
 # Round 3 narrows the crop from 80 to 40 pixels: a strip of seven panels on a two-column
@@ -1222,7 +1222,7 @@ def draw_gallery(name, sections):
             s.set_linewidth(0.6)
         return a
 
-    def band_tag(ax, text, colour="white"):
+    def band_tag(ax, text, color="white"):
         """The filter name inside the panel corner, white on a dark box (Akins Fig. 4)."""
         ax.text(
             0.055,
@@ -1232,7 +1232,7 @@ def draw_gallery(name, sections):
             ha="left",
             va="top",
             fontsize=SMALL,
-            color=colour,
+            color=color,
             zorder=6,
             bbox=dict(facecolor="black", edgecolor="none", alpha=0.55, pad=0.9),
         )
@@ -1284,7 +1284,7 @@ def draw_gallery(name, sections):
                         im is None
                     ):  # the band has no coverage here: say so, do not fake it
                         ax.set_facecolor("#f2f2f2")
-                        band_tag(ax, BAND_SHORT[b], colour="white")
+                        band_tag(ax, BAND_SHORT[b], color="white")
                         ax.text(
                             0.5,
                             0.42,
@@ -1310,7 +1310,7 @@ def draw_gallery(name, sections):
                 axr = stamp_axes(x0 + 6 * (G_STAMP + G_INGAP), y_st, GCOL[g])
                 axr.imshow(rgb[crop, crop], origin="lower", interpolation="nearest")
                 band_tag(axr, "RGB")
-                # the bar is inset far enough that its centred label clears the left border
+                # the bar is inset far enough that its centered label clears the left border
                 _bx = 0.15 * NPX
                 axr.plot(
                     [_bx, _bx + BAR_PX],
@@ -1397,7 +1397,7 @@ ax.hist(
     histtype="step",
     color=C_MODEL,
     lw=1.0,
-    label="confirmed LRDs (%d)" % len(pos),
+    label="spectroscopic LRDs (%d)" % len(pos),
 )
 ax.hist(
     eb.mag_f444w,
@@ -1454,7 +1454,7 @@ ax.hist(
 ax.axvline(3, color=K, lw=0.5, ls=":")
 ax.set_xlim(0, 12)
 ax.set_ylim(0, 0.52)
-ax.set_xlabel("catalogue photometric redshift")
+ax.set_xlabel("catalog photometric redshift")
 ax.set_ylabel("density")
 panel(ax, "b")
 ax = axes[2]
@@ -1520,7 +1520,7 @@ ax = fig.add_axes(
     ]
 )
 items = [
-    # label, matched recall, colour, marker, recall at the run's own threshold
+    # label, matched recall, color, marker, recall at the run's own threshold
     (
         "learned selection (primary)",
         N["primaryMatchedRecall"],
@@ -1793,8 +1793,8 @@ with open(
         " figures/fig_pipeline.tex and measured back from the compiled PDF.\n"
         "Every figure is emitted at the exact width main.tex includes it at. Under"
         " aastex701 (twocolumn), measured from the class, \\columnwidth is 85.15 mm and"
-        " \\textwidth 180.34 mm, so a 178 mm canvas is scaled up by 1.3 per cent and an"
-        " 84 mm canvas by 1.4 per cent: 8.0 pt prints at 8.1 pt.\n"
+        " \\textwidth 180.34 mm, so a 178 mm canvas is scaled up by 1.3 percent and an"
+        " 84 mm canvas by 1.4 percent: 8.0 pt prints at 8.1 pt.\n"
         "main.tex includes fig_gallery_known and fig_gallery_cand at \\textwidth with"
         " no height limit, so both print at the width their canvas is emitted for and the"
         " sizes above are the sizes on the page.\n"
