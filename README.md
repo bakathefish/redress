@@ -56,8 +56,20 @@ A secure redshift is a redshift classification, not an LRD spectral-shape verdic
 statuses archive consistent / inconclusive / disfavoured / untestable would record the frozen
 refit of an eligible archival PRISM spectrum (grade >= 3, z > 3); no candidate has one:
 0 eligible spectra, 0 refit verdicts. Equal-burden tier: untested 337, secure z>3 (V untested) 17, secure low-z 8.
-No candidate has been spectroscopically established as an LRD. `ranking_score` is a rank
-statistic, not a probability.
+No candidate had been spectroscopically established as an LRD when the lists were frozen.
+`ranking_score` is a rank statistic, not a probability.
+
+**Catalog versions.** The three reference lists and the archive index were frozen with
+version 0.1 of the de Graaff et al. (2026) release (Zenodo record 17665942, 20 November 2025,
+116 unique sources). A later version (Zenodo record 21977747, 17 August 2026, 181 spectra of
+146 unique sources) holds 3 of the 1207 candidates within 0.5 arcsec: ranks 78, 154 and 176,
+at spectroscopic redshifts 4.59, 3.40 and 2.04, all in the equal-burden tier and two in the
+follow-up tier, all marked `untested` because the archive index was frozen with the lists.
+`recovery/v4_match_degraaff_v2.py` records the match in the columns `in_degraaff26_v2` and
+`zspec_degraaff26_v2` of `candidates.csv`; the labels, the model and every count above are
+left as frozen. Under the paper's definition the three are spectroscopic LRDs that no rule
+selects and the ranking placed in its top 362; three objects chosen by another group's
+targeting are not a yield measurement.
 
 **Compactness and the follow-up tier.** The frozen aperture protocol of the paper was run on
 the F444W mosaics for 1196 of the 1207 candidates; in the equal-burden tier

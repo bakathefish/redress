@@ -62,13 +62,14 @@ rerun after steps 1 to 3 have been rerun.
 | 17 | `v4_release.py` | laptop | the released directory, its model card, its manifest, its `requirements.txt`, the released `final.json` (`models_dir` set to `models`) |
 | 18 | `v4_baseline_burden.py` | laptop | `baseline_burden.json`, `baseline_burden.md`, `baseline_oof_full.parquet` |
 | 19 | `v4_round3_analysis.py` | laptop | `published_catalogues_extra.parquet`, `anchor_test_status.csv`, `round3_analysis_counts.json` |
+| 20 | `v4_match_degraaff_v2.py` | laptop | `candidates.csv` (columns `in_degraaff26_v2`, `zspec_degraaff26_v2`; every other column unchanged) |
 
 `model_selection.json` was written by hand-run Python from the evaluation files during the
 build and records the challenger comparison and the decision sequence.
 
 ## Records of the review rounds
 
-Steps 18 and 19 ran after step 17, during the paper's review rounds, and their records were
+Steps 18 to 20 ran after step 17, during the paper's review rounds, and their records were
 added to `recovery/` after the release was first staged. sha256 of the released bytes, in
 `sha256sum` order so the list can be checked as it stands:
 
