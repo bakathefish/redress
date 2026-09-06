@@ -206,6 +206,26 @@ is not one of the seven of record and no union or burden above includes it. The 
 of this are in `recovery/referee_compute_2026_09_06.json`, and `RUN_MANIFEST.md` lists the
 files with their sha256.
 
+**Second revision of the same day (steps 24 to 26 of the manifest).** `recovery/label_provenance.csv`
+is now the one table of record for every label: one row per labelled or ambiguous source
+with its identifiers, sky group, region, every list membership, the spectral eligibility,
+evaluability and verdict at the source and at the row level, the final class, the
+ambiguity reason and the spectroscopic redshift with its source. `recovery/test_status_reconciliation.csv`
+lists every row where the two earlier test-status files (`anchor_test_status.csv`,
+`positive_test_status.csv`) differ and records that none of the differences moves a label
+or a printed count; those two files are kept for the record and superseded.
+`recovery/rule_audit_positives.csv` gives each rule's outcome on each of the 151 positives
+by criterion, `recovery/positive_match_alternatives.csv` the alternative catalog rows of the
+multi-row positives, and `recovery/positive_apertures.csv` the aperture compactness of every
+positive measured with the candidates' protocol. `recovery/candidates.csv` gains the eighth
+selection's flag (`sel_barro24b`), a five-way `spectrum_status`, the secure archival
+redshift where one exists (`z_spec_secure`) and a post-freeze list flag
+(`listed_after_freeze`). The paper's primary equal-cost comparison is now the
+region-matched one: each held-out region cut at the union's own row count there
+(`recovery/positive_outcomes.csv` carries that outcome per positive, and
+`recovery/regional_budget_curve.json` the curve). The counts are in
+`recovery/round9_compute_2026_09_06.json`.
+
 ## Errata and record notes
 
 Facts about the released files that a reader reproducing from them needs and that the model

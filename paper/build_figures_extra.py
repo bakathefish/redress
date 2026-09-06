@@ -1509,7 +1509,7 @@ for j, reg in enumerate(REGIONS):
     # region name, then its field names one per line; ngdeep has no band-complete row and
     # so contributes nothing to support, which the panel says rather than hides
     fl = sorted(k for k, v in FIELDS.items() if v == reg)
-    fl = [f + (" (none)" if int((sup.field == f).sum()) == 0 else "") for f in fl]
+    fl = [f + (" (no support)" if int((sup.field == f).sum()) == 0 else "") for f in fl]
     # offsets in points, so they do not depend on how tall the equal-aspect panel ends up
     ax.set_title(
         reg, fontsize=FS, pad=4.0 + 10.6 * MAXFIELDS
@@ -1560,7 +1560,7 @@ handles = [
         mec=C_NEG,
         mew=0.6,
         ms=4,
-        label="spectroscopic non-LRD anchors",
+        label="comparison objects (not established as LRDs)",
     ),
     Line2D(
         [],

@@ -170,6 +170,53 @@ d0cb262ef320943aa241f695e673a41ae7a62d67021b5bf167f1e773c0a2985b  referee_macros
 a3fca795c1b76ecc01fefc80e92f6599d5b737ec1bf04b45781eee855ffe35d6  numbers.tex
 ```
 
+## Records of the second revision of 2026-09-06 (steps 24 to 26)
+
+Steps 24 to 26 ran on the evening of 2026-09-06 (IST) from the tables of record, the
+unreleased `inputs/` tables and one aperture pass on the DJA cutout service. Nothing was
+retrained; no number of steps 1 to 23 changed.
+
+| step | script (arguments) | where | produces |
+|---|---|---|---|
+| 24 | `v4_positive_apertures.py` | laptop, DJA cutout service | `positive_apertures.csv`: the Labbe et al. (2023) and Akins et al. (2024) aperture compactness of all 151 positives, measured with the protocol of step 14 (151 measurable, 2 mosaic versions) |
+| 25 | `paper/round9_compute_2026_09_06.py` | laptop | `label_provenance.csv` (one row per labelled or ambiguous source, 5596 rows: identifiers, sky group, region, support, every list membership, spectral eligibility, evaluability and verdict at source and row level, label, final class, ambiguity reason, spectroscopic redshift and its source); `test_status_reconciliation.csv` (the 532 rows where the two earlier test-status files differ, with whether a label or a printed count moves: none does); `positive_match_alternatives.csv` (every row of every multi-row positive sky group with its offset and both selections' verdicts); `rule_audit_positives.csv` (each rule on each positive: selected, or the first failing criterion, or a required input unavailable, from the modules rerun on the seven bands against the flags of record); `positive_outcomes.csv`, `regional_budget_curve.json` and `still_missed_region_rank.json` (the region-matched outcome of every positive, the regional-budget curve of the recall figure, and the within-region rank of the still-missed objects); `candidates.csv` (four columns added, `sel_barro24b`, `spectrum_status`, `z_spec_secure`, `listed_after_freeze`; every other column unchanged; 94 columns); `round9_compute_2026_09_06.json` (every count the script prints, keyed by macro name) |
+| 26 | `paper/round9_macros_b.py`, then `paper/build_figures.py`, `paper/build_figures_pub.py`, `paper/build_figures_extra.py`, `paper/build_tables.py` | laptop | the fitter constants, the audit remainders and the per-field depth table (`paper/tables/data_fields.tex`) appended to `numbers.tex`; the figures and the appendix table bodies (`paper/tables/`), which now carry the spectroscopic redshift, the within-region rank and the eighth selection's flag |
+
+The region-matched comparison (each held-out region cut at the union's own row count
+there) is the primary equal-cost result from this revision on; the deployed thresholds are
+kept as the deployment experiment. `paper/round9_figure_patch.py` and
+`paper/round9_figure_patch_b.py` are the edits that took the figure scripts from the
+previous revision to this one and are kept for the record; they have already been applied
+to the scripts released here. sha256 of the released bytes:
+
+```
+73a935254ddd2b12f9dbcd9d45ba6adb2fde1ca3a66b6b46b94d7186451c906e  positive_apertures.csv
+5db7930e653429e76aa4d08ae2ce76e2795ccafe230f8821894d79434e6c5baa  v4_positive_apertures.py
+d6959794e753287e951b077973a744766378b105cb8d868d32fa8e03fab47244  label_provenance.csv
+3e69bddd2629e2e5f57852ff7286aa11b42ef0dc7ad96ca907865bdf8791a6c1  test_status_reconciliation.csv
+7fdfcc5976c23dc8a1119bf96bcde409b7e2f6ad8a2e5526016e0428968c5251  positive_match_alternatives.csv
+323b7d8a44243224af856d1be1dad632fda17c56d1691f0dc1ded4d54117b4b0  rule_audit_positives.csv
+5a6d9a28a5923b71aeb00293938fd005b785232ff862552b68b6d23bc7d20ec6  positive_outcomes.csv
+c7878b737c931f4c86bf575b65e14b57fd6fb1a285b9238b216297e7110248e1  regional_budget_curve.json
+1db09bfadfd09704cbcb1fbdf841a15ed36058727e3be6cae367c8218b48e586  still_missed_region_rank.json
+de323f848fb0a978d82aa6969dd0a329bf403a0e2aa3bef7295ad4f32af58051  candidates.csv
+c98e54e6b8dd15c9a5f26086ebc3c89b45aea43a3127ae2f7153e00ada6a1096  round9_compute_2026_09_06.json
+1d7e74fb92990f73cce4e47a3eddddf8c42f74ea8e38ea7fc725f02f29b73334  round9_compute_2026_09_06.py
+8deebfa41e0ae17f5406ea799c4e72f85f06c397b9bb32859a01520a3405310a  round9_macros_b.py
+75bec64b4dd18acedd37cdbd14789268b8c1c1042373820e8ee6bfcf5d207f48  round9_figure_patch.py
+85c245f79314aed4b8328ebe94113c1c6cb0c7829f8797654b3f7e33af465707  round9_figure_patch_b.py
+1e5f25136facb82acb554b1bc3bbe278bfb089df2aa54d961a86bb675a7646d4  build_figures.py
+207e494fc68235271089465db76603273e453ee6ed59be4b82afcd001d6da46e  build_figures_pub.py
+8cfcc199b651e5e7d7532a25484cd144b9a6b7629f78e246bd5cb07b81276728  build_figures_extra.py
+aad7ac305bcf42bb4881f0111878accb28ecf5430cc6e48e15faf0e384791338  build_tables.py
+5169520d9436c2d7204c9d50cb012d6613065c752c4e3f4ac4a02b54e4faaa93  check_pub.py
+ebf7bf37fa30e44a352a8853ddf9b3b70e46cb6dbfccddab37d770e4ab2d2031  numbers.tex
+2b8222c095f10e04b5838ab3d386ed2a7d1844dcbd2e54b104d46ac7cdcd9b0a  tables/data_fields.tex
+4a87d6381f95fea70323646d19400813b4f695378b03f851d16f7d389c702922  tables/followup_top.tex
+1c4f67b62d864fb47bd4fb2bc8a15ba392789468c2e1e15adfb6057e342bdfbb  tables/recovered_rule_missed.tex
+ace62b523b89596a8d1a854c7492c682021118564893941502308ad328b84586  tables/still_missed.tex
+```
+
 ## The paper chain
 
 `paper/build_numbers.py` reads the tables in `recovery/` (and the two unreleased parquet

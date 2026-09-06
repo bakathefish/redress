@@ -30,7 +30,12 @@ os.chdir(ROOT)
 # are released in label_audit.csv, so those two tables no longer print RA and Dec and no
 # longer join them. The follow-up table of the main text keeps its coordinates and reads
 # them from candidates.csv, not from this join.
-JOIN_COLS = ["c_f277w_f444w", "z_phot"]
+JOIN_COLS = ["c_f277w_f444w", "z_phot", "source_id"]
+# Round 9: each object table also prints the spectroscopic redshift (published_catalogues_extra)
+# and the within-region rank of the still-missed objects (recovery)
+ZSPEC = pd.read_parquet(os.path.join(V, "published_catalogues_extra.parquet"), columns=["source_id", "z_spec"]).set_index("source_id").z_spec
+RRANK = {(r["field"], int(r["id"])): r["rank_pct_region"] for r in json.load(open(os.path.join(ROOT, "recovery", "still_missed_region_rank.json")))}
+B24 = pd.read_parquet(os.path.join(V, "barro24b_flags.parquet")).set_index("source_id").sel_barro24b
 
 # The archive status as printed in the follow-up table. The catalogue wording is too wide for
 # the printed column, so it is set in the paper's notation here and nowhere else; the
@@ -134,6 +139,7 @@ def table_recovered(ev, feat):
                 str(int(r["id"])),
                 num("%.2f", r["mag_f444w"]),
                 num("%.2f", r["c_f277w_f444w"]),
+                num("%.2f", ZSPEC.loc[int(r["source_id"])]),
                 num("%.2f", r["z_phot"]),
                 lists,
                 num("%.3f", r["score"]),
@@ -157,12 +163,13 @@ def table_still_missed(ev, feat):
                 str(int(r["id"])),
                 num("%.2f", r["mag_f444w"]),
                 num("%.2f", r["c_f277w_f444w"]),
+                num("%.2f", ZSPEC.loc[int(r["source_id"])]),
                 num("%.2f", r["z_phot"]),
                 yesno(r["picked"]),
                 num("%.3f", r["score"]),
-                # score_rank_pct is already 100 x the fraction of the catalogue scoring at
-                # least as high (recovery/v4_evaluate.py), so it is printed as it stands.
-                num("%.2f", r["score_rank_pct"]),
+                # Round 9: the percentile rank is taken within the object's own region, since the
+                # five held-out ensembles do not share a score scale.
+                num("%.2f", RRANK[(str(r["field"]), int(r["id"]))]),
             ]
         )
     return rows
@@ -199,6 +206,7 @@ def table_followup(n=20):
                 num("%.2f", r["c_f277w_f444w"]),
                 zp,
                 num("%.3f", r["ranking_score"]),
+                yesno(B24.get(int(r["source_id"]), False)),
                 STATUS_TEX[r["status"]],
             ]
         )

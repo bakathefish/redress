@@ -73,6 +73,8 @@ PUB = os.path.join(ROOT, "paper", "figures")
 os.makedirs(FIG, exist_ok=True)
 os.makedirs(PUB, exist_ok=True)
 N = json.load(open(os.path.join(HERE, "numbers.json")))
+N9 = json.load(open(os.path.join(ROOT, "recovery", "round9_numbers.json")))
+POUT = pd.read_csv(os.path.join(ROOT, "recovery", "positive_outcomes.csv")).set_index("source_id")
 
 # ==========================================================================================
 # House style, copied from paper/build_figures.py lines 78 to 290.
@@ -517,8 +519,9 @@ assert (
 # The learned selection at the equal-burden operating point, out of fold. The model scores
 # only the seven-band support, so the nPosOutside positives outside it are not recovered by
 # the learned selection, end to end (Section 2.3 of main.tex).
+# Round 9: the primary operating point is the region-matched one (Section 5.1)
 POS_MODEL = np.zeros(len(posAll), dtype=bool)
-POS_MODEL[POS_INSUP] = sup.loc[posAll.index[POS_INSUP], "sel_burden"].to_numpy(bool)
+POS_MODEL[POS_INSUP] = POUT.loc[posAll.index[POS_INSUP], "sel_matched"].to_numpy(bool)
 
 # The spectroscopic redshift of each positive: the redshift column of the published list the
 # object is in, else the DAWN JWST Archive v4.4 secure redshift, else the catalog
@@ -554,10 +557,10 @@ ZEDGES = np.arange(Z_LO, Z_HI + 0.5 * Z_W, Z_W)
 
 # the four outcome classes at the equal-burden operating point, out of fold, end to end
 ZCLASS = [
-    ("both", POS_UNION & POS_MODEL, "pairedBoth", C_UNION, None),
-    ("union only", POS_UNION & ~POS_MODEL, "pairedUnionOnlyEnd", C_UNION, "////"),
-    ("model only", POS_MODEL & ~POS_UNION, "pairedModelOnly", C_MODEL, None),
-    ("neither", ~POS_UNION & ~POS_MODEL, "pairedNeitherEnd", C_MISS, None),
+    ("both", POS_UNION & POS_MODEL, "matchedPairedBoth", C_UNION, None),
+    ("union only", POS_UNION & ~POS_MODEL, "matchedPairedUnionOnlyEnd", C_UNION, "////"),
+    ("model only", POS_MODEL & ~POS_UNION, "matchedPairedModelOnly", C_MODEL, None),
+    ("neither", ~POS_UNION & ~POS_MODEL, "matchedPairedNeitherEnd", C_MISS, None),
 ]
 ZLEGEND = [
     "rules and learned selection",
@@ -570,8 +573,8 @@ print("\nfig_zdist assertions")
 _tot = 0
 for name, mask, key, _c, _h in ZCLASS:
     got = int(mask.sum())
-    assert got == N[key], "%s is %d, numbers.json %s is %d" % (name, got, key, N[key])
-    print("  class %-11s %3d == numbers.json %-20s %3d" % (name, got, key, N[key]))
+    assert got == N9[key], "%s is %d, round9 %s is %d" % (name, got, key, N9[key])
+    print("  class %-11s %3d == round9 %-20s %3d" % (name, got, key, N9[key]))
     _tot += got
 assert _tot == N["nPos"], "the four outcome classes do not partition the positives"
 print("  sum %d == nPos %d" % (_tot, N["nPos"]))

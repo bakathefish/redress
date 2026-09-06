@@ -1,5 +1,5 @@
-"""Checks on the publication rewrite (paper_pub/main_flat.tex) against the deposited draft
-(paper_pub/reviews/main_reference_2026-09-04.tex).
+"""Checks on the publication rewrite (paper/main_flat.tex) against the deposited draft
+(paper/main_reference_2026-09-04.tex).
 
   1. every macro used exists in numbers.tex or is defined in the preamble (a name the
      reference never used is listed so it can be looked at);
@@ -17,7 +17,7 @@
 
 Run after flatten.py:
 
-    python paper_pub/flatten.py && python paper_pub/check_pub.py
+    python paper/flatten.py && python paper/check_pub.py
 """
 
 from __future__ import annotations
@@ -57,6 +57,11 @@ ALLOWED_LITERALS = {
     "3577": "GO 3577 (MAST)",
     "4233": "RUBIES, GO 4233 (MAST)",
     "249": "Perez-Gonzalez et al. 2026 abstract (arXiv:2602.20247): 249 LRDs with NIRSpec prism spectra",
+    # column widths of the scope table (tab:scope); layout constants, not measurements
+    # (revision 2026-09-06, round 9)
+    "5.2": "tab:scope column width in cm (layout)",
+    "6.6": "tab:scope column width in cm (layout)",
+    "4.6": "tab:scope column width in cm (layout)",
 }
 
 PROHIBITED = [

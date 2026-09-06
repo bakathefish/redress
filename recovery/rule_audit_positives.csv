@@ -1,0 +1,1058 @@
+rule,source_id,field,id,selected_record,selected_rerun,outcome,note,z_phot,in_support
+labbe23,2583,primer-uds-north,74752,False,False,color criterion,,6.100034236907959,True
+labbe23,3915,primer-uds-north,75975,False,False,color criterion,,2.3604953289031982,True
+labbe23,5003,primer-uds-north,82791,True,True,selected,,4.691159248352051,True
+labbe23,8880,primer-uds-south,36210,True,True,selected,,4.759895324707031,True
+labbe23,10951,primer-uds-north,74005,True,True,selected,,7.129388332366943,True
+labbe23,11111,primer-uds-north,36569,False,False,color criterion,,6.348576545715332,True
+labbe23,17782,primer-uds-south,29173,False,False,color criterion,,7.129854202270508,True
+labbe23,18015,primer-uds-south,45540,True,True,selected,,3.5563695430755615,True
+labbe23,19679,primer-uds-north,38196,True,True,selected,,7.135456562042236,True
+labbe23,24623,primer-uds-south,44341,False,False,detection gate,,7.636297702789307,True
+labbe23,25252,primer-uds-north,71609,False,False,color criterion,,7.133871078491211,True
+labbe23,26406,primer-uds-south,53274,True,False,selected,record selects; seven-band rerun with fresh apertures does not,6.005431652069092,True
+labbe23,27181,primer-uds-south,38479,False,False,detection gate,,2.3496365547180176,True
+labbe23,27975,primer-uds-south,15006,False,False,color criterion,,3.389786958694458,True
+labbe23,28266,primer-uds-north,19957,True,True,selected,,4.757785320281982,True
+labbe23,28999,primer-uds-south,61912,True,True,selected,,4.52282190322876,True
+labbe23,31845,primer-uds-south,65705,False,False,detection gate,,6.436645984649658,True
+labbe23,41569,primer-uds-north,39709,True,True,selected,,5.658624649047852,True
+labbe23,47582,primer-uds-north,49209,False,False,detection gate,,7.164916038513184,True
+labbe23,50436,primer-uds-south,42814,True,True,selected,,0.8433279991149902,True
+labbe23,52014,primer-uds-south,56686,False,False,color criterion,,5.656572341918945,True
+labbe23,58431,primer-uds-south,40800,False,False,detection gate,,5.4395670890808105,True
+labbe23,59037,primer-uds-north,44195,True,True,selected,,15.479340553283691,True
+labbe23,64163,primer-uds-north,67741,False,False,compactness criterion,,4.553906440734863,True
+labbe23,66039,primer-uds-south,23438,False,False,compactness criterion,,4.585654258728027,True
+labbe23,69421,primer-uds-south,36171,False,False,color criterion,,4.44737434387207,True
+labbe23,73068,primer-uds-south,33451,False,False,detection gate,,7.153848648071289,True
+labbe23,77053,primer-uds-north,47411,True,True,selected,,4.576568603515625,True
+labbe23,78416,primer-uds-north,19857,True,True,selected,,4.3381805419921875,True
+labbe23,78552,primer-uds-north,46223,False,False,color criterion,,8.899354934692383,True
+labbe23,80076,primer-uds-south,16053,False,False,color criterion,,6.08278226852417,True
+labbe23,80916,primer-uds-north,72350,True,True,selected,,2.39176344871521,True
+labbe23,82379,primer-uds-north,63748,True,True,selected,,7.136462211608887,True
+labbe23,83583,primer-uds-south,26611,False,False,detection gate,,8.990806579589844,True
+labbe23,84181,primer-uds-south,7111,True,True,selected,,7.876816749572754,True
+labbe23,86816,primer-uds-south,10036,False,False,color criterion,,6.621140003204346,True
+labbe23,87772,primer-uds-south,19521,False,False,detection gate,,5.662346839904785,True
+labbe23,89236,primer-uds-north,49501,True,True,selected,,4.64432954788208,True
+labbe23,94497,primer-uds-north,50135,False,False,color criterion,,0.8360292911529541,True
+labbe23,101065,primer-uds-north,54183,True,True,selected,,4.526068687438965,True
+labbe23,105458,primer-uds-north,36534,True,True,selected,,4.728287696838379,True
+labbe23,106664,primer-uds-south,42310,True,True,selected,,5.6530256271362305,True
+labbe23,107613,primer-uds-north,49298,True,True,selected,,5.12906551361084,True
+labbe23,120751,primer-uds-south,29813,True,True,selected,,5.3878960609436035,True
+labbe23,121629,primer-uds-south,53692,False,False,color criterion,,5.407966136932373,True
+labbe23,126807,primer-uds-north,74471,True,True,selected,,7.973998546600342,True
+labbe23,128283,primer-uds-south,50431,False,False,compactness criterion,,1.557572364807129,True
+labbe23,128779,primer-uds-north,11352,True,True,selected,,5.395835876464844,True
+labbe23,134898,primer-uds-north,25768,False,False,color criterion,,3.5201046466827393,True
+labbe23,145455,primer-uds-south,37427,False,False,color criterion,,7.045917987823486,True
+labbe23,149161,primer-uds-north,8768,False,False,color criterion,,5.159881591796875,True
+labbe23,157134,gds-sw,43476,True,True,selected,,4.527184009552002,True
+labbe23,159272,gds-sw,42114,True,True,selected,,4.482551574707031,True
+labbe23,160972,gds-sw,42382,False,False,color criterion,,8.220477104187012,True
+labbe23,166519,gds-sw,36474,False,False,color criterion,,7.84176778793335,True
+labbe23,166635,gds-sw,45401,True,True,selected,,5.457492351531982,True
+labbe23,184343,gds,67753,False,False,color criterion,,5.614948749542236,False
+labbe23,189430,gds-sw,12550,False,False,color criterion,,0.9876317381858826,True
+labbe23,189514,gds-sw,12551,False,False,color criterion,,0.2993711531162262,True
+labbe23,195041,gds-sw,18538,False,False,color criterion,,6.266995429992676,True
+labbe23,202262,gds,11107,False,False,color criterion,,7.682340145111084,True
+labbe23,205934,gds,30367,True,True,selected,,5.658355712890625,True
+labbe23,206765,gds,24555,False,False,color criterion,,5.676430702209473,True
+labbe23,209262,gds,56437,True,True,selected,,3.853292226791382,True
+labbe23,210911,gds,2947,True,True,selected,,4.7854156494140625,True
+labbe23,212510,gds,44120,False,False,color criterion,,5.438838005065918,False
+labbe23,212842,gds,47103,True,True,selected,,4.109916687011719,True
+labbe23,214148,gds,38174,False,False,color criterion,,5.71851110458374,True
+labbe23,215176,gds,49351,False,False,color criterion,,5.928738594055176,True
+labbe23,233452,gds,53198,True,True,selected,,6.311873435974121,True
+labbe23,251875,gds,53152,True,True,selected,,2.623657703399658,True
+labbe23,301324,primer-cosmos-west,62385,True,False,selected,record selects; seven-band rerun with fresh apertures does not,6.335335731506348,True
+labbe23,305821,primer-cosmos-west,69048,True,True,selected,,5.651267051696777,True
+labbe23,309737,primer-cosmos-west,56264,False,False,detection gate,,5.631539344787598,True
+labbe23,312610,primer-cosmos-west,67730,True,True,selected,,5.65523624420166,True
+labbe23,316329,primer-cosmos-west,45444,False,False,color criterion,,7.164122104644775,True
+labbe23,317222,primer-cosmos-west,25560,True,True,selected,,5.207961082458496,True
+labbe23,317568,primer-cosmos-west,65299,False,False,color criterion,,5.7602033615112305,True
+labbe23,318732,primer-cosmos-west,75011,True,False,selected,record selects; seven-band rerun with fresh apertures does not,5.658799648284912,True
+labbe23,325315,primer-cosmos-west,56136,True,True,selected,,5.608597755432129,True
+labbe23,331636,primer-cosmos-west,56169,True,True,selected,,0.5420839190483093,True
+labbe23,346105,primer-cosmos-west,103340,True,True,selected,,5.646090984344482,True
+labbe23,357556,primer-cosmos-west,43711,True,True,selected,,4.6719512939453125,True
+labbe23,361493,primer-cosmos-west,105065,True,True,selected,,6.53060245513916,True
+labbe23,362724,primer-cosmos-west,84507,True,True,selected,,7.020806789398193,True
+labbe23,366504,primer-cosmos-west,95058,True,True,selected,,5.783301830291748,True
+labbe23,378189,primer-cosmos-east,40812,True,True,selected,,3.54661226272583,True
+labbe23,381318,primer-cosmos-east,37681,False,False,compactness criterion,,5.6531572341918945,True
+labbe23,383096,primer-cosmos-east,60812,False,False,color criterion,,7.095141410827637,True
+labbe23,386649,primer-cosmos-west,93006,False,False,detection gate,,6.521352767944336,True
+labbe23,389457,primer-cosmos-west,89952,False,False,color criterion,,5.280839443206787,True
+labbe23,389576,primer-cosmos-west,15989,True,True,selected,,6.521212100982666,True
+labbe23,393440,primer-cosmos-east,38011,False,False,color criterion,,1.2610883712768555,True
+labbe23,401609,primer-cosmos-east,48066,True,True,selected,,4.534336566925049,True
+labbe23,414231,primer-cosmos-east,83388,False,False,color criterion,,5.145186901092529,True
+labbe23,416141,primer-cosmos-east,79141,False,False,color criterion,,8.924863815307617,True
+labbe23,416779,primer-cosmos-east,79519,True,True,selected,,0.4245518445968628,True
+labbe23,428125,primer-cosmos-east,57753,True,True,selected,,4.799247741699219,True
+labbe23,428195,primer-cosmos-east,71672,True,True,selected,,4.556371212005615,True
+labbe23,465479,gdn,67601,False,False,color criterion,,2.7290353775024414,True
+labbe23,469414,gdn,42019,False,False,color criterion,,6.58986234664917,True
+labbe23,470144,gdn,48455,False,False,color criterion,,7.129549026489258,True
+labbe23,474195,gdn,77875,False,False,color criterion,,4.729620456695557,True
+labbe23,479449,gdn,60096,False,False,compactness criterion,,6.7591753005981445,True
+labbe23,482712,gdn,36091,False,False,color criterion,,5.732479572296143,True
+labbe23,485386,gdn,40027,False,False,color criterion,,5.584617614746094,True
+labbe23,489368,gdn,16455,True,True,selected,,4.212161064147949,True
+labbe23,489501,gdn,16334,False,False,color criterion,,7.341634750366211,True
+labbe23,490982,gdn,64586,False,False,color criterion,,7.24368953704834,True
+labbe23,498369,gdn,4064,False,False,compactness criterion,,5.219847202301025,True
+labbe23,506785,gdn,54665,False,False,color criterion,,3.9982566833496094,True
+labbe23,511912,gdn,24803,False,False,compactness criterion,,4.465741157531738,True
+labbe23,512221,gdn,4389,True,True,selected,,5.663364887237549,True
+labbe23,519153,gdn,27348,False,False,color criterion,,5.148443698883057,True
+labbe23,519381,gdn,6046,False,False,color criterion,,4.790410041809082,True
+labbe23,519713,gdn,24477,False,False,color criterion,,3.3923702239990234,True
+labbe23,559252,ceers-full,45658,True,True,selected,,5.188017845153809,True
+labbe23,559649,ceers-full,57736,False,False,compactness criterion,,5.6522111892700195,True
+labbe23,562006,ceers-full,76469,True,True,selected,,5.618987083435059,True
+labbe23,563101,ceers-full,20143,False,False,color criterion,,3.6578361988067627,True
+labbe23,564842,ceers-full,54373,False,False,color criterion,,5.145248889923096,True
+labbe23,566490,ceers-full,78166,True,True,selected,,2.2818305492401123,True
+labbe23,568695,ceers-full,63478,True,True,selected,,4.211513519287109,True
+labbe23,569893,ceers-full,55163,False,False,color criterion,,3.541563034057617,True
+labbe23,575904,ceers-full,51045,False,False,color criterion,,5.157491683959961,True
+labbe23,577548,ceers-full,60925,False,False,color criterion,,8.472604751586914,True
+labbe23,578604,ceers-full,29185,False,False,color criterion,,5.358488082885742,True
+labbe23,580427,ceers-full,45873,True,True,selected,,4.9836931228637695,True
+labbe23,580499,ceers-full,41679,True,True,selected,,1.6664848327636719,True
+labbe23,582061,ceers-full,53527,True,True,selected,,7.1176066398620605,True
+labbe23,582122,ceers-full,44889,True,True,selected,,6.766268730163574,True
+labbe23,583031,ceers-full,66131,False,False,compactness criterion,,4.7095818519592285,False
+labbe23,584284,ceers-full,22050,True,True,selected,,4.957590579986572,True
+labbe23,589379,ceers-full,72397,False,False,detection gate,,5.399571418762207,True
+labbe23,590975,ceers-full,31636,True,True,selected,,4.740969657897949,True
+labbe23,591417,ceers-full,73652,False,False,color criterion,,5.231081962585449,True
+labbe23,591916,ceers-full,30759,False,False,color criterion,,5.382406234741211,True
+labbe23,592333,ceers-full,46532,False,False,color criterion,,5.462147235870361,True
+labbe23,597534,ceers-full,74332,False,False,color criterion,,5.691756248474121,False
+labbe23,603690,ceers-full,66240,True,True,selected,,5.051843166351318,True
+labbe23,604428,ceers-full,48350,False,False,color criterion,,5.265514850616455,True
+labbe23,604497,ceers-full,7491,False,False,detection gate,,3.3916428089141846,True
+labbe23,606156,ceers-full,60195,True,True,selected,,7.470250129699707,True
+labbe23,606709,ceers-full,58886,False,False,color criterion,,5.140321254730225,True
+labbe23,607094,ceers-full,19938,False,False,color criterion,,5.204113006591797,True
+labbe23,607861,ceers-full,40268,True,True,selected,,5.654208660125732,True
+labbe23,615242,ceers-full,32314,True,True,selected,,4.991174221038818,True
+labbe23,618550,ceers-full,18848,False,False,color criterion,,7.3547444343566895,True
+labbe23,624327,ceers-full,25868,True,True,selected,,6.835084915161133,True
+labbe23,628553,ceers-full,6342,False,False,color criterion,,7.405714988708496,True
+labbe23,629133,ceers-full,24827,True,True,selected,,5.299620151519775,True
+kokorev24,2583,primer-uds-north,74752,False,False,compactness criterion,,6.100034236907959,True
+kokorev24,3915,primer-uds-north,75975,False,False,color criterion,,2.3604953289031982,True
+kokorev24,5003,primer-uds-north,82791,True,True,selected,,4.691159248352051,True
+kokorev24,8880,primer-uds-south,36210,True,True,selected,,4.759895324707031,True
+kokorev24,10951,primer-uds-north,74005,False,False,color criterion,,7.129388332366943,True
+kokorev24,11111,primer-uds-north,36569,False,True,none,seven-band rerun with fresh apertures selects; record does not,6.348576545715332,True
+kokorev24,17782,primer-uds-south,29173,False,False,color criterion,,7.129854202270508,True
+kokorev24,18015,primer-uds-south,45540,True,True,selected,,3.5563695430755615,True
+kokorev24,19679,primer-uds-north,38196,True,True,selected,,7.135456562042236,True
+kokorev24,24623,primer-uds-south,44341,False,False,detection gate,,7.636297702789307,True
+kokorev24,25252,primer-uds-north,71609,False,False,color criterion,,7.133871078491211,True
+kokorev24,26406,primer-uds-south,53274,True,False,selected,record selects; seven-band rerun with fresh apertures does not,6.005431652069092,True
+kokorev24,27181,primer-uds-south,38479,False,False,detection gate,,2.3496365547180176,True
+kokorev24,27975,primer-uds-south,15006,False,False,color criterion,,3.389786958694458,True
+kokorev24,28266,primer-uds-north,19957,False,False,color criterion,,4.757785320281982,True
+kokorev24,28999,primer-uds-south,61912,True,True,selected,,4.52282190322876,True
+kokorev24,31845,primer-uds-south,65705,False,False,detection gate,,6.436645984649658,True
+kokorev24,41569,primer-uds-north,39709,True,True,selected,,5.658624649047852,True
+kokorev24,47582,primer-uds-north,49209,False,False,detection gate,,7.164916038513184,True
+kokorev24,50436,primer-uds-south,42814,False,False,brown-dwarf color,,0.8433279991149902,True
+kokorev24,52014,primer-uds-south,56686,False,False,brown-dwarf color,,5.656572341918945,True
+kokorev24,58431,primer-uds-south,40800,False,False,detection gate,,5.4395670890808105,True
+kokorev24,59037,primer-uds-north,44195,True,True,selected,,15.479340553283691,True
+kokorev24,64163,primer-uds-north,67741,False,False,compactness criterion,,4.553906440734863,True
+kokorev24,66039,primer-uds-south,23438,False,False,compactness criterion,,4.585654258728027,True
+kokorev24,69421,primer-uds-south,36171,False,False,color criterion,,4.44737434387207,True
+kokorev24,73068,primer-uds-south,33451,False,False,detection gate,,7.153848648071289,True
+kokorev24,77053,primer-uds-north,47411,False,False,color criterion,,4.576568603515625,True
+kokorev24,78416,primer-uds-north,19857,True,True,selected,,4.3381805419921875,True
+kokorev24,78552,primer-uds-north,46223,False,False,color criterion,,8.899354934692383,True
+kokorev24,80076,primer-uds-south,16053,True,True,selected,,6.08278226852417,True
+kokorev24,80916,primer-uds-north,72350,True,True,selected,,2.39176344871521,True
+kokorev24,82379,primer-uds-north,63748,True,True,selected,,7.136462211608887,True
+kokorev24,83583,primer-uds-south,26611,False,False,detection gate,,8.990806579589844,True
+kokorev24,84181,primer-uds-south,7111,True,True,selected,,7.876816749572754,True
+kokorev24,86816,primer-uds-south,10036,False,False,color criterion,,6.621140003204346,True
+kokorev24,87772,primer-uds-south,19521,False,False,detection gate,,5.662346839904785,True
+kokorev24,89236,primer-uds-north,49501,True,True,selected,,4.64432954788208,True
+kokorev24,94497,primer-uds-north,50135,False,False,color criterion,,0.8360292911529541,True
+kokorev24,101065,primer-uds-north,54183,True,True,selected,,4.526068687438965,True
+kokorev24,105458,primer-uds-north,36534,True,True,selected,,4.728287696838379,True
+kokorev24,106664,primer-uds-south,42310,True,True,selected,,5.6530256271362305,True
+kokorev24,107613,primer-uds-north,49298,True,True,selected,,5.12906551361084,True
+kokorev24,120751,primer-uds-south,29813,True,True,selected,,5.3878960609436035,True
+kokorev24,121629,primer-uds-south,53692,False,False,color criterion,,5.407966136932373,True
+kokorev24,126807,primer-uds-north,74471,False,False,color criterion,,7.973998546600342,True
+kokorev24,128283,primer-uds-south,50431,False,False,compactness criterion,,1.557572364807129,True
+kokorev24,128779,primer-uds-north,11352,True,True,selected,,5.395835876464844,True
+kokorev24,134898,primer-uds-north,25768,False,False,color criterion,,3.5201046466827393,True
+kokorev24,145455,primer-uds-south,37427,False,False,color criterion,,7.045917987823486,True
+kokorev24,149161,primer-uds-north,8768,False,False,color criterion,,5.159881591796875,True
+kokorev24,157134,gds-sw,43476,True,True,selected,,4.527184009552002,True
+kokorev24,159272,gds-sw,42114,True,True,selected,,4.482551574707031,True
+kokorev24,160972,gds-sw,42382,False,False,color criterion,,8.220477104187012,True
+kokorev24,166519,gds-sw,36474,False,False,color criterion,,7.84176778793335,True
+kokorev24,166635,gds-sw,45401,True,True,selected,,5.457492351531982,True
+kokorev24,184343,gds,67753,False,False,color criterion,,5.614948749542236,False
+kokorev24,189430,gds-sw,12550,False,False,color criterion,,0.9876317381858826,True
+kokorev24,189514,gds-sw,12551,False,False,color criterion,,0.2993711531162262,True
+kokorev24,195041,gds-sw,18538,True,True,selected,,6.266995429992676,True
+kokorev24,202262,gds,11107,False,False,color criterion,,7.682340145111084,True
+kokorev24,205934,gds,30367,True,True,selected,,5.658355712890625,True
+kokorev24,206765,gds,24555,False,False,compactness criterion,,5.676430702209473,True
+kokorev24,209262,gds,56437,True,True,selected,,3.853292226791382,True
+kokorev24,210911,gds,2947,True,True,selected,,4.7854156494140625,True
+kokorev24,212510,gds,44120,False,False,color criterion,,5.438838005065918,False
+kokorev24,212842,gds,47103,True,True,selected,,4.109916687011719,True
+kokorev24,214148,gds,38174,True,True,selected,,5.71851110458374,True
+kokorev24,215176,gds,49351,False,False,color criterion,,5.928738594055176,True
+kokorev24,233452,gds,53198,True,True,selected,,6.311873435974121,True
+kokorev24,251875,gds,53152,True,True,selected,,2.623657703399658,True
+kokorev24,301324,primer-cosmos-west,62385,True,False,selected,record selects; seven-band rerun with fresh apertures does not,6.335335731506348,True
+kokorev24,305821,primer-cosmos-west,69048,False,False,color criterion,,5.651267051696777,True
+kokorev24,309737,primer-cosmos-west,56264,False,False,detection gate,,5.631539344787598,True
+kokorev24,312610,primer-cosmos-west,67730,True,True,selected,,5.65523624420166,True
+kokorev24,316329,primer-cosmos-west,45444,False,False,color criterion,,7.164122104644775,True
+kokorev24,317222,primer-cosmos-west,25560,True,True,selected,,5.207961082458496,True
+kokorev24,317568,primer-cosmos-west,65299,False,False,color criterion,,5.7602033615112305,True
+kokorev24,318732,primer-cosmos-west,75011,True,False,selected,record selects; seven-band rerun with fresh apertures does not,5.658799648284912,True
+kokorev24,325315,primer-cosmos-west,56136,True,True,selected,,5.608597755432129,True
+kokorev24,331636,primer-cosmos-west,56169,True,True,selected,,0.5420839190483093,True
+kokorev24,346105,primer-cosmos-west,103340,True,True,selected,,5.646090984344482,True
+kokorev24,357556,primer-cosmos-west,43711,True,True,selected,,4.6719512939453125,True
+kokorev24,361493,primer-cosmos-west,105065,True,True,selected,,6.53060245513916,True
+kokorev24,362724,primer-cosmos-west,84507,True,True,selected,,7.020806789398193,True
+kokorev24,366504,primer-cosmos-west,95058,True,True,selected,,5.783301830291748,True
+kokorev24,378189,primer-cosmos-east,40812,True,True,selected,,3.54661226272583,True
+kokorev24,381318,primer-cosmos-east,37681,False,False,compactness criterion,,5.6531572341918945,True
+kokorev24,383096,primer-cosmos-east,60812,False,False,color criterion,,7.095141410827637,True
+kokorev24,386649,primer-cosmos-west,93006,False,False,detection gate,,6.521352767944336,True
+kokorev24,389457,primer-cosmos-west,89952,False,False,color criterion,,5.280839443206787,True
+kokorev24,389576,primer-cosmos-west,15989,True,True,selected,,6.521212100982666,True
+kokorev24,393440,primer-cosmos-east,38011,False,False,color criterion,,1.2610883712768555,True
+kokorev24,401609,primer-cosmos-east,48066,True,True,selected,,4.534336566925049,True
+kokorev24,414231,primer-cosmos-east,83388,False,False,color criterion,,5.145186901092529,True
+kokorev24,416141,primer-cosmos-east,79141,False,False,color criterion,,8.924863815307617,True
+kokorev24,416779,primer-cosmos-east,79519,True,True,selected,,0.4245518445968628,True
+kokorev24,428125,primer-cosmos-east,57753,True,True,selected,,4.799247741699219,True
+kokorev24,428195,primer-cosmos-east,71672,True,True,selected,,4.556371212005615,True
+kokorev24,465479,gdn,67601,False,False,color criterion,,2.7290353775024414,True
+kokorev24,469414,gdn,42019,True,True,selected,,6.58986234664917,True
+kokorev24,470144,gdn,48455,True,True,selected,,7.129549026489258,True
+kokorev24,474195,gdn,77875,False,False,color criterion,,4.729620456695557,True
+kokorev24,479449,gdn,60096,False,False,compactness criterion,,6.7591753005981445,True
+kokorev24,482712,gdn,36091,True,True,selected,,5.732479572296143,True
+kokorev24,485386,gdn,40027,True,True,selected,,5.584617614746094,True
+kokorev24,489368,gdn,16455,True,True,selected,,4.212161064147949,True
+kokorev24,489501,gdn,16334,False,False,color criterion,,7.341634750366211,True
+kokorev24,490982,gdn,64586,False,False,color criterion,,7.24368953704834,True
+kokorev24,498369,gdn,4064,False,False,compactness criterion,,5.219847202301025,True
+kokorev24,506785,gdn,54665,False,False,color criterion,,3.9982566833496094,True
+kokorev24,511912,gdn,24803,False,False,compactness criterion,,4.465741157531738,True
+kokorev24,512221,gdn,4389,True,True,selected,,5.663364887237549,True
+kokorev24,519153,gdn,27348,False,False,color criterion,,5.148443698883057,True
+kokorev24,519381,gdn,6046,False,False,color criterion,,4.790410041809082,True
+kokorev24,519713,gdn,24477,False,False,color criterion,,3.3923702239990234,True
+kokorev24,559252,ceers-full,45658,True,True,selected,,5.188017845153809,True
+kokorev24,559649,ceers-full,57736,False,False,compactness criterion,,5.6522111892700195,True
+kokorev24,562006,ceers-full,76469,False,False,color criterion,,5.618987083435059,True
+kokorev24,563101,ceers-full,20143,False,False,color criterion,,3.6578361988067627,True
+kokorev24,564842,ceers-full,54373,False,False,color criterion,,5.145248889923096,True
+kokorev24,566490,ceers-full,78166,True,True,selected,,2.2818305492401123,True
+kokorev24,568695,ceers-full,63478,True,True,selected,,4.211513519287109,True
+kokorev24,569893,ceers-full,55163,False,False,color criterion,,3.541563034057617,True
+kokorev24,575904,ceers-full,51045,False,False,color criterion,,5.157491683959961,True
+kokorev24,577548,ceers-full,60925,False,False,color criterion,,8.472604751586914,True
+kokorev24,578604,ceers-full,29185,False,False,color criterion,,5.358488082885742,True
+kokorev24,580427,ceers-full,45873,True,True,selected,,4.9836931228637695,True
+kokorev24,580499,ceers-full,41679,True,True,selected,,1.6664848327636719,True
+kokorev24,582061,ceers-full,53527,True,True,selected,,7.1176066398620605,True
+kokorev24,582122,ceers-full,44889,True,True,selected,,6.766268730163574,True
+kokorev24,583031,ceers-full,66131,False,False,compactness criterion,,4.7095818519592285,False
+kokorev24,584284,ceers-full,22050,True,True,selected,,4.957590579986572,True
+kokorev24,589379,ceers-full,72397,False,False,detection gate,,5.399571418762207,True
+kokorev24,590975,ceers-full,31636,True,True,selected,,4.740969657897949,True
+kokorev24,591417,ceers-full,73652,False,False,color criterion,,5.231081962585449,True
+kokorev24,591916,ceers-full,30759,False,False,color criterion,,5.382406234741211,True
+kokorev24,592333,ceers-full,46532,False,False,brown-dwarf color,,5.462147235870361,True
+kokorev24,597534,ceers-full,74332,False,False,brown-dwarf color,,5.691756248474121,False
+kokorev24,603690,ceers-full,66240,True,True,selected,,5.051843166351318,True
+kokorev24,604428,ceers-full,48350,False,False,color criterion,,5.265514850616455,True
+kokorev24,604497,ceers-full,7491,False,False,detection gate,,3.3916428089141846,True
+kokorev24,606156,ceers-full,60195,True,True,selected,,7.470250129699707,True
+kokorev24,606709,ceers-full,58886,False,False,color criterion,,5.140321254730225,True
+kokorev24,607094,ceers-full,19938,False,False,color criterion,,5.204113006591797,True
+kokorev24,607861,ceers-full,40268,True,True,selected,,5.654208660125732,True
+kokorev24,615242,ceers-full,32314,True,True,selected,,4.991174221038818,True
+kokorev24,618550,ceers-full,18848,False,False,color criterion,,7.3547444343566895,True
+kokorev24,624327,ceers-full,25868,True,True,selected,,6.835084915161133,True
+kokorev24,628553,ceers-full,6342,False,False,color criterion,,7.405714988708496,True
+kokorev24,629133,ceers-full,24827,True,True,selected,,5.299620151519775,True
+kocevski24,2583,primer-uds-north,74752,False,False,slope criterion,,6.100034236907959,True
+kocevski24,3915,primer-uds-north,75975,False,False,HST band set required,,2.3604953289031982,True
+kocevski24,5003,primer-uds-north,82791,False,False,HST band set required,,4.691159248352051,True
+kocevski24,8880,primer-uds-south,36210,False,False,slope criterion,,4.759895324707031,True
+kocevski24,10951,primer-uds-north,74005,True,True,selected,,7.129388332366943,True
+kocevski24,11111,primer-uds-north,36569,False,False,slope criterion,,6.348576545715332,True
+kocevski24,17782,primer-uds-south,29173,False,False,slope criterion,,7.129854202270508,True
+kocevski24,18015,primer-uds-south,45540,False,False,HST band set required,,3.5563695430755615,True
+kocevski24,19679,primer-uds-north,38196,True,True,selected,,7.135456562042236,True
+kocevski24,24623,primer-uds-south,44341,False,False,detection gate,,7.636297702789307,True
+kocevski24,25252,primer-uds-north,71609,False,False,slope criterion,,7.133871078491211,True
+kocevski24,26406,primer-uds-south,53274,True,True,selected,,6.005431652069092,True
+kocevski24,27181,primer-uds-south,38479,False,False,HST band set required,,2.3496365547180176,True
+kocevski24,27975,primer-uds-south,15006,False,False,HST band set required,,3.389786958694458,True
+kocevski24,28266,primer-uds-north,19957,False,False,slope criterion,,4.757785320281982,True
+kocevski24,28999,primer-uds-south,61912,True,False,selected,record selects; seven-band rerun with fresh apertures does not,4.52282190322876,True
+kocevski24,31845,primer-uds-south,65705,False,False,detection gate,,6.436645984649658,True
+kocevski24,41569,primer-uds-north,39709,True,True,selected,,5.658624649047852,True
+kocevski24,47582,primer-uds-north,49209,False,False,detection gate,,7.164916038513184,True
+kocevski24,50436,primer-uds-south,42814,False,False,HST band set required,,0.8433279991149902,True
+kocevski24,52014,primer-uds-south,56686,True,True,selected,,5.656572341918945,True
+kocevski24,58431,primer-uds-south,40800,False,False,slope criterion,,5.4395670890808105,True
+kocevski24,59037,primer-uds-north,44195,False,False,slope criterion,,15.479340553283691,True
+kocevski24,64163,primer-uds-north,67741,False,False,HST band set required,,4.553906440734863,True
+kocevski24,66039,primer-uds-south,23438,False,False,HST band set required,,4.585654258728027,True
+kocevski24,69421,primer-uds-south,36171,False,False,HST band set required,,4.44737434387207,True
+kocevski24,73068,primer-uds-south,33451,False,False,detection gate,,7.153848648071289,True
+kocevski24,77053,primer-uds-north,47411,False,False,HST band set required,,4.576568603515625,True
+kocevski24,78416,primer-uds-north,19857,True,False,selected,record selects; seven-band rerun with fresh apertures does not,4.3381805419921875,True
+kocevski24,78552,primer-uds-north,46223,False,False,slope criterion,,8.899354934692383,True
+kocevski24,80076,primer-uds-south,16053,False,False,slope criterion,,6.08278226852417,True
+kocevski24,80916,primer-uds-north,72350,False,False,HST band set required,,2.39176344871521,True
+kocevski24,82379,primer-uds-north,63748,False,False,slope criterion,,7.136462211608887,True
+kocevski24,83583,primer-uds-south,26611,False,False,detection gate,,8.990806579589844,True
+kocevski24,84181,primer-uds-south,7111,False,False,slope criterion,,7.876816749572754,True
+kocevski24,86816,primer-uds-south,10036,False,False,slope criterion,,6.621140003204346,True
+kocevski24,87772,primer-uds-south,19521,False,False,detection gate,,5.662346839904785,True
+kocevski24,89236,primer-uds-north,49501,False,False,HST band set required,,4.64432954788208,True
+kocevski24,94497,primer-uds-north,50135,False,False,HST band set required,,0.8360292911529541,True
+kocevski24,101065,primer-uds-north,54183,False,False,HST band set required,,4.526068687438965,True
+kocevski24,105458,primer-uds-north,36534,False,False,HST band set required,,4.728287696838379,True
+kocevski24,106664,primer-uds-south,42310,True,True,selected,,5.6530256271362305,True
+kocevski24,107613,primer-uds-north,49298,False,False,slope criterion,,5.12906551361084,True
+kocevski24,120751,primer-uds-south,29813,True,True,selected,,5.3878960609436035,True
+kocevski24,121629,primer-uds-south,53692,False,False,slope criterion,,5.407966136932373,True
+kocevski24,126807,primer-uds-north,74471,False,False,slope criterion,,7.973998546600342,True
+kocevski24,128283,primer-uds-south,50431,False,False,HST band set required,,1.557572364807129,True
+kocevski24,128779,primer-uds-north,11352,True,True,selected,,5.395835876464844,True
+kocevski24,134898,primer-uds-north,25768,False,False,HST band set required,,3.5201046466827393,True
+kocevski24,145455,primer-uds-south,37427,False,False,slope criterion,,7.045917987823486,True
+kocevski24,149161,primer-uds-north,8768,False,False,slope criterion,,5.159881591796875,True
+kocevski24,157134,gds-sw,43476,True,False,selected,record selects; seven-band rerun with fresh apertures does not,4.527184009552002,True
+kocevski24,159272,gds-sw,42114,False,False,HST band set required,,4.482551574707031,True
+kocevski24,160972,gds-sw,42382,True,True,selected,,8.220477104187012,True
+kocevski24,166519,gds-sw,36474,False,False,line-boost criterion,,7.84176778793335,True
+kocevski24,166635,gds-sw,45401,True,True,selected,,5.457492351531982,True
+kocevski24,184343,gds,67753,False,False,slope criterion,,5.614948749542236,False
+kocevski24,189430,gds-sw,12550,False,False,HST band set required,,0.9876317381858826,True
+kocevski24,189514,gds-sw,12551,False,False,HST band set required,,0.2993711531162262,True
+kocevski24,195041,gds-sw,18538,False,False,slope criterion,,6.266995429992676,True
+kocevski24,202262,gds,11107,False,False,slope criterion,,7.682340145111084,True
+kocevski24,205934,gds,30367,True,True,selected,,5.658355712890625,True
+kocevski24,206765,gds,24555,False,False,slope criterion,,5.676430702209473,True
+kocevski24,209262,gds,56437,False,False,HST band set required,,3.853292226791382,True
+kocevski24,210911,gds,2947,False,False,slope criterion,,4.7854156494140625,True
+kocevski24,212510,gds,44120,False,False,slope criterion,,5.438838005065918,False
+kocevski24,212842,gds,47103,False,False,HST band set required,,4.109916687011719,True
+kocevski24,214148,gds,38174,False,False,slope criterion,,5.71851110458374,True
+kocevski24,215176,gds,49351,False,False,slope criterion,,5.928738594055176,True
+kocevski24,233452,gds,53198,False,False,slope criterion,,6.311873435974121,True
+kocevski24,251875,gds,53152,False,False,HST band set required,,2.623657703399658,True
+kocevski24,301324,primer-cosmos-west,62385,False,False,slope criterion,,6.335335731506348,True
+kocevski24,305821,primer-cosmos-west,69048,False,False,slope criterion,,5.651267051696777,True
+kocevski24,309737,primer-cosmos-west,56264,False,False,detection gate,,5.631539344787598,True
+kocevski24,312610,primer-cosmos-west,67730,True,True,selected,,5.65523624420166,True
+kocevski24,316329,primer-cosmos-west,45444,False,False,size criterion,,7.164122104644775,True
+kocevski24,317222,primer-cosmos-west,25560,False,False,line-boost criterion,,5.207961082458496,True
+kocevski24,317568,primer-cosmos-west,65299,False,False,slope criterion,,5.7602033615112305,True
+kocevski24,318732,primer-cosmos-west,75011,True,True,selected,,5.658799648284912,True
+kocevski24,325315,primer-cosmos-west,56136,True,True,selected,,5.608597755432129,True
+kocevski24,331636,primer-cosmos-west,56169,False,False,HST band set required,,0.5420839190483093,True
+kocevski24,346105,primer-cosmos-west,103340,True,True,selected,,5.646090984344482,True
+kocevski24,357556,primer-cosmos-west,43711,False,False,HST band set required,,4.6719512939453125,True
+kocevski24,361493,primer-cosmos-west,105065,False,False,slope criterion,,6.53060245513916,True
+kocevski24,362724,primer-cosmos-west,84507,True,True,selected,,7.020806789398193,True
+kocevski24,366504,primer-cosmos-west,95058,False,False,slope criterion,,5.783301830291748,True
+kocevski24,378189,primer-cosmos-east,40812,False,False,HST band set required,,3.54661226272583,True
+kocevski24,381318,primer-cosmos-east,37681,False,False,slope criterion,,5.6531572341918945,True
+kocevski24,383096,primer-cosmos-east,60812,True,False,selected,record selects; seven-band rerun with fresh apertures does not,7.095141410827637,True
+kocevski24,386649,primer-cosmos-west,93006,False,False,slope criterion,,6.521352767944336,True
+kocevski24,389457,primer-cosmos-west,89952,False,False,slope criterion,,5.280839443206787,True
+kocevski24,389576,primer-cosmos-west,15989,False,False,slope criterion,,6.521212100982666,True
+kocevski24,393440,primer-cosmos-east,38011,False,False,HST band set required,,1.2610883712768555,True
+kocevski24,401609,primer-cosmos-east,48066,True,False,selected,record selects; seven-band rerun with fresh apertures does not,4.534336566925049,True
+kocevski24,414231,primer-cosmos-east,83388,False,False,slope criterion,,5.145186901092529,True
+kocevski24,416141,primer-cosmos-east,79141,False,False,slope criterion,,8.924863815307617,True
+kocevski24,416779,primer-cosmos-east,79519,False,False,HST band set required,,0.4245518445968628,True
+kocevski24,428125,primer-cosmos-east,57753,False,False,slope criterion,,4.799247741699219,True
+kocevski24,428195,primer-cosmos-east,71672,False,False,HST band set required,,4.556371212005615,True
+kocevski24,465479,gdn,67601,False,False,HST band set required,,2.7290353775024414,True
+kocevski24,469414,gdn,42019,False,False,slope criterion,,6.58986234664917,True
+kocevski24,470144,gdn,48455,True,True,selected,,7.129549026489258,True
+kocevski24,474195,gdn,77875,False,False,HST band set required,,4.729620456695557,True
+kocevski24,479449,gdn,60096,False,False,slope criterion,,6.7591753005981445,True
+kocevski24,482712,gdn,36091,False,True,none,seven-band rerun with fresh apertures selects; record does not,5.732479572296143,True
+kocevski24,485386,gdn,40027,True,True,selected,,5.584617614746094,True
+kocevski24,489368,gdn,16455,False,False,HST band set required,,4.212161064147949,True
+kocevski24,489501,gdn,16334,True,True,selected,,7.341634750366211,True
+kocevski24,490982,gdn,64586,True,True,selected,,7.24368953704834,True
+kocevski24,498369,gdn,4064,False,False,size criterion,,5.219847202301025,True
+kocevski24,506785,gdn,54665,False,False,HST band set required,,3.9982566833496094,True
+kocevski24,511912,gdn,24803,False,False,HST band set required,,4.465741157531738,True
+kocevski24,512221,gdn,4389,False,True,none,seven-band rerun with fresh apertures selects; record does not,5.663364887237549,True
+kocevski24,519153,gdn,27348,False,False,slope criterion,,5.148443698883057,True
+kocevski24,519381,gdn,6046,False,False,slope criterion,,4.790410041809082,True
+kocevski24,519713,gdn,24477,False,False,HST band set required,,3.3923702239990234,True
+kocevski24,559252,ceers-full,45658,True,True,selected,,5.188017845153809,True
+kocevski24,559649,ceers-full,57736,True,True,selected,,5.6522111892700195,True
+kocevski24,562006,ceers-full,76469,True,True,selected,,5.618987083435059,True
+kocevski24,563101,ceers-full,20143,False,False,HST band set required,,3.6578361988067627,True
+kocevski24,564842,ceers-full,54373,False,False,slope criterion,,5.145248889923096,True
+kocevski24,566490,ceers-full,78166,False,False,HST band set required,,2.2818305492401123,True
+kocevski24,568695,ceers-full,63478,True,False,selected,record selects; seven-band rerun with fresh apertures does not,4.211513519287109,True
+kocevski24,569893,ceers-full,55163,False,False,HST band set required,,3.541563034057617,True
+kocevski24,575904,ceers-full,51045,False,False,slope criterion,,5.157491683959961,True
+kocevski24,577548,ceers-full,60925,True,True,selected,,8.472604751586914,True
+kocevski24,578604,ceers-full,29185,True,True,selected,,5.358488082885742,True
+kocevski24,580427,ceers-full,45873,False,False,slope criterion,,4.9836931228637695,True
+kocevski24,580499,ceers-full,41679,False,False,HST band set required,,1.6664848327636719,True
+kocevski24,582061,ceers-full,53527,True,True,selected,,7.1176066398620605,True
+kocevski24,582122,ceers-full,44889,False,False,slope criterion,,6.766268730163574,True
+kocevski24,583031,ceers-full,66131,False,False,HST band set required,,4.7095818519592285,False
+kocevski24,584284,ceers-full,22050,False,False,slope criterion,,4.957590579986572,True
+kocevski24,589379,ceers-full,72397,False,False,detection gate,,5.399571418762207,True
+kocevski24,590975,ceers-full,31636,False,False,HST band set required,,4.740969657897949,True
+kocevski24,591417,ceers-full,73652,False,False,slope criterion,,5.231081962585449,True
+kocevski24,591916,ceers-full,30759,True,True,selected,,5.382406234741211,True
+kocevski24,592333,ceers-full,46532,False,False,slope criterion,,5.462147235870361,True
+kocevski24,597534,ceers-full,74332,False,False,slope criterion,,5.691756248474121,False
+kocevski24,603690,ceers-full,66240,False,False,slope criterion,,5.051843166351318,True
+kocevski24,604428,ceers-full,48350,False,False,line-boost criterion,,5.265514850616455,True
+kocevski24,604497,ceers-full,7491,False,False,detection gate,,3.3916428089141846,True
+kocevski24,606156,ceers-full,60195,True,True,selected,,7.470250129699707,True
+kocevski24,606709,ceers-full,58886,False,False,slope criterion,,5.140321254730225,True
+kocevski24,607094,ceers-full,19938,False,False,slope criterion,,5.204113006591797,True
+kocevski24,607861,ceers-full,40268,True,True,selected,,5.654208660125732,True
+kocevski24,615242,ceers-full,32314,False,False,slope criterion,,4.991174221038818,True
+kocevski24,618550,ceers-full,18848,False,False,line-boost criterion,,7.3547444343566895,True
+kocevski24,624327,ceers-full,25868,False,False,slope criterion,,6.835084915161133,True
+kocevski24,628553,ceers-full,6342,False,False,line-boost criterion,,7.405714988708496,True
+kocevski24,629133,ceers-full,24827,True,True,selected,,5.299620151519775,True
+perezgonzalez24,2583,primer-uds-north,74752,False,False,color criterion,,6.100034236907959,True
+perezgonzalez24,3915,primer-uds-north,75975,False,False,color criterion,,2.3604953289031982,True
+perezgonzalez24,5003,primer-uds-north,82791,False,False,color criterion,,4.691159248352051,True
+perezgonzalez24,8880,primer-uds-south,36210,False,False,color criterion,,4.759895324707031,True
+perezgonzalez24,10951,primer-uds-north,74005,True,True,selected,,7.129388332366943,True
+perezgonzalez24,11111,primer-uds-north,36569,False,False,color criterion,,6.348576545715332,True
+perezgonzalez24,17782,primer-uds-south,29173,False,False,color criterion,,7.129854202270508,True
+perezgonzalez24,18015,primer-uds-south,45540,False,False,color criterion,,3.5563695430755615,True
+perezgonzalez24,19679,primer-uds-north,38196,True,True,selected,,7.135456562042236,True
+perezgonzalez24,24623,primer-uds-south,44341,True,True,selected,,7.636297702789307,True
+perezgonzalez24,25252,primer-uds-north,71609,True,True,selected,,7.133871078491211,True
+perezgonzalez24,26406,primer-uds-south,53274,True,True,selected,,6.005431652069092,True
+perezgonzalez24,27181,primer-uds-south,38479,False,False,color criterion,,2.3496365547180176,True
+perezgonzalez24,27975,primer-uds-south,15006,False,False,color criterion,,3.389786958694458,True
+perezgonzalez24,28266,primer-uds-north,19957,False,False,color criterion,,4.757785320281982,True
+perezgonzalez24,28999,primer-uds-south,61912,False,False,color criterion,,4.52282190322876,True
+perezgonzalez24,31845,primer-uds-south,65705,False,False,color criterion,,6.436645984649658,True
+perezgonzalez24,41569,primer-uds-north,39709,True,True,selected,,5.658624649047852,True
+perezgonzalez24,47582,primer-uds-north,49209,False,False,color criterion,,7.164916038513184,True
+perezgonzalez24,50436,primer-uds-south,42814,True,True,selected,,0.8433279991149902,True
+perezgonzalez24,52014,primer-uds-south,56686,False,False,color criterion,,5.656572341918945,True
+perezgonzalez24,58431,primer-uds-south,40800,True,True,selected,,5.4395670890808105,True
+perezgonzalez24,59037,primer-uds-north,44195,False,False,color criterion,,15.479340553283691,True
+perezgonzalez24,64163,primer-uds-north,67741,False,False,color criterion,,4.553906440734863,True
+perezgonzalez24,66039,primer-uds-south,23438,False,False,color criterion,,4.585654258728027,True
+perezgonzalez24,69421,primer-uds-south,36171,False,False,color criterion,,4.44737434387207,True
+perezgonzalez24,73068,primer-uds-south,33451,True,True,selected,,7.153848648071289,True
+perezgonzalez24,77053,primer-uds-north,47411,False,False,color criterion,,4.576568603515625,True
+perezgonzalez24,78416,primer-uds-north,19857,False,False,color criterion,,4.3381805419921875,True
+perezgonzalez24,78552,primer-uds-north,46223,False,False,brown-dwarf color,,8.899354934692383,True
+perezgonzalez24,80076,primer-uds-south,16053,False,False,color criterion,,6.08278226852417,True
+perezgonzalez24,80916,primer-uds-north,72350,False,False,color criterion,,2.39176344871521,True
+perezgonzalez24,82379,primer-uds-north,63748,False,False,brown-dwarf color,,7.136462211608887,True
+perezgonzalez24,83583,primer-uds-south,26611,True,True,selected,,8.990806579589844,True
+perezgonzalez24,84181,primer-uds-south,7111,False,False,color criterion,,7.876816749572754,True
+perezgonzalez24,86816,primer-uds-south,10036,False,False,color criterion,,6.621140003204346,True
+perezgonzalez24,87772,primer-uds-south,19521,True,True,selected,,5.662346839904785,True
+perezgonzalez24,89236,primer-uds-north,49501,False,False,color criterion,,4.64432954788208,True
+perezgonzalez24,94497,primer-uds-north,50135,False,False,color criterion,,0.8360292911529541,True
+perezgonzalez24,101065,primer-uds-north,54183,False,False,color criterion,,4.526068687438965,True
+perezgonzalez24,105458,primer-uds-north,36534,False,False,color criterion,,4.728287696838379,True
+perezgonzalez24,106664,primer-uds-south,42310,True,True,selected,,5.6530256271362305,True
+perezgonzalez24,107613,primer-uds-north,49298,False,False,color criterion,,5.12906551361084,True
+perezgonzalez24,120751,primer-uds-south,29813,False,False,brown-dwarf color,,5.3878960609436035,True
+perezgonzalez24,121629,primer-uds-south,53692,False,False,color criterion,,5.407966136932373,True
+perezgonzalez24,126807,primer-uds-north,74471,True,True,selected,,7.973998546600342,True
+perezgonzalez24,128283,primer-uds-south,50431,True,True,selected,,1.557572364807129,True
+perezgonzalez24,128779,primer-uds-north,11352,True,True,selected,,5.395835876464844,True
+perezgonzalez24,134898,primer-uds-north,25768,False,False,color criterion,,3.5201046466827393,True
+perezgonzalez24,145455,primer-uds-south,37427,False,False,color criterion,,7.045917987823486,True
+perezgonzalez24,149161,primer-uds-north,8768,False,False,color criterion,,5.159881591796875,True
+perezgonzalez24,157134,gds-sw,43476,False,False,color criterion,,4.527184009552002,True
+perezgonzalez24,159272,gds-sw,42114,False,False,color criterion,,4.482551574707031,True
+perezgonzalez24,160972,gds-sw,42382,True,True,selected,,8.220477104187012,True
+perezgonzalez24,166519,gds-sw,36474,True,True,selected,,7.84176778793335,True
+perezgonzalez24,166635,gds-sw,45401,True,False,selected,record selects; seven-band rerun with fresh apertures does not,5.457492351531982,True
+perezgonzalez24,184343,gds,67753,False,False,color criterion,,5.614948749542236,False
+perezgonzalez24,189430,gds-sw,12550,False,False,color criterion,,0.9876317381858826,True
+perezgonzalez24,189514,gds-sw,12551,False,False,color criterion,,0.2993711531162262,True
+perezgonzalez24,195041,gds-sw,18538,False,False,color criterion,,6.266995429992676,True
+perezgonzalez24,202262,gds,11107,False,False,color criterion,,7.682340145111084,True
+perezgonzalez24,205934,gds,30367,True,True,selected,,5.658355712890625,True
+perezgonzalez24,206765,gds,24555,False,False,color criterion,,5.676430702209473,True
+perezgonzalez24,209262,gds,56437,False,False,color criterion,,3.853292226791382,True
+perezgonzalez24,210911,gds,2947,False,False,color criterion,,4.7854156494140625,True
+perezgonzalez24,212510,gds,44120,False,False,color criterion,,5.438838005065918,False
+perezgonzalez24,212842,gds,47103,False,False,color criterion,,4.109916687011719,True
+perezgonzalez24,214148,gds,38174,False,False,color criterion,,5.71851110458374,True
+perezgonzalez24,215176,gds,49351,False,False,color criterion,,5.928738594055176,True
+perezgonzalez24,233452,gds,53198,True,True,selected,,6.311873435974121,True
+perezgonzalez24,251875,gds,53152,True,True,selected,,2.623657703399658,True
+perezgonzalez24,301324,primer-cosmos-west,62385,True,True,selected,,6.335335731506348,True
+perezgonzalez24,305821,primer-cosmos-west,69048,False,False,color criterion,,5.651267051696777,True
+perezgonzalez24,309737,primer-cosmos-west,56264,False,False,detection gate,,5.631539344787598,True
+perezgonzalez24,312610,primer-cosmos-west,67730,True,True,selected,,5.65523624420166,True
+perezgonzalez24,316329,primer-cosmos-west,45444,True,True,selected,,7.164122104644775,True
+perezgonzalez24,317222,primer-cosmos-west,25560,True,True,selected,,5.207961082458496,True
+perezgonzalez24,317568,primer-cosmos-west,65299,False,False,color criterion,,5.7602033615112305,True
+perezgonzalez24,318732,primer-cosmos-west,75011,True,True,selected,,5.658799648284912,True
+perezgonzalez24,325315,primer-cosmos-west,56136,True,True,selected,,5.608597755432129,True
+perezgonzalez24,331636,primer-cosmos-west,56169,True,True,selected,,0.5420839190483093,True
+perezgonzalez24,346105,primer-cosmos-west,103340,True,True,selected,,5.646090984344482,True
+perezgonzalez24,357556,primer-cosmos-west,43711,False,False,color criterion,,4.6719512939453125,True
+perezgonzalez24,361493,primer-cosmos-west,105065,True,True,selected,,6.53060245513916,True
+perezgonzalez24,362724,primer-cosmos-west,84507,True,True,selected,,7.020806789398193,True
+perezgonzalez24,366504,primer-cosmos-west,95058,False,False,color criterion,,5.783301830291748,True
+perezgonzalez24,378189,primer-cosmos-east,40812,False,False,color criterion,,3.54661226272583,True
+perezgonzalez24,381318,primer-cosmos-east,37681,False,False,color criterion,,5.6531572341918945,True
+perezgonzalez24,383096,primer-cosmos-east,60812,True,True,selected,,7.095141410827637,True
+perezgonzalez24,386649,primer-cosmos-west,93006,True,True,selected,,6.521352767944336,True
+perezgonzalez24,389457,primer-cosmos-west,89952,False,False,brown-dwarf color,,5.280839443206787,True
+perezgonzalez24,389576,primer-cosmos-west,15989,True,True,selected,,6.521212100982666,True
+perezgonzalez24,393440,primer-cosmos-east,38011,True,True,selected,,1.2610883712768555,True
+perezgonzalez24,401609,primer-cosmos-east,48066,False,False,color criterion,,4.534336566925049,True
+perezgonzalez24,414231,primer-cosmos-east,83388,False,False,color criterion,,5.145186901092529,True
+perezgonzalez24,416141,primer-cosmos-east,79141,False,False,brown-dwarf color,,8.924863815307617,True
+perezgonzalez24,416779,primer-cosmos-east,79519,True,True,selected,,0.4245518445968628,True
+perezgonzalez24,428125,primer-cosmos-east,57753,False,False,color criterion,,4.799247741699219,True
+perezgonzalez24,428195,primer-cosmos-east,71672,False,False,color criterion,,4.556371212005615,True
+perezgonzalez24,465479,gdn,67601,False,False,color criterion,,2.7290353775024414,True
+perezgonzalez24,469414,gdn,42019,False,False,color criterion,,6.58986234664917,True
+perezgonzalez24,470144,gdn,48455,False,False,color criterion,,7.129549026489258,True
+perezgonzalez24,474195,gdn,77875,False,False,color criterion,,4.729620456695557,True
+perezgonzalez24,479449,gdn,60096,True,True,selected,,6.7591753005981445,True
+perezgonzalez24,482712,gdn,36091,True,True,selected,,5.732479572296143,True
+perezgonzalez24,485386,gdn,40027,False,False,color criterion,,5.584617614746094,True
+perezgonzalez24,489368,gdn,16455,False,False,color criterion,,4.212161064147949,True
+perezgonzalez24,489501,gdn,16334,True,True,selected,,7.341634750366211,True
+perezgonzalez24,490982,gdn,64586,True,True,selected,,7.24368953704834,True
+perezgonzalez24,498369,gdn,4064,True,True,selected,,5.219847202301025,True
+perezgonzalez24,506785,gdn,54665,False,False,color criterion,,3.9982566833496094,True
+perezgonzalez24,511912,gdn,24803,False,False,color criterion,,4.465741157531738,True
+perezgonzalez24,512221,gdn,4389,True,True,selected,,5.663364887237549,True
+perezgonzalez24,519153,gdn,27348,False,False,color criterion,,5.148443698883057,True
+perezgonzalez24,519381,gdn,6046,False,False,color criterion,,4.790410041809082,True
+perezgonzalez24,519713,gdn,24477,False,False,color criterion,,3.3923702239990234,True
+perezgonzalez24,559252,ceers-full,45658,True,True,selected,,5.188017845153809,True
+perezgonzalez24,559649,ceers-full,57736,True,True,selected,,5.6522111892700195,True
+perezgonzalez24,562006,ceers-full,76469,True,True,selected,,5.618987083435059,True
+perezgonzalez24,563101,ceers-full,20143,False,False,color criterion,,3.6578361988067627,True
+perezgonzalez24,564842,ceers-full,54373,False,False,color criterion,,5.145248889923096,True
+perezgonzalez24,566490,ceers-full,78166,True,True,selected,,2.2818305492401123,True
+perezgonzalez24,568695,ceers-full,63478,False,False,color criterion,,4.211513519287109,True
+perezgonzalez24,569893,ceers-full,55163,False,False,color criterion,,3.541563034057617,True
+perezgonzalez24,575904,ceers-full,51045,False,False,color criterion,,5.157491683959961,True
+perezgonzalez24,577548,ceers-full,60925,True,True,selected,,8.472604751586914,True
+perezgonzalez24,578604,ceers-full,29185,True,True,selected,,5.358488082885742,True
+perezgonzalez24,580427,ceers-full,45873,True,True,selected,,4.9836931228637695,True
+perezgonzalez24,580499,ceers-full,41679,False,False,color criterion,,1.6664848327636719,True
+perezgonzalez24,582061,ceers-full,53527,True,True,selected,,7.1176066398620605,True
+perezgonzalez24,582122,ceers-full,44889,True,True,selected,,6.766268730163574,True
+perezgonzalez24,583031,ceers-full,66131,False,False,color criterion,,4.7095818519592285,False
+perezgonzalez24,584284,ceers-full,22050,True,True,selected,,4.957590579986572,True
+perezgonzalez24,589379,ceers-full,72397,False,False,detection gate,,5.399571418762207,True
+perezgonzalez24,590975,ceers-full,31636,False,False,color criterion,,4.740969657897949,True
+perezgonzalez24,591417,ceers-full,73652,False,False,color criterion,,5.231081962585449,True
+perezgonzalez24,591916,ceers-full,30759,False,False,color criterion,,5.382406234741211,True
+perezgonzalez24,592333,ceers-full,46532,False,False,color criterion,,5.462147235870361,True
+perezgonzalez24,597534,ceers-full,74332,False,False,color criterion,,5.691756248474121,False
+perezgonzalez24,603690,ceers-full,66240,False,False,brown-dwarf color,,5.051843166351318,True
+perezgonzalez24,604428,ceers-full,48350,True,True,selected,,5.265514850616455,True
+perezgonzalez24,604497,ceers-full,7491,False,False,color criterion,,3.3916428089141846,True
+perezgonzalez24,606156,ceers-full,60195,True,True,selected,,7.470250129699707,True
+perezgonzalez24,606709,ceers-full,58886,False,False,color criterion,,5.140321254730225,True
+perezgonzalez24,607094,ceers-full,19938,False,False,color criterion,,5.204113006591797,True
+perezgonzalez24,607861,ceers-full,40268,True,True,selected,,5.654208660125732,True
+perezgonzalez24,615242,ceers-full,32314,False,False,color criterion,,4.991174221038818,True
+perezgonzalez24,618550,ceers-full,18848,False,False,color criterion,,7.3547444343566895,True
+perezgonzalez24,624327,ceers-full,25868,True,True,selected,,6.835084915161133,True
+perezgonzalez24,628553,ceers-full,6342,True,True,selected,,7.405714988708496,True
+perezgonzalez24,629133,ceers-full,24827,True,True,selected,,5.299620151519775,True
+barro23,2583,primer-uds-north,74752,False,False,color criterion,,6.100034236907959,True
+barro23,3915,primer-uds-north,75975,True,True,selected,,2.3604953289031982,True
+barro23,5003,primer-uds-north,82791,False,False,color criterion,,4.691159248352051,True
+barro23,8880,primer-uds-south,36210,False,False,color criterion,,4.759895324707031,True
+barro23,10951,primer-uds-north,74005,True,True,selected,,7.129388332366943,True
+barro23,11111,primer-uds-north,36569,False,False,color criterion,,6.348576545715332,True
+barro23,17782,primer-uds-south,29173,True,True,selected,,7.129854202270508,True
+barro23,18015,primer-uds-south,45540,False,False,color criterion,,3.5563695430755615,True
+barro23,19679,primer-uds-north,38196,False,False,color criterion,,7.135456562042236,True
+barro23,24623,primer-uds-south,44341,True,True,selected,,7.636297702789307,True
+barro23,25252,primer-uds-north,71609,False,False,color criterion,,7.133871078491211,True
+barro23,26406,primer-uds-south,53274,False,False,color criterion,,6.005431652069092,True
+barro23,27181,primer-uds-south,38479,False,False,color criterion,,2.3496365547180176,True
+barro23,27975,primer-uds-south,15006,False,False,color criterion,,3.389786958694458,True
+barro23,28266,primer-uds-north,19957,False,False,color criterion,,4.757785320281982,True
+barro23,28999,primer-uds-south,61912,False,False,color criterion,,4.52282190322876,True
+barro23,31845,primer-uds-south,65705,False,False,color criterion,,6.436645984649658,True
+barro23,41569,primer-uds-north,39709,False,False,color criterion,,5.658624649047852,True
+barro23,47582,primer-uds-north,49209,False,False,color criterion,,7.164916038513184,True
+barro23,50436,primer-uds-south,42814,True,True,selected,,0.8433279991149902,True
+barro23,52014,primer-uds-south,56686,True,True,selected,,5.656572341918945,True
+barro23,58431,primer-uds-south,40800,False,False,color criterion,,5.4395670890808105,True
+barro23,59037,primer-uds-north,44195,False,False,color criterion,,15.479340553283691,True
+barro23,64163,primer-uds-north,67741,False,False,color criterion,,4.553906440734863,True
+barro23,66039,primer-uds-south,23438,False,False,color criterion,,4.585654258728027,True
+barro23,69421,primer-uds-south,36171,True,True,selected,,4.44737434387207,True
+barro23,73068,primer-uds-south,33451,False,False,color criterion,,7.153848648071289,True
+barro23,77053,primer-uds-north,47411,False,False,color criterion,,4.576568603515625,True
+barro23,78416,primer-uds-north,19857,False,False,color criterion,,4.3381805419921875,True
+barro23,78552,primer-uds-north,46223,False,False,color criterion,,8.899354934692383,True
+barro23,80076,primer-uds-south,16053,False,False,color criterion,,6.08278226852417,True
+barro23,80916,primer-uds-north,72350,True,True,selected,,2.39176344871521,True
+barro23,82379,primer-uds-north,63748,True,True,selected,,7.136462211608887,True
+barro23,83583,primer-uds-south,26611,False,False,color criterion,,8.990806579589844,True
+barro23,84181,primer-uds-south,7111,True,True,selected,,7.876816749572754,True
+barro23,86816,primer-uds-south,10036,False,False,color criterion,,6.621140003204346,True
+barro23,87772,primer-uds-south,19521,False,False,color criterion,,5.662346839904785,True
+barro23,89236,primer-uds-north,49501,False,False,color criterion,,4.64432954788208,True
+barro23,94497,primer-uds-north,50135,True,True,selected,,0.8360292911529541,True
+barro23,101065,primer-uds-north,54183,False,False,color criterion,,4.526068687438965,True
+barro23,105458,primer-uds-north,36534,False,False,color criterion,,4.728287696838379,True
+barro23,106664,primer-uds-south,42310,True,True,selected,,5.6530256271362305,True
+barro23,107613,primer-uds-north,49298,False,False,color criterion,,5.12906551361084,True
+barro23,120751,primer-uds-south,29813,False,False,color criterion,,5.3878960609436035,True
+barro23,121629,primer-uds-south,53692,True,True,selected,,5.407966136932373,True
+barro23,126807,primer-uds-north,74471,False,False,color criterion,,7.973998546600342,True
+barro23,128283,primer-uds-south,50431,True,True,selected,,1.557572364807129,True
+barro23,128779,primer-uds-north,11352,True,True,selected,,5.395835876464844,True
+barro23,134898,primer-uds-north,25768,False,False,color criterion,,3.5201046466827393,True
+barro23,145455,primer-uds-south,37427,False,False,color criterion,,7.045917987823486,True
+barro23,149161,primer-uds-north,8768,False,False,color criterion,,5.159881591796875,True
+barro23,157134,gds-sw,43476,False,False,color criterion,,4.527184009552002,True
+barro23,159272,gds-sw,42114,False,False,color criterion,,4.482551574707031,True
+barro23,160972,gds-sw,42382,False,False,color criterion,,8.220477104187012,True
+barro23,166519,gds-sw,36474,False,False,color criterion,,7.84176778793335,True
+barro23,166635,gds-sw,45401,True,True,selected,,5.457492351531982,True
+barro23,184343,gds,67753,False,False,color criterion,,5.614948749542236,False
+barro23,189430,gds-sw,12550,False,False,color criterion,,0.9876317381858826,True
+barro23,189514,gds-sw,12551,False,False,color criterion,,0.2993711531162262,True
+barro23,195041,gds-sw,18538,False,False,color criterion,,6.266995429992676,True
+barro23,202262,gds,11107,False,False,color criterion,,7.682340145111084,True
+barro23,205934,gds,30367,False,False,color criterion,,5.658355712890625,True
+barro23,206765,gds,24555,False,False,color criterion,,5.676430702209473,True
+barro23,209262,gds,56437,False,False,color criterion,,3.853292226791382,True
+barro23,210911,gds,2947,False,False,color criterion,,4.7854156494140625,True
+barro23,212510,gds,44120,True,True,selected,,5.438838005065918,False
+barro23,212842,gds,47103,False,False,color criterion,,4.109916687011719,True
+barro23,214148,gds,38174,False,False,color criterion,,5.71851110458374,True
+barro23,215176,gds,49351,False,False,color criterion,,5.928738594055176,True
+barro23,233452,gds,53198,False,False,color criterion,,6.311873435974121,True
+barro23,251875,gds,53152,True,True,selected,,2.623657703399658,True
+barro23,301324,primer-cosmos-west,62385,False,False,color criterion,,6.335335731506348,True
+barro23,305821,primer-cosmos-west,69048,False,False,color criterion,,5.651267051696777,True
+barro23,309737,primer-cosmos-west,56264,False,False,detection gate,,5.631539344787598,True
+barro23,312610,primer-cosmos-west,67730,False,False,color criterion,,5.65523624420166,True
+barro23,316329,primer-cosmos-west,45444,False,False,color criterion,,7.164122104644775,True
+barro23,317222,primer-cosmos-west,25560,False,False,color criterion,,5.207961082458496,True
+barro23,317568,primer-cosmos-west,65299,False,False,color criterion,,5.7602033615112305,True
+barro23,318732,primer-cosmos-west,75011,True,True,selected,,5.658799648284912,True
+barro23,325315,primer-cosmos-west,56136,True,True,selected,,5.608597755432129,True
+barro23,331636,primer-cosmos-west,56169,True,True,selected,,0.5420839190483093,True
+barro23,346105,primer-cosmos-west,103340,True,True,selected,,5.646090984344482,True
+barro23,357556,primer-cosmos-west,43711,False,False,color criterion,,4.6719512939453125,True
+barro23,361493,primer-cosmos-west,105065,False,False,color criterion,,6.53060245513916,True
+barro23,362724,primer-cosmos-west,84507,False,False,color criterion,,7.020806789398193,True
+barro23,366504,primer-cosmos-west,95058,False,False,color criterion,,5.783301830291748,True
+barro23,378189,primer-cosmos-east,40812,False,False,color criterion,,3.54661226272583,True
+barro23,381318,primer-cosmos-east,37681,False,False,color criterion,,5.6531572341918945,True
+barro23,383096,primer-cosmos-east,60812,False,False,color criterion,,7.095141410827637,True
+barro23,386649,primer-cosmos-west,93006,False,False,color criterion,,6.521352767944336,True
+barro23,389457,primer-cosmos-west,89952,False,False,color criterion,,5.280839443206787,True
+barro23,389576,primer-cosmos-west,15989,False,False,color criterion,,6.521212100982666,True
+barro23,393440,primer-cosmos-east,38011,True,True,selected,,1.2610883712768555,True
+barro23,401609,primer-cosmos-east,48066,False,False,color criterion,,4.534336566925049,True
+barro23,414231,primer-cosmos-east,83388,False,False,color criterion,,5.145186901092529,True
+barro23,416141,primer-cosmos-east,79141,False,False,color criterion,,8.924863815307617,True
+barro23,416779,primer-cosmos-east,79519,False,False,color criterion,,0.4245518445968628,True
+barro23,428125,primer-cosmos-east,57753,False,False,color criterion,,4.799247741699219,True
+barro23,428195,primer-cosmos-east,71672,False,False,color criterion,,4.556371212005615,True
+barro23,465479,gdn,67601,False,False,color criterion,,2.7290353775024414,True
+barro23,469414,gdn,42019,False,False,color criterion,,6.58986234664917,True
+barro23,470144,gdn,48455,True,True,selected,,7.129549026489258,True
+barro23,474195,gdn,77875,False,False,color criterion,,4.729620456695557,True
+barro23,479449,gdn,60096,False,False,color criterion,,6.7591753005981445,True
+barro23,482712,gdn,36091,False,False,color criterion,,5.732479572296143,True
+barro23,485386,gdn,40027,False,False,color criterion,,5.584617614746094,True
+barro23,489368,gdn,16455,False,False,color criterion,,4.212161064147949,True
+barro23,489501,gdn,16334,False,False,color criterion,,7.341634750366211,True
+barro23,490982,gdn,64586,False,False,color criterion,,7.24368953704834,True
+barro23,498369,gdn,4064,False,False,color criterion,,5.219847202301025,True
+barro23,506785,gdn,54665,False,False,color criterion,,3.9982566833496094,True
+barro23,511912,gdn,24803,False,False,color criterion,,4.465741157531738,True
+barro23,512221,gdn,4389,False,False,color criterion,,5.663364887237549,True
+barro23,519153,gdn,27348,False,False,color criterion,,5.148443698883057,True
+barro23,519381,gdn,6046,False,False,color criterion,,4.790410041809082,True
+barro23,519713,gdn,24477,False,False,color criterion,,3.3923702239990234,True
+barro23,559252,ceers-full,45658,False,False,color criterion,,5.188017845153809,True
+barro23,559649,ceers-full,57736,False,False,color criterion,,5.6522111892700195,True
+barro23,562006,ceers-full,76469,True,True,selected,,5.618987083435059,True
+barro23,563101,ceers-full,20143,False,False,color criterion,,3.6578361988067627,True
+barro23,564842,ceers-full,54373,False,False,color criterion,,5.145248889923096,True
+barro23,566490,ceers-full,78166,False,False,color criterion,,2.2818305492401123,True
+barro23,568695,ceers-full,63478,False,False,color criterion,,4.211513519287109,True
+barro23,569893,ceers-full,55163,False,False,color criterion,,3.541563034057617,True
+barro23,575904,ceers-full,51045,False,False,color criterion,,5.157491683959961,True
+barro23,577548,ceers-full,60925,False,False,color criterion,,8.472604751586914,True
+barro23,578604,ceers-full,29185,False,False,color criterion,,5.358488082885742,True
+barro23,580427,ceers-full,45873,False,False,color criterion,,4.9836931228637695,True
+barro23,580499,ceers-full,41679,False,False,color criterion,,1.6664848327636719,True
+barro23,582061,ceers-full,53527,True,True,selected,,7.1176066398620605,True
+barro23,582122,ceers-full,44889,False,False,color criterion,,6.766268730163574,True
+barro23,583031,ceers-full,66131,False,False,color criterion,,4.7095818519592285,False
+barro23,584284,ceers-full,22050,False,False,color criterion,,4.957590579986572,True
+barro23,589379,ceers-full,72397,False,False,detection gate,,5.399571418762207,True
+barro23,590975,ceers-full,31636,False,False,color criterion,,4.740969657897949,True
+barro23,591417,ceers-full,73652,False,False,color criterion,,5.231081962585449,True
+barro23,591916,ceers-full,30759,False,False,color criterion,,5.382406234741211,True
+barro23,592333,ceers-full,46532,True,True,selected,,5.462147235870361,True
+barro23,597534,ceers-full,74332,False,False,color criterion,,5.691756248474121,False
+barro23,603690,ceers-full,66240,False,False,color criterion,,5.051843166351318,True
+barro23,604428,ceers-full,48350,False,False,color criterion,,5.265514850616455,True
+barro23,604497,ceers-full,7491,False,False,color criterion,,3.3916428089141846,True
+barro23,606156,ceers-full,60195,True,True,selected,,7.470250129699707,True
+barro23,606709,ceers-full,58886,False,False,color criterion,,5.140321254730225,True
+barro23,607094,ceers-full,19938,False,False,color criterion,,5.204113006591797,True
+barro23,607861,ceers-full,40268,True,True,selected,,5.654208660125732,True
+barro23,615242,ceers-full,32314,False,False,color criterion,,4.991174221038818,True
+barro23,618550,ceers-full,18848,False,False,color criterion,,7.3547444343566895,True
+barro23,624327,ceers-full,25868,False,False,color criterion,,6.835084915161133,True
+barro23,628553,ceers-full,6342,False,False,color criterion,,7.405714988708496,True
+barro23,629133,ceers-full,24827,False,False,color criterion,,5.299620151519775,True
+greene24,2583,primer-uds-north,74752,False,False,color criterion,,6.100034236907959,True
+greene24,3915,primer-uds-north,75975,False,False,color criterion,,2.3604953289031982,True
+greene24,5003,primer-uds-north,82791,False,False,color criterion,,4.691159248352051,True
+greene24,8880,primer-uds-south,36210,False,False,color criterion,,4.759895324707031,True
+greene24,10951,primer-uds-north,74005,False,False,color criterion,,7.129388332366943,True
+greene24,11111,primer-uds-north,36569,False,False,color criterion,,6.348576545715332,True
+greene24,17782,primer-uds-south,29173,False,False,color criterion,,7.129854202270508,True
+greene24,18015,primer-uds-south,45540,False,False,color criterion,,3.5563695430755615,True
+greene24,19679,primer-uds-north,38196,True,True,selected,,7.135456562042236,True
+greene24,24623,primer-uds-south,44341,False,False,detection gate,,7.636297702789307,True
+greene24,25252,primer-uds-north,71609,False,False,color criterion,,7.133871078491211,True
+greene24,26406,primer-uds-south,53274,True,True,selected,,6.005431652069092,True
+greene24,27181,primer-uds-south,38479,False,False,detection gate,,2.3496365547180176,True
+greene24,27975,primer-uds-south,15006,False,False,color criterion,,3.389786958694458,True
+greene24,28266,primer-uds-north,19957,False,False,color criterion,,4.757785320281982,True
+greene24,28999,primer-uds-south,61912,False,False,color criterion,,4.52282190322876,True
+greene24,31845,primer-uds-south,65705,False,False,detection gate,,6.436645984649658,True
+greene24,41569,primer-uds-north,39709,True,True,selected,,5.658624649047852,True
+greene24,47582,primer-uds-north,49209,False,False,detection gate,,7.164916038513184,True
+greene24,50436,primer-uds-south,42814,False,False,color criterion,,0.8433279991149902,True
+greene24,52014,primer-uds-south,56686,True,True,selected,,5.656572341918945,True
+greene24,58431,primer-uds-south,40800,False,False,detection gate,,5.4395670890808105,True
+greene24,59037,primer-uds-north,44195,False,False,color criterion,,15.479340553283691,True
+greene24,64163,primer-uds-north,67741,False,False,color criterion,,4.553906440734863,True
+greene24,66039,primer-uds-south,23438,False,False,color criterion,,4.585654258728027,True
+greene24,69421,primer-uds-south,36171,False,False,color criterion,,4.44737434387207,True
+greene24,73068,primer-uds-south,33451,False,False,detection gate,,7.153848648071289,True
+greene24,77053,primer-uds-north,47411,False,False,color criterion,,4.576568603515625,True
+greene24,78416,primer-uds-north,19857,False,False,color criterion,,4.3381805419921875,True
+greene24,78552,primer-uds-north,46223,False,False,color criterion,,8.899354934692383,True
+greene24,80076,primer-uds-south,16053,False,False,color criterion,,6.08278226852417,True
+greene24,80916,primer-uds-north,72350,True,True,selected,,2.39176344871521,True
+greene24,82379,primer-uds-north,63748,False,False,color criterion,,7.136462211608887,True
+greene24,83583,primer-uds-south,26611,False,False,detection gate,,8.990806579589844,True
+greene24,84181,primer-uds-south,7111,False,False,color criterion,,7.876816749572754,True
+greene24,86816,primer-uds-south,10036,False,False,color criterion,,6.621140003204346,True
+greene24,87772,primer-uds-south,19521,False,False,detection gate,,5.662346839904785,True
+greene24,89236,primer-uds-north,49501,False,False,color criterion,,4.64432954788208,True
+greene24,94497,primer-uds-north,50135,False,False,color criterion,,0.8360292911529541,True
+greene24,101065,primer-uds-north,54183,False,False,color criterion,,4.526068687438965,True
+greene24,105458,primer-uds-north,36534,False,False,color criterion,,4.728287696838379,True
+greene24,106664,primer-uds-south,42310,True,True,selected,,5.6530256271362305,True
+greene24,107613,primer-uds-north,49298,False,False,color criterion,,5.12906551361084,True
+greene24,120751,primer-uds-south,29813,True,True,selected,,5.3878960609436035,True
+greene24,121629,primer-uds-south,53692,False,False,color criterion,,5.407966136932373,True
+greene24,126807,primer-uds-north,74471,False,False,color criterion,,7.973998546600342,True
+greene24,128283,primer-uds-south,50431,True,True,selected,,1.557572364807129,True
+greene24,128779,primer-uds-north,11352,True,True,selected,,5.395835876464844,True
+greene24,134898,primer-uds-north,25768,False,False,color criterion,,3.5201046466827393,True
+greene24,145455,primer-uds-south,37427,False,False,color criterion,,7.045917987823486,True
+greene24,149161,primer-uds-north,8768,False,False,color criterion,,5.159881591796875,True
+greene24,157134,gds-sw,43476,False,False,color criterion,,4.527184009552002,True
+greene24,159272,gds-sw,42114,False,False,color criterion,,4.482551574707031,True
+greene24,160972,gds-sw,42382,True,True,selected,,8.220477104187012,True
+greene24,166519,gds-sw,36474,True,True,selected,,7.84176778793335,True
+greene24,166635,gds-sw,45401,True,True,selected,,5.457492351531982,True
+greene24,184343,gds,67753,False,False,color criterion,,5.614948749542236,False
+greene24,189430,gds-sw,12550,False,False,color criterion,,0.9876317381858826,True
+greene24,189514,gds-sw,12551,False,False,color criterion,,0.2993711531162262,True
+greene24,195041,gds-sw,18538,False,False,color criterion,,6.266995429992676,True
+greene24,202262,gds,11107,False,False,color criterion,,7.682340145111084,True
+greene24,205934,gds,30367,True,True,selected,,5.658355712890625,True
+greene24,206765,gds,24555,False,False,color criterion,,5.676430702209473,True
+greene24,209262,gds,56437,False,False,color criterion,,3.853292226791382,True
+greene24,210911,gds,2947,False,False,color criterion,,4.7854156494140625,True
+greene24,212510,gds,44120,False,False,color criterion,,5.438838005065918,False
+greene24,212842,gds,47103,False,False,color criterion,,4.109916687011719,True
+greene24,214148,gds,38174,False,False,color criterion,,5.71851110458374,True
+greene24,215176,gds,49351,False,False,color criterion,,5.928738594055176,True
+greene24,233452,gds,53198,True,True,selected,,6.311873435974121,True
+greene24,251875,gds,53152,False,False,color criterion,,2.623657703399658,True
+greene24,301324,primer-cosmos-west,62385,True,True,selected,,6.335335731506348,True
+greene24,305821,primer-cosmos-west,69048,False,False,color criterion,,5.651267051696777,True
+greene24,309737,primer-cosmos-west,56264,False,False,detection gate,,5.631539344787598,True
+greene24,312610,primer-cosmos-west,67730,True,True,selected,,5.65523624420166,True
+greene24,316329,primer-cosmos-west,45444,True,True,selected,,7.164122104644775,True
+greene24,317222,primer-cosmos-west,25560,True,True,selected,,5.207961082458496,True
+greene24,317568,primer-cosmos-west,65299,False,False,color criterion,,5.7602033615112305,True
+greene24,318732,primer-cosmos-west,75011,True,True,selected,,5.658799648284912,True
+greene24,325315,primer-cosmos-west,56136,True,True,selected,,5.608597755432129,True
+greene24,331636,primer-cosmos-west,56169,True,True,selected,,0.5420839190483093,True
+greene24,346105,primer-cosmos-west,103340,False,False,color criterion,,5.646090984344482,True
+greene24,357556,primer-cosmos-west,43711,False,False,color criterion,,4.6719512939453125,True
+greene24,361493,primer-cosmos-west,105065,True,True,selected,,6.53060245513916,True
+greene24,362724,primer-cosmos-west,84507,True,True,selected,,7.020806789398193,True
+greene24,366504,primer-cosmos-west,95058,False,False,color criterion,,5.783301830291748,True
+greene24,378189,primer-cosmos-east,40812,False,False,color criterion,,3.54661226272583,True
+greene24,381318,primer-cosmos-east,37681,False,False,color criterion,,5.6531572341918945,True
+greene24,383096,primer-cosmos-east,60812,True,True,selected,,7.095141410827637,True
+greene24,386649,primer-cosmos-west,93006,False,False,detection gate,,6.521352767944336,True
+greene24,389457,primer-cosmos-west,89952,False,False,color criterion,,5.280839443206787,True
+greene24,389576,primer-cosmos-west,15989,True,True,selected,,6.521212100982666,True
+greene24,393440,primer-cosmos-east,38011,False,False,color criterion,,1.2610883712768555,True
+greene24,401609,primer-cosmos-east,48066,False,False,color criterion,,4.534336566925049,True
+greene24,414231,primer-cosmos-east,83388,False,False,color criterion,,5.145186901092529,True
+greene24,416141,primer-cosmos-east,79141,False,False,color criterion,,8.924863815307617,True
+greene24,416779,primer-cosmos-east,79519,True,True,selected,,0.4245518445968628,True
+greene24,428125,primer-cosmos-east,57753,False,False,color criterion,,4.799247741699219,True
+greene24,428195,primer-cosmos-east,71672,False,False,color criterion,,4.556371212005615,True
+greene24,465479,gdn,67601,False,False,color criterion,,2.7290353775024414,True
+greene24,469414,gdn,42019,False,False,color criterion,,6.58986234664917,True
+greene24,470144,gdn,48455,True,True,selected,,7.129549026489258,True
+greene24,474195,gdn,77875,False,False,color criterion,,4.729620456695557,True
+greene24,479449,gdn,60096,True,True,selected,,6.7591753005981445,True
+greene24,482712,gdn,36091,True,True,selected,,5.732479572296143,True
+greene24,485386,gdn,40027,True,True,selected,,5.584617614746094,True
+greene24,489368,gdn,16455,False,False,color criterion,,4.212161064147949,True
+greene24,489501,gdn,16334,True,True,selected,,7.341634750366211,True
+greene24,490982,gdn,64586,True,True,selected,,7.24368953704834,True
+greene24,498369,gdn,4064,True,True,selected,,5.219847202301025,True
+greene24,506785,gdn,54665,False,False,color criterion,,3.9982566833496094,True
+greene24,511912,gdn,24803,False,False,color criterion,,4.465741157531738,True
+greene24,512221,gdn,4389,True,True,selected,,5.663364887237549,True
+greene24,519153,gdn,27348,False,False,color criterion,,5.148443698883057,True
+greene24,519381,gdn,6046,False,False,color criterion,,4.790410041809082,True
+greene24,519713,gdn,24477,False,False,color criterion,,3.3923702239990234,True
+greene24,559252,ceers-full,45658,True,True,selected,,5.188017845153809,True
+greene24,559649,ceers-full,57736,True,True,selected,,5.6522111892700195,True
+greene24,562006,ceers-full,76469,True,True,selected,,5.618987083435059,True
+greene24,563101,ceers-full,20143,False,False,color criterion,,3.6578361988067627,True
+greene24,564842,ceers-full,54373,False,False,color criterion,,5.145248889923096,True
+greene24,566490,ceers-full,78166,False,False,color criterion,,2.2818305492401123,True
+greene24,568695,ceers-full,63478,False,False,color criterion,,4.211513519287109,True
+greene24,569893,ceers-full,55163,False,False,color criterion,,3.541563034057617,True
+greene24,575904,ceers-full,51045,False,False,color criterion,,5.157491683959961,True
+greene24,577548,ceers-full,60925,False,False,color criterion,,8.472604751586914,True
+greene24,578604,ceers-full,29185,True,True,selected,,5.358488082885742,True
+greene24,580427,ceers-full,45873,True,True,selected,,4.9836931228637695,True
+greene24,580499,ceers-full,41679,False,False,color criterion,,1.6664848327636719,True
+greene24,582061,ceers-full,53527,True,True,selected,,7.1176066398620605,True
+greene24,582122,ceers-full,44889,True,True,selected,,6.766268730163574,True
+greene24,583031,ceers-full,66131,False,False,color criterion,,4.7095818519592285,False
+greene24,584284,ceers-full,22050,True,True,selected,,4.957590579986572,True
+greene24,589379,ceers-full,72397,False,False,detection gate,,5.399571418762207,True
+greene24,590975,ceers-full,31636,False,False,color criterion,,4.740969657897949,True
+greene24,591417,ceers-full,73652,False,False,color criterion,,5.231081962585449,True
+greene24,591916,ceers-full,30759,False,False,color criterion,,5.382406234741211,True
+greene24,592333,ceers-full,46532,False,False,color criterion,,5.462147235870361,True
+greene24,597534,ceers-full,74332,False,False,color criterion,,5.691756248474121,False
+greene24,603690,ceers-full,66240,False,False,color criterion,,5.051843166351318,True
+greene24,604428,ceers-full,48350,True,True,selected,,5.265514850616455,True
+greene24,604497,ceers-full,7491,False,False,detection gate,,3.3916428089141846,True
+greene24,606156,ceers-full,60195,True,True,selected,,7.470250129699707,True
+greene24,606709,ceers-full,58886,False,False,color criterion,,5.140321254730225,True
+greene24,607094,ceers-full,19938,False,False,color criterion,,5.204113006591797,True
+greene24,607861,ceers-full,40268,True,True,selected,,5.654208660125732,True
+greene24,615242,ceers-full,32314,False,False,color criterion,,4.991174221038818,True
+greene24,618550,ceers-full,18848,False,False,color criterion,,7.3547444343566895,True
+greene24,624327,ceers-full,25868,True,True,selected,,6.835084915161133,True
+greene24,628553,ceers-full,6342,True,True,selected,,7.405714988708496,True
+greene24,629133,ceers-full,24827,True,True,selected,,5.299620151519775,True
+akins24,2583,primer-uds-north,74752,False,False,color criterion,,6.100034236907959,True
+akins24,3915,primer-uds-north,75975,True,True,selected,,2.3604953289031982,True
+akins24,5003,primer-uds-north,82791,False,False,color criterion,,4.691159248352051,True
+akins24,8880,primer-uds-south,36210,False,False,color criterion,,4.759895324707031,True
+akins24,10951,primer-uds-north,74005,True,True,selected,,7.129388332366943,True
+akins24,11111,primer-uds-north,36569,False,False,color criterion,,6.348576545715332,True
+akins24,17782,primer-uds-south,29173,True,True,selected,,7.129854202270508,True
+akins24,18015,primer-uds-south,45540,False,False,color criterion,,3.5563695430755615,True
+akins24,19679,primer-uds-north,38196,False,False,color criterion,,7.135456562042236,True
+akins24,24623,primer-uds-south,44341,False,False,detection gate,,7.636297702789307,True
+akins24,25252,primer-uds-north,71609,False,False,color criterion,,7.133871078491211,True
+akins24,26406,primer-uds-south,53274,False,False,color criterion,,6.005431652069092,True
+akins24,27181,primer-uds-south,38479,False,False,color criterion,,2.3496365547180176,True
+akins24,27975,primer-uds-south,15006,False,False,color criterion,,3.389786958694458,True
+akins24,28266,primer-uds-north,19957,False,False,color criterion,,4.757785320281982,True
+akins24,28999,primer-uds-south,61912,False,False,color criterion,,4.52282190322876,True
+akins24,31845,primer-uds-south,65705,False,False,detection gate,,6.436645984649658,True
+akins24,41569,primer-uds-north,39709,False,False,color criterion,,5.658624649047852,True
+akins24,47582,primer-uds-north,49209,False,False,detection gate,,7.164916038513184,True
+akins24,50436,primer-uds-south,42814,True,True,selected,,0.8433279991149902,True
+akins24,52014,primer-uds-south,56686,True,True,selected,,5.656572341918945,True
+akins24,58431,primer-uds-south,40800,False,False,color criterion,,5.4395670890808105,True
+akins24,59037,primer-uds-north,44195,False,False,color criterion,,15.479340553283691,True
+akins24,64163,primer-uds-north,67741,False,False,color criterion,,4.553906440734863,True
+akins24,66039,primer-uds-south,23438,False,False,color criterion,,4.585654258728027,True
+akins24,69421,primer-uds-south,36171,True,True,selected,,4.44737434387207,True
+akins24,73068,primer-uds-south,33451,False,False,detection gate,,7.153848648071289,True
+akins24,77053,primer-uds-north,47411,False,False,color criterion,,4.576568603515625,True
+akins24,78416,primer-uds-north,19857,False,False,color criterion,,4.3381805419921875,True
+akins24,78552,primer-uds-north,46223,False,False,color criterion,,8.899354934692383,True
+akins24,80076,primer-uds-south,16053,False,False,color criterion,,6.08278226852417,True
+akins24,80916,primer-uds-north,72350,True,True,selected,,2.39176344871521,True
+akins24,82379,primer-uds-north,63748,True,True,selected,,7.136462211608887,True
+akins24,83583,primer-uds-south,26611,False,False,detection gate,,8.990806579589844,True
+akins24,84181,primer-uds-south,7111,True,True,selected,,7.876816749572754,True
+akins24,86816,primer-uds-south,10036,False,False,color criterion,,6.621140003204346,True
+akins24,87772,primer-uds-south,19521,False,False,detection gate,,5.662346839904785,True
+akins24,89236,primer-uds-north,49501,False,False,color criterion,,4.64432954788208,True
+akins24,94497,primer-uds-north,50135,True,True,selected,,0.8360292911529541,True
+akins24,101065,primer-uds-north,54183,False,False,color criterion,,4.526068687438965,True
+akins24,105458,primer-uds-north,36534,False,False,color criterion,,4.728287696838379,True
+akins24,106664,primer-uds-south,42310,True,True,selected,,5.6530256271362305,True
+akins24,107613,primer-uds-north,49298,False,False,color criterion,,5.12906551361084,True
+akins24,120751,primer-uds-south,29813,False,False,color criterion,,5.3878960609436035,True
+akins24,121629,primer-uds-south,53692,True,True,selected,,5.407966136932373,True
+akins24,126807,primer-uds-north,74471,False,False,color criterion,,7.973998546600342,True
+akins24,128283,primer-uds-south,50431,False,False,compactness criterion,,1.557572364807129,True
+akins24,128779,primer-uds-north,11352,True,True,selected,,5.395835876464844,True
+akins24,134898,primer-uds-north,25768,False,False,color criterion,,3.5201046466827393,True
+akins24,145455,primer-uds-south,37427,False,False,color criterion,,7.045917987823486,True
+akins24,149161,primer-uds-north,8768,False,False,color criterion,,5.159881591796875,True
+akins24,157134,gds-sw,43476,False,False,color criterion,,4.527184009552002,True
+akins24,159272,gds-sw,42114,False,False,color criterion,,4.482551574707031,True
+akins24,160972,gds-sw,42382,False,False,color criterion,,8.220477104187012,True
+akins24,166519,gds-sw,36474,False,False,color criterion,,7.84176778793335,True
+akins24,166635,gds-sw,45401,True,True,selected,,5.457492351531982,True
+akins24,184343,gds,67753,False,False,color criterion,,5.614948749542236,False
+akins24,189430,gds-sw,12550,False,False,color criterion,,0.9876317381858826,True
+akins24,189514,gds-sw,12551,False,False,color criterion,,0.2993711531162262,True
+akins24,195041,gds-sw,18538,False,False,color criterion,,6.266995429992676,True
+akins24,202262,gds,11107,False,False,color criterion,,7.682340145111084,True
+akins24,205934,gds,30367,False,False,color criterion,,5.658355712890625,True
+akins24,206765,gds,24555,False,False,color criterion,,5.676430702209473,True
+akins24,209262,gds,56437,False,False,color criterion,,3.853292226791382,True
+akins24,210911,gds,2947,False,False,color criterion,,4.7854156494140625,True
+akins24,212510,gds,44120,True,True,selected,,5.438838005065918,False
+akins24,212842,gds,47103,False,False,color criterion,,4.109916687011719,True
+akins24,214148,gds,38174,False,False,color criterion,,5.71851110458374,True
+akins24,215176,gds,49351,False,False,color criterion,,5.928738594055176,True
+akins24,233452,gds,53198,False,False,color criterion,,6.311873435974121,True
+akins24,251875,gds,53152,True,True,selected,,2.623657703399658,True
+akins24,301324,primer-cosmos-west,62385,False,False,color criterion,,6.335335731506348,True
+akins24,305821,primer-cosmos-west,69048,False,False,color criterion,,5.651267051696777,True
+akins24,309737,primer-cosmos-west,56264,False,False,detection gate,,5.631539344787598,True
+akins24,312610,primer-cosmos-west,67730,False,False,color criterion,,5.65523624420166,True
+akins24,316329,primer-cosmos-west,45444,False,False,color criterion,,7.164122104644775,True
+akins24,317222,primer-cosmos-west,25560,False,False,color criterion,,5.207961082458496,True
+akins24,317568,primer-cosmos-west,65299,False,False,color criterion,,5.7602033615112305,True
+akins24,318732,primer-cosmos-west,75011,True,True,selected,,5.658799648284912,True
+akins24,325315,primer-cosmos-west,56136,True,True,selected,,5.608597755432129,True
+akins24,331636,primer-cosmos-west,56169,True,True,selected,,0.5420839190483093,True
+akins24,346105,primer-cosmos-west,103340,True,True,selected,,5.646090984344482,True
+akins24,357556,primer-cosmos-west,43711,False,False,color criterion,,4.6719512939453125,True
+akins24,361493,primer-cosmos-west,105065,False,False,color criterion,,6.53060245513916,True
+akins24,362724,primer-cosmos-west,84507,False,False,color criterion,,7.020806789398193,True
+akins24,366504,primer-cosmos-west,95058,False,False,color criterion,,5.783301830291748,True
+akins24,378189,primer-cosmos-east,40812,False,False,color criterion,,3.54661226272583,True
+akins24,381318,primer-cosmos-east,37681,False,False,color criterion,,5.6531572341918945,True
+akins24,383096,primer-cosmos-east,60812,False,False,color criterion,,7.095141410827637,True
+akins24,386649,primer-cosmos-west,93006,False,False,color criterion,,6.521352767944336,True
+akins24,389457,primer-cosmos-west,89952,False,False,color criterion,,5.280839443206787,True
+akins24,389576,primer-cosmos-west,15989,False,False,color criterion,,6.521212100982666,True
+akins24,393440,primer-cosmos-east,38011,True,True,selected,,1.2610883712768555,True
+akins24,401609,primer-cosmos-east,48066,False,False,color criterion,,4.534336566925049,True
+akins24,414231,primer-cosmos-east,83388,False,False,color criterion,,5.145186901092529,True
+akins24,416141,primer-cosmos-east,79141,False,False,color criterion,,8.924863815307617,True
+akins24,416779,primer-cosmos-east,79519,False,False,color criterion,,0.4245518445968628,True
+akins24,428125,primer-cosmos-east,57753,False,False,color criterion,,4.799247741699219,True
+akins24,428195,primer-cosmos-east,71672,False,False,color criterion,,4.556371212005615,True
+akins24,465479,gdn,67601,False,False,color criterion,,2.7290353775024414,True
+akins24,469414,gdn,42019,False,False,color criterion,,6.58986234664917,True
+akins24,470144,gdn,48455,True,True,selected,,7.129549026489258,True
+akins24,474195,gdn,77875,False,False,color criterion,,4.729620456695557,True
+akins24,479449,gdn,60096,False,False,color criterion,,6.7591753005981445,True
+akins24,482712,gdn,36091,False,False,color criterion,,5.732479572296143,True
+akins24,485386,gdn,40027,False,False,color criterion,,5.584617614746094,True
+akins24,489368,gdn,16455,False,False,color criterion,,4.212161064147949,True
+akins24,489501,gdn,16334,False,False,color criterion,,7.341634750366211,True
+akins24,490982,gdn,64586,False,False,color criterion,,7.24368953704834,True
+akins24,498369,gdn,4064,False,False,color criterion,,5.219847202301025,True
+akins24,506785,gdn,54665,False,False,color criterion,,3.9982566833496094,True
+akins24,511912,gdn,24803,False,False,color criterion,,4.465741157531738,True
+akins24,512221,gdn,4389,False,False,color criterion,,5.663364887237549,True
+akins24,519153,gdn,27348,False,False,color criterion,,5.148443698883057,True
+akins24,519381,gdn,6046,False,False,color criterion,,4.790410041809082,True
+akins24,519713,gdn,24477,False,False,color criterion,,3.3923702239990234,True
+akins24,559252,ceers-full,45658,False,False,color criterion,,5.188017845153809,True
+akins24,559649,ceers-full,57736,False,False,color criterion,,5.6522111892700195,True
+akins24,562006,ceers-full,76469,True,True,selected,,5.618987083435059,True
+akins24,563101,ceers-full,20143,False,False,color criterion,,3.6578361988067627,True
+akins24,564842,ceers-full,54373,False,False,color criterion,,5.145248889923096,True
+akins24,566490,ceers-full,78166,False,False,color criterion,,2.2818305492401123,True
+akins24,568695,ceers-full,63478,False,False,color criterion,,4.211513519287109,True
+akins24,569893,ceers-full,55163,False,False,color criterion,,3.541563034057617,True
+akins24,575904,ceers-full,51045,False,False,color criterion,,5.157491683959961,True
+akins24,577548,ceers-full,60925,False,False,color criterion,,8.472604751586914,True
+akins24,578604,ceers-full,29185,False,False,color criterion,,5.358488082885742,True
+akins24,580427,ceers-full,45873,False,False,color criterion,,4.9836931228637695,True
+akins24,580499,ceers-full,41679,False,False,color criterion,,1.6664848327636719,True
+akins24,582061,ceers-full,53527,True,True,selected,,7.1176066398620605,True
+akins24,582122,ceers-full,44889,False,False,color criterion,,6.766268730163574,True
+akins24,583031,ceers-full,66131,False,False,color criterion,,4.7095818519592285,False
+akins24,584284,ceers-full,22050,False,False,color criterion,,4.957590579986572,True
+akins24,589379,ceers-full,72397,False,False,detection gate,,5.399571418762207,True
+akins24,590975,ceers-full,31636,False,False,color criterion,,4.740969657897949,True
+akins24,591417,ceers-full,73652,False,False,color criterion,,5.231081962585449,True
+akins24,591916,ceers-full,30759,False,False,color criterion,,5.382406234741211,True
+akins24,592333,ceers-full,46532,True,True,selected,,5.462147235870361,True
+akins24,597534,ceers-full,74332,False,False,color criterion,,5.691756248474121,False
+akins24,603690,ceers-full,66240,False,False,color criterion,,5.051843166351318,True
+akins24,604428,ceers-full,48350,False,False,color criterion,,5.265514850616455,True
+akins24,604497,ceers-full,7491,False,False,detection gate,,3.3916428089141846,True
+akins24,606156,ceers-full,60195,True,True,selected,,7.470250129699707,True
+akins24,606709,ceers-full,58886,False,False,color criterion,,5.140321254730225,True
+akins24,607094,ceers-full,19938,False,False,color criterion,,5.204113006591797,True
+akins24,607861,ceers-full,40268,True,True,selected,,5.654208660125732,True
+akins24,615242,ceers-full,32314,False,False,color criterion,,4.991174221038818,True
+akins24,618550,ceers-full,18848,False,False,color criterion,,7.3547444343566895,True
+akins24,624327,ceers-full,25868,False,False,color criterion,,6.835084915161133,True
+akins24,628553,ceers-full,6342,False,False,color criterion,,7.405714988708496,True
+akins24,629133,ceers-full,24827,False,False,color criterion,,5.299620151519775,True

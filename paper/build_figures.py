@@ -53,6 +53,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 FIG = os.path.join(HERE, "figures")
 os.makedirs(FIG, exist_ok=True)
 N = json.load(open(os.path.join(HERE, "numbers.json")))
+# round 9 (2026-09-06): the region-matched comparison is the primary result, and its
+# numbers, the regional-budget curve and the per-object outcomes come from these records
+N9 = json.load(open(os.path.join(ROOT, "recovery", "round9_numbers.json")))
+CURVE = json.load(open(os.path.join(ROOT, "recovery", "regional_budget_curve.json")))
+POUT = pd.read_csv(os.path.join(ROOT, "recovery", "positive_outcomes.csv")).set_index("source_id")
 REG = ["CEERS", "GOODS-N", "GOODS-S", "COSMOS", "UDS"]
 
 # ------------------------------------------------------------------ sizes
@@ -328,14 +333,16 @@ RULE_LABEL_SHORT = {
 # key in the empty region under the curve with a hairline leader; and the six-entry key of
 # the series sits under the axes in two columns, where it can cover neither the shuffled
 # band nor the literature points.
-fig, ax = plt.subplots(figsize=(COL2, 92 * MM))
-fig.subplots_adjust(left=0.07, right=0.985, top=0.985, bottom=0.24)
-sc = sup.score.values
-ys = (sup.y == 1).values
-order = np.argsort(-sc)
-cum = np.cumsum(ys[order])
-n = np.arange(1, len(cum) + 1)
-ax.plot(n, cum, color=C_MODEL, lw=1.0, label="learned ranking, out of fold", zorder=3)
+fig, ax = plt.subplots(figsize=(COL2, 98 * MM))
+fig.subplots_adjust(left=0.07, right=0.985, top=0.985, bottom=0.30)
+# Round 9: the five held-out ensembles do not share a score scale, so the curve is
+# built region by region. At each budget fraction f every region keeps the top f times
+# the union's row count there, by that region's own out-of-fold ranking, and the
+# recoveries are summed; the x coordinate is the total number of rows kept.
+_KTOT = float(sum(CURVE["K_union"].values()))
+_fx = np.array(CURVE["fractions"]) * _KTOT
+ax.plot(_fx, CURVE["primary"], color=C_MODEL, lw=1.0, label="learned ranking (within-region ranks, one budget fraction)", zorder=3)
+ax.plot(_fx, CURVE["imitation"], color=K, lw=0.8, ls=(0, (3.0, 1.6)), label="imitation of the rules, same construction", zorder=3)
 un = ev["union"]
 pe = ev["primary_equal_burden"]
 p5 = ev["primary_0p5pct"]
@@ -349,22 +356,53 @@ ax.scatter(
     label="union of seven rules",
 )
 ax.scatter(
-    [pe["selected_total"]],
-    [pe["recall_147"]],
+    [CURVE["union"]["rows"]],
+    [CURVE["union"]["primary"] if "primary" in CURVE["union"] else N9["matchedRecallSupport"]],
     marker="D",
     s=18,
     color=C_MODEL,
     zorder=6,
-    label="learned, equal burden",
+    label="learned, region-matched burden",
 )
 ax.scatter(
-    [p5["selected_total"]],
-    [p5["recall_147"]],
+    [pe["selected_total"]],
+    [pe["recall_147"]],
+    marker="x",
+    s=22,
+    color=C_MODEL,
+    lw=0.9,
+    zorder=6,
+    label="learned, deployed thresholds",
+)
+ax.scatter(
+    [CURVE["union8"]["rows"]],
+    [CURVE["union8"]["recall"]],
+    marker="s",
+    s=20,
+    facecolor="white",
+    edgecolor=C_UNION,
+    lw=0.8,
+    zorder=5,
+    label="union of eight (with Barro+24b)",
+)
+ax.scatter(
+    [CURVE["union8"]["rows"]],
+    [CURVE["union8"]["primary"]],
     marker="D",
     s=18,
     facecolor="white",
     edgecolor=C_MODEL,
-    lw=0.7,
+    lw=0.9,
+    zorder=6,
+    label="learned at the union of eight's row counts",
+)
+ax.scatter(
+    [p5["selected_total"]],
+    [p5["recall_147"]],
+    marker="+",
+    s=30,
+    color=C_MODEL,
+    lw=0.9,
     zorder=6,
     label="learned, 0.5% threshold",
 )
@@ -381,7 +419,7 @@ ax.scatter(
     edgecolor=K,
     lw=0.7,
     zorder=6,
-    label="imitation of the rules",
+    label="imitation, own realized burden",
 )
 ax.fill_between(
     [800, 1700],
@@ -444,9 +482,9 @@ for r, ky in zip(key_order, key_y):
         ),
     )
 ax.set_xscale("log")
-ax.set_xlim(100, 30000)
+ax.set_xlim(100, 40000)
 ax.set_ylim(0, 162)
-ax.set_xlabel("catalog rows selected (burden)")
+ax.set_xlabel("catalog rows selected, summed over the five regions")
 ax.set_ylabel("spectroscopic LRDs recovered")
 h, lb = ax.get_legend_handles_labels()
 fig.legend(
@@ -454,7 +492,7 @@ fig.legend(
     lb,
     loc="lower center",
     bbox_to_anchor=(0.5, 0.005),
-    ncol=4,
+    ncol=3,
     fontsize=BASE,
     handletextpad=0.4,
     columnspacing=1.0,
@@ -782,9 +820,9 @@ fig, ax = plt.subplots(figsize=(COL2, 66 * MM))
 fig.subplots_adjust(left=0.07, right=0.975, top=0.985, bottom=0.20)
 x = np.arange(5)
 u = [N["unionRegion" + r.replace("-", "")] for r in REG]
-m = [N["modelRegion" + r.replace("-", "")] for r in REG]
+m = [N9["matchedRegion" + r.replace("-", "")] for r in REG]
 t = [N["posSup" + r.replace("-", "")] for r in REG]
-mm_ = [N["modelRegionMissed" + r.replace("-", "")] for r in REG]
+mm_ = [N9["matchedRegionRuleMissed" + r.replace("-", "")] for r in REG]
 b_u = ax.bar(x - 0.19, u, 0.36, color=C_UNION, edgecolor=K, lw=0.3)
 b_m = ax.bar(x + 0.19, m, 0.36, color=C_MODEL, edgecolor=K, lw=0.3)
 h_t = ax.scatter(x, t, marker="_", s=170, color=K, lw=1.0, zorder=5)
@@ -799,7 +837,7 @@ for i in range(5):
 ax.set_xticks(x)
 ax.set_xticklabels(
     [
-        "%s\n+%d of %d" % (r, mm_[i], N["missedSup" + r.replace("-", "")])
+        "%s\n%d of %d rule-missed" % (r, mm_[i], N["missedSup" + r.replace("-", "")])
         for i, r in enumerate(REG)
     ],
     fontsize=BASE,
@@ -809,13 +847,13 @@ ax.set_xlim(-0.6, 4.6)
 ax.set_ylim(0, 88)
 ax.xaxis.set_minor_locator(NullLocator())
 ax.tick_params(axis="x", length=0)
-ax.set_ylabel("LRDs recovered, equal burden")
+ax.set_ylabel("LRDs recovered at the union's row count in the region")
 ax.legend(
     handles=[h_t, b_u, b_m],
     labels=[
         "spectroscopic LRDs in region",
         "union of seven rules",
-        "learned selection (region held out)",
+        "learned selection (region held out, region-matched burden)",
     ],
     loc="upper left",
     fontsize=BASE,
@@ -949,7 +987,7 @@ tiles(
     ],
     [
         "spectroscopic\nLRDs (%d)" % N["nPos"],
-        "non-LRD\nanchors (%s)" % "{:,}".format(N["nNegSupport"]),
+        "comparison\nobjects (%s)" % "{:,}".format(N["nNegSupport"]),
     ],
     ["selected", "not selected"],
 )
@@ -957,10 +995,10 @@ ax = fig.add_axes([AX_X[1], AX_Y, AX_W, AX_H])
 tiles(
     ax,
     "b",
-    "learned selection",
+    "learned selection, region-matched",
     [
-        [N["modelRecallEnd"], N["nPos"] - N["modelRecallEnd"]],
-        [N["modelAnchors"], N["nNegSupport"] - N["modelAnchors"]],
+        [N9["matchedRecallEnd"], N["nPos"] - N9["matchedRecallEnd"]],
+        [N9["matchedAnchors"], N["nNegSupport"] - N9["matchedAnchors"]],
     ],
     ["", ""],
     ["selected", "not selected"],
@@ -971,8 +1009,8 @@ tiles(
     "c",
     "the %d LRDs, paired" % N["nPos"],
     [
-        [N["pairedBoth"], N["pairedUnionOnlyEnd"]],
-        [N["pairedModelOnly"], N["pairedNeitherEnd"]],
+        [N9["matchedPairedBoth"], N9["matchedPairedUnionOnlyEnd"]],
+        [N9["matchedPairedModelOnly"], N9["matchedPairedNeitherEnd"]],
     ],
     ["yes", "no"],
     ["yes", "no"],
@@ -982,42 +1020,30 @@ tiles(
 save(fig, "fig_confusion", 178.0)
 
 # ================================================================== Figure 8: score distributions
-fig, ax = plt.subplots(figsize=(COL1, 64 * MM))
-fig.subplots_adjust(left=0.155, right=0.975, top=0.985, bottom=0.135)
-bins = np.linspace(0, 1, 51)
-ax.hist(
-    sup.score,
-    bins=bins,
-    color=C_CAT,
-    lw=0,
-    label="all {:,} support rows".format(len(sup)),
-)
-ax.hist(
-    neg.score,
-    bins=bins,
-    color=C_NEG,
-    lw=0,
-    label="{:,} non-LRD anchors".format(len(neg)),
-)
-ax.hist(pos.score, bins=bins, color=C_MODEL, lw=0, label="%d spectroscopic LRDs" % len(pos))
-tb = np.unique(sup.t_burden)
-ax.axvspan(tb.min(), tb.max(), color=C_MISS, alpha=0.15, lw=0)
-ax.text(
-    (tb.min() + tb.max()) / 2,
-    3.0e3,
-    "equal-burden\nthresholds\n(five folds)",
-    ha="center",
-    va="center",
-    fontsize=BASE,
-    color=C_MISS,
-    linespacing=1.25,
-)
-ax.set_yscale("log")
-ax.set_ylim(0.7, 3e8)
-ax.set_xlim(0, 1)
-ax.set_xlabel("out-of-fold ranking score")
-ax.set_ylabel("rows")
-ax.legend(loc="upper left", fontsize=BASE, borderaxespad=0.6)
+# Round 9: the five ensembles' scores are not on one scale, so the distributions are drawn
+# one region per panel, each with its own fold's equal-burden threshold.
+fig, axes = plt.subplots(5, 1, figsize=(COL1, 124 * MM), sharex=True)
+fig.subplots_adjust(left=0.155, right=0.975, top=0.965, bottom=0.115, hspace=0.42)
+bins = np.linspace(0, 1, 41)
+for _ax, _r in zip(axes, REG):
+    _s = sup[sup.region == _r]
+    _n = neg[neg.region == _r]
+    _p = pos[pos.region == _r]
+    _ax.hist(_s.score, bins=bins, color=C_CAT, lw=0, label="support rows")
+    _ax.hist(_n.score, bins=bins, color=C_NEG, lw=0, label="comparison objects")
+    _ax.hist(_p.score, bins=bins, color=C_MODEL, lw=0, label="spectroscopic LRDs")
+    _tb = float(np.unique(_s.t_burden)[0])
+    _ax.axvline(_tb, color=C_MISS, lw=0.8, zorder=4)
+    _ax.set_yscale("log")
+    _ax.set_ylim(0.7, 4e5)
+    _ax.set_xlim(0, 1)
+    _ax.set_yticks([1, 1e2, 1e4])
+    _ax.set_title("%s: %s rows, %d comparison objects, %d LRDs" % (_r, "{:,}".format(len(_s)), len(_n), len(_p)), fontsize=SMALL, loc="left", pad=2.0)
+    _ax.text(_tb - 0.012, 1.0e4, "threshold %.3f" % _tb, fontsize=SMALL, color=C_MISS, ha="right", va="top")
+axes[-1].set_xlabel("out-of-fold ranking score (held-out region)")
+axes[2].set_ylabel("rows")
+_h, _l = axes[0].get_legend_handles_labels()
+fig.legend(_h, _l, loc="lower center", bbox_to_anchor=(0.56, 0.0), fontsize=SMALL, ncol=3, handlelength=1.2, columnspacing=0.8, handletextpad=0.4, frameon=False)
 save(fig, "fig_scores", 84.0)
 
 # ================================================================== Figure 9: image gallery
@@ -1122,8 +1148,9 @@ SECTIONS = [
     dict(
         key="recovered",
         title="Spectroscopic LRDs missed by every rule and recovered by the learned selection",
+        # Round 9: the three reddest recovered misses are the objects of fig_miss_anatomy,
+        # so only the three bluest are drawn here
         parts=[
-            ("F277W$-$F444W above 1.0", _red),
             ("F277W$-$F444W below 0.5", _blue),
         ],
     ),
@@ -1478,18 +1505,21 @@ for i, (lab, d) in enumerate(sets):
     b2 = ax.bar(
         i, l_ / tot, 0.62, bottom=(u_ + h_) / tot, color=C_MISS, edgecolor=K, lw=0.3
     )
+    # Round 9: the counts are printed, so the axis can run from 0 to 1 without hiding them
+    ax.text(i, 0.5 * u_ / tot, "%d" % u_, ha="center", va="center", fontsize=SMALL, color=K)
+    ax.text(i, 1.012, "%d / %d" % (h_, l_), ha="center", va="bottom", fontsize=SMALL, color=K)
     if i == 0:
         hs = [b0, b1, b2]
 ax.set_xticks(x)
 ax.set_xticklabels([s[0] for s in sets], fontsize=BASE, linespacing=1.35)
 ax.set_xlim(-0.6, 2.6)
-ax.set_ylim(0.88, 1.005)
+ax.set_ylim(0.0, 1.10)
 ax.xaxis.set_minor_locator(NullLocator())
 ax.tick_params(axis="x", length=0)
 ax.set_ylabel("fraction")
 ax.legend(
     handles=hs,
-    labels=["untested", "secure $z > 3$", "secure $z \\leq 3$"],
+    labels=["no usable spectrum", "secure $z > 3$", "secure $z \\leq 3$"],
     loc="lower right",
     bbox_to_anchor=(1.0, 1.005),
     ncol=3,
@@ -1544,7 +1574,7 @@ items = [
         N["blAnchorHalfRecall"],
     ),
     (
-        "positives vs anchors only (no PU)",
+        "positives against comparison objects only",
         N["blPNMatchedRecall"],
         C_ALT,
         "o",

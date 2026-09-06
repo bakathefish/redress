@@ -1,0 +1,194 @@
+[
+ {
+  "field": "ceers-full",
+  "id": 55163,
+  "region": "CEERS",
+  "score": 0.8686739471050857,
+  "rank_pct_pooled": 0.18,
+  "rank_pct_region": 0.28
+ },
+ {
+  "field": "primer-uds-north",
+  "id": 67741,
+  "region": "UDS",
+  "score": 0.75273127579786,
+  "rank_pct_pooled": 0.29,
+  "rank_pct_region": 0.32
+ },
+ {
+  "field": "primer-uds-south",
+  "id": 65705,
+  "region": "UDS",
+  "score": 0.7448106163542957,
+  "rank_pct_pooled": 0.3,
+  "rank_pct_region": 0.33
+ },
+ {
+  "field": "primer-cosmos-west",
+  "id": 89952,
+  "region": "COSMOS",
+  "score": 0.7412018645497543,
+  "rank_pct_pooled": 0.3,
+  "rank_pct_region": 0.23
+ },
+ {
+  "field": "primer-cosmos-west",
+  "id": 45444,
+  "region": "COSMOS",
+  "score": 0.7329186017458387,
+  "rank_pct_pooled": 0.31,
+  "rank_pct_region": 0.24
+ },
+ {
+  "field": "gds",
+  "id": 11107,
+  "region": "GOODS-S",
+  "score": 0.7171607712665381,
+  "rank_pct_pooled": 0.33,
+  "rank_pct_region": 0.2
+ },
+ {
+  "field": "primer-cosmos-east",
+  "id": 83388,
+  "region": "COSMOS",
+  "score": 0.6736942216986384,
+  "rank_pct_pooled": 0.39,
+  "rank_pct_region": 0.3
+ },
+ {
+  "field": "primer-uds-north",
+  "id": 8768,
+  "region": "UDS",
+  "score": 0.6352713391420598,
+  "rank_pct_pooled": 0.44,
+  "rank_pct_region": 0.5
+ },
+ {
+  "field": "gds-sw",
+  "id": 12551,
+  "region": "GOODS-S",
+  "score": 0.6234661980657118,
+  "rank_pct_pooled": 0.46,
+  "rank_pct_region": 0.25
+ },
+ {
+  "field": "gdn",
+  "id": 77875,
+  "region": "GOODS-N",
+  "score": 0.5734478144541321,
+  "rank_pct_pooled": 0.54,
+  "rank_pct_region": 0.29
+ },
+ {
+  "field": "ceers-full",
+  "id": 7491,
+  "region": "CEERS",
+  "score": 0.5328253761481084,
+  "rank_pct_pooled": 0.6,
+  "rank_pct_region": 1.14
+ },
+ {
+  "field": "primer-uds-south",
+  "id": 7111,
+  "region": "UDS",
+  "score": 0.4843328436725951,
+  "rank_pct_pooled": 0.7,
+  "rank_pct_region": 0.9
+ },
+ {
+  "field": "gdn",
+  "id": 4064,
+  "region": "GOODS-N",
+  "score": 0.4816236526753514,
+  "rank_pct_pooled": 0.71,
+  "rank_pct_region": 0.42
+ },
+ {
+  "field": "primer-cosmos-west",
+  "id": 65299,
+  "region": "COSMOS",
+  "score": 0.3853154546154857,
+  "rank_pct_pooled": 1.06,
+  "rank_pct_region": 0.81
+ },
+ {
+  "field": "primer-uds-north",
+  "id": 49209,
+  "region": "UDS",
+  "score": 0.3568449873426542,
+  "rank_pct_pooled": 1.26,
+  "rank_pct_region": 1.76
+ },
+ {
+  "field": "gdn",
+  "id": 27348,
+  "region": "GOODS-N",
+  "score": 0.3391774359056064,
+  "rank_pct_pooled": 1.42,
+  "rank_pct_region": 0.98
+ },
+ {
+  "field": "gdn",
+  "id": 54665,
+  "region": "GOODS-N",
+  "score": 0.3324515171746367,
+  "rank_pct_pooled": 1.49,
+  "rank_pct_region": 1.04
+ },
+ {
+  "field": "ceers-full",
+  "id": 51045,
+  "region": "CEERS",
+  "score": 0.3085510768222588,
+  "rank_pct_pooled": 1.77,
+  "rank_pct_region": 2.42
+ },
+ {
+  "field": "ceers-full",
+  "id": 72397,
+  "region": "CEERS",
+  "score": 0.2999813871528854,
+  "rank_pct_pooled": 1.88,
+  "rank_pct_region": 2.53
+ },
+ {
+  "field": "primer-cosmos-west",
+  "id": 56264,
+  "region": "COSMOS",
+  "score": 0.229963124798467,
+  "rank_pct_pooled": 3.08,
+  "rank_pct_region": 2.8
+ },
+ {
+  "field": "gdn",
+  "id": 67601,
+  "region": "GOODS-N",
+  "score": 0.1918699436207694,
+  "rank_pct_pooled": 4.09,
+  "rank_pct_region": 3.85
+ },
+ {
+  "field": "primer-uds-south",
+  "id": 38479,
+  "region": "UDS",
+  "score": 0.16279742766652391,
+  "rank_pct_pooled": 5.2,
+  "rank_pct_region": 6.8
+ },
+ {
+  "field": "gdn",
+  "id": 24477,
+  "region": "GOODS-N",
+  "score": 0.07632966828895466,
+  "rank_pct_pooled": 11.62,
+  "rank_pct_region": 13.69
+ },
+ {
+  "field": "gds-sw",
+  "id": 12550,
+  "region": "GOODS-S",
+  "score": 0.010742399846315932,
+  "rank_pct_pooled": 65.32,
+  "rank_pct_region": 68.33
+ }
+]
