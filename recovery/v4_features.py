@@ -28,7 +28,7 @@ from astropy.coordinates import SkyCoord
 from astropy.table import Table
 
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-sys.path.insert(0, "src")
+sys.path.insert(0, "selections")
 from redress.folds import sky_groups  # noqa: E402
 
 OUT = "recovery"

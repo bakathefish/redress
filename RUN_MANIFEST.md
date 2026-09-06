@@ -20,9 +20,14 @@ Place these under `inputs/` (the `prior_art_catalogues` ones inside
   the staging VM and joined by (field, id);
 - the DJA msaexp v4.4 emission-line table (`dja_v4.4_zenodo_dja_msaexp_emission_lines_v4.4.csv.gz`);
 - the grizli v7 F444W science and weight mosaics (`https://s3.amazonaws.com/grizli-v2/JwstMosaics/v7/`);
-- the published LRD lists (Hviding et al. 2025 table A1 and B1, Barro et al. 2025, de Graaff
-  et al. 2026) and the census tables of the earlier work (`inputs/sources_v3.parquet`,
-  `inputs/training.parquet`);
+- the published LRD lists (Hviding et al. 2025 table A1 and B1, from arXiv:2506.05459; Barro
+  et al. 2025, arXiv:2412.01887 v2 of 17 December 2025; de Graaff et al. 2026, Zenodo record
+  17665942 version 0.1, dataset dated 20 November 2025, preprint of 26 November 2025), downloaded
+  on 30 August 2026 (the de Graaff et al. table on 2 September 2026), and the census tables of
+  the earlier work (`inputs/sources_v3.parquet`, `inputs/training.parquet`); the DJA spectrum
+  index was read on 1 September 2026 and the label table frozen on 3 September 2026;
+- the Skyfire Table 3 of Kocevski et al. (2026, arXiv:2609.00112, `Table3.Kocevski26.cat` from
+  github.com/dalekocevski/Kocevski26), read by step 27 only;
 - `labels.parquet`, the label table built by `build_labels.py` from the above (not released;
   the per-source audit of it is `recovery/label_audit.csv`).
 
@@ -216,6 +221,21 @@ ebf7bf37fa30e44a352a8853ddf9b3b70e46cb6dbfccddab37d770e4ab2d2031  numbers.tex
 1c4f67b62d864fb47bd4fb2bc8a15ba392789468c2e1e15adfb6057e342bdfbb  tables/recovered_rule_missed.tex
 ace62b523b89596a8d1a854c7492c682021118564893941502308ad328b84586  tables/still_missed.tex
 ```
+
+## Records of the revision of 2026-09-07 (steps 27 to 29)
+
+Steps 27 to 29 ran on 2026-09-07 (IST) from the tables of record and the unreleased `inputs/`
+tables. Nothing was retrained; no number of steps 1 to 26 changed.
+
+| step | script (arguments) | where | produces |
+|---|---|---|---|
+| 27 | `paper/round10_compute_2026_09_07.py` | laptop | `round10_compute_2026_09_07.json`: the fidelity of the `barro24b` module to the published membership, the kocevski24 module on the published catalogue, the region-matched leave-one-list-out cells, the close pair of positives and the merged recount, Newcombe and Wald intervals of every paired difference, the audit disagreements by rule, the ambiguous split, the row- and source-level V-shape ledger, the Skyfire cross-match, the within-region agreement of the final and out-of-fold rankings, and the freeze dates; every value appended to `paper/numbers.tex` under its macro name |
+| 28 | `paper/round10_release_tables.py` | laptop | `labelled_rows.csv` (30 features, seven fluxes and uncertainties in microjansky, five AB colours, region-matched selections, eighth-rule and hand-added flags; 91 columns), `label_provenance.csv` (`hand_added_barro26`), `oof_scores_primary.parquet` (466419 rows, 21 columns), `candidates.csv` (fluxes, uncertainties, AB magnitudes, `bd_screen`; 116 columns), `columns.md`; repairs `recovery/v4_features.py` (import path) and `requirements.txt` (sedpy) |
+| 29 | `paper/round10_figure_patch.py`, then `paper/build_figures.py`, `paper/build_figures_pub.py`, `paper/build_figures_extra.py` | laptop | the figures: citation years on the rule labels, Wilson intervals on the gain figure, the within-region rank on the miss-anatomy figure |
+
+The digest of record for every released file is `SHA256SUMS` at the repository root, written
+by `paper/round10_clone_docs.py` over the whole tree after step 29; the per-revision digest
+blocks above record the bytes as they were at each earlier revision and are superseded by it.
 
 ## The paper chain
 

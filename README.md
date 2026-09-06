@@ -5,7 +5,7 @@ for a learned selection of little red dots (LRDs) in JWST/NIRCam imaging: a rank
 catalog quantities alone to resemble the spectroscopically confirmed LRDs the community has
 published, together with the seven published photometric selections it is measured against,
 the scripts that built the paper's numbers, figures and tables, and the frozen spectral-refit
-engine used for the archival test. Author: Rudra. The paper is in preparation; nothing here
+engine used for the archival test. Author: Rudra Puri. The paper is in preparation; nothing here
 depends on it, and every number in the model card below is read from the tables in
 `recovery/`.
 
@@ -31,10 +31,13 @@ selects 1115 rows against the union's 1133:
 | selection | rows selected | spectroscopic LRDs recovered (of 151) | of the 44 missed by all rules | strict 32 | strict misses (7) | spectroscopic comparison objects not established as LRDs (anchors) selected (of 4979) |
 |---|---|---|---|---|---|---|
 | union of seven published rules | 1133 | 107 (70.9%) | 0 | 25 | 0 | 46 (0.92%) |
+| this model, cut to the union's row count in each held-out region (primary) | 1133 | 124 (82.1%) | 21 | | | 56 (1.12%) |
 | this model, thresholds targeting the union burden | 1115 | 123 (81.5%) | 20 | 30 | 5 | 70 (1.41%) |
 | this model, thresholds targeting 0.5% of training-region support | 2659 | 133 (88.1%) | 29 | 30 | 5 | 225 (4.52%) |
 
 Wilson 95% interval on the union-burden recall of the 147 in-support positives: [0.769, 0.888].
+Primary (region-matched) paired difference against the union on the 147: 12.2 points, 95% interval 5.9 to 18.8 (Newcombe method 10); exact McNemar 21 against 3, p = 0.0003.
+Two positives (gds-sw 12550 and 12551) lie 0.53 arcsec apart at the same redshift in different sky groups and are counted as two objects; merged, the counts read 150 positives, 107 for the union and 124 for the primary.
 Per region (model vs union): CEERS 29/33 vs 23, GOODS-N 11/17 vs 10, GOODS-S 15/18 vs 13, COSMOS 23/28 vs 22, UDS 45/51 vs 38.
 
 **What the number is not.** The targeted-negative selection rate is a selection rate on
@@ -59,9 +62,10 @@ refit of an eligible archival PRISM spectrum (grade >= 3, z > 3); no candidate h
 No candidate had been spectroscopically established as an LRD when the lists were frozen.
 `ranking_score` is a rank statistic, not a probability.
 
-**Catalog versions.** The three reference lists and the archive index were frozen with
-version 0.1 of the de Graaff et al. (2026) release (Zenodo record 17665942, 20 November 2025,
-116 unique sources). A later version (Zenodo record 21977747, 17 August 2026, 181 spectra of
+**Catalog versions.** The reference lists were downloaded on 30 August 2026 (the de Graaff
+et al. table on 2 September 2026), the archive index on 1 September 2026, and the label table
+was frozen on 3 September 2026, with version 0.1 of the de Graaff et al. (2026) release
+(Zenodo record 17665942, dataset version dated 20 November 2025, 116 unique sources). A later version (Zenodo record 21977747, 17 August 2026, 181 spectra of
 146 unique sources) holds 3 of the 1207 candidates within 0.5 arcsec: ranks 78, 154 and 176,
 at spectroscopic redshifts 4.59, 3.40 and 2.04, all in the equal-burden tier and two in the
 follow-up tier, all marked `untested` because the archive index was frozen with the lists.
@@ -69,7 +73,12 @@ follow-up tier, all marked `untested` because the archive index was frozen with 
 `zspec_degraaff26_v2` of `candidates.csv`; the labels, the model and every count above are
 left as frozen. Under the paper's definition the three are spectroscopic LRDs that no rule
 selects and the ranking placed in its top 362; three objects chosen by another group's
-targeting are not a yield measurement.
+targeting are not a yield measurement. The Skyfire survey (Kocevski et al. 2026,
+arXiv:2609.00112) appeared after the freeze as well: of its 33 broad-line AGN in CEERS, 16
+classed as LRDs, 5 are already positives and 2 are candidates (ranks 59 and 132, both LRDs);
+the 12 Skyfire LRDs in no input list all lie in the support, and the union of seven selects 7
+of them, the region-matched model 10 and the deployed thresholds 10
+(`paper/round10_compute_2026_09_07.py`, from the published Table 3 of that paper).
 
 **Compactness and the follow-up tier.** The frozen aperture protocol of the paper was run on
 the F444W mosaics for 1196 of the 1207 candidates; in the equal-burden tier
@@ -150,9 +159,10 @@ The paper chain runs after that, from the repository root:
 python paper/build_numbers.py        # every number the paper quotes -> numbers.json, numbers.tex
 python paper/fetch_stamps.py         # three-band cutouts for the gallery figures
 python paper/fetch_stamps_6band.py   # the other four bands for the same objects
-python paper/build_figures.py        # twelve of the paper's sixteen figures
+python paper/build_figures.py        # thirteen of the paper's eighteen figures
+python paper/build_figures_pub.py    # the colour-colour figure
 python paper/build_figures_extra.py  # the other four
-python paper/build_tables.py         # the three appendix tables
+python paper/build_tables.py         # the four appendix table bodies
 ```
 
 The manuscript itself is not released, so nothing here typesets it. What is released is
@@ -195,7 +205,14 @@ Four things a reader of the first release will not find in it. `recovery/labelle
 carries every labelled or ambiguous row with its label, list memberships, the seven rule
 flags of record, its region and sky group and its out-of-fold score and outcomes, so every
 per-rule and paired count can be recomputed from released files. `recovery/rule_flags.parquet`
-carries the seven flags of record for all 630869 catalog rows. `recovery/candidates.csv`
+carries the seven flags of record for all 630869 catalog rows. Since the revision of
+2026-09-07 `recovery/labelled_rows.csv` also carries the 30 model features, the seven total
+fluxes and uncertainties in microjansky, the five AB colours the rules act on, the
+region-matched selections and the eighth-rule flag (91 columns); `recovery/oof_scores_primary.parquet`
+carries the primary model's out-of-fold score and every selection of the paper's main table for
+all 466419 support rows; `recovery/candidates.csv` carries the fluxes, uncertainties, AB
+magnitudes and the brown-dwarf screen flag `bd_screen` (116 columns); and `recovery/columns.md`
+is the column dictionary of the three. `recovery/candidates.csv`
 carries, next to the in-sample ranking score, the out-of-fold score of the fold model that
 never saw the candidate's region and that fold's thresholds (`oof_*` columns); a reader who
 prefers the validated ranking can define the tiers on those. And the Barro et al. (2024b)

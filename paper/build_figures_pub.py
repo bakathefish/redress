@@ -205,13 +205,13 @@ DENS_CMAP = LinearSegmentedColormap.from_list(
 # the display names used where a rule is named on a figure, with the journal year of the
 # bibliography entry; the same seven names Table 1 lists
 RULE_LABEL_SHORT = {
-    "labbe23": "Labbé+23",
+    "labbe23": "Labbé+25",
     "kokorev24": "Kokorev+24",
-    "kocevski24": "Kocevski+24",
+    "kocevski24": "Kocevski+25",
     "perezgonzalez24": "Pérez-González+24",
-    "barro23": "Barro+23",
+    "barro23": "Barro+24b",
     "greene24": "Greene+24",
-    "akins24": "Akins+24",
+    "akins24": "Akins+25",
 }
 
 FONT_REPORT = []
@@ -1046,7 +1046,7 @@ PENDING_A.append(
 # Three nested red2-style windows, each shaded at the same low alpha so the shade darkens
 # with the number of rules that accept, each edged by its own dashed coloured boundary.
 WIN = [
-    ("labbe23", 0.8, 1.0, "Labbé+23 red2"),
+    ("labbe23", 0.8, 1.0, "Labbé+25 red2"),
     ("kokorev24", 0.8, 0.7, "Kokorev+24 red2"),
     ("perezgonzalez24", 0.5, 1.0, "Pérez-González+24"),
 ]

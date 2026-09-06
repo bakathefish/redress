@@ -57,6 +57,9 @@ ALLOWED_LITERALS = {
     "3577": "GO 3577 (MAST)",
     "4233": "RUBIES, GO 4233 (MAST)",
     "249": "Perez-Gonzalez et al. 2026 abstract (arXiv:2602.20247): 249 LRDs with NIRSpec prism spectra",
+    # catalog identifier of the second member of the close pair of positives; the first,
+    # 12550, is already quoted in the still-missed paragraph (round 10, 2026-09-07)
+    "12551": "gds-sw 12551, catalog id of the partner of gds-sw 12550 (Section 2.2)",
     # column widths of the scope table (tab:scope); layout constants, not measurements
     # (revision 2026-09-06, round 9)
     "5.2": "tab:scope column width in cm (layout)",

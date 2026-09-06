@@ -18,3 +18,4 @@ matplotlib==3.10.8
 # the unit tests in selections/ additionally need, at the versions they ran on:
 pytest==9.0.2
 hypothesis==6.165.0
+sedpy==0.4.1

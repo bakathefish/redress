@@ -7,6 +7,8 @@ authors:
     given-names: Rudra
     email: rudrapuri082610@gmail.com
 repository-code: "https://github.com/bakathefish/redress"
+version: "0.10.0"
+date-released: "2026-09-07"
 license: MIT
 keywords:
   - JWST

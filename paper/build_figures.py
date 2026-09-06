@@ -313,13 +313,13 @@ RTAG = {
 # the display names used where a rule is named on a figure, with the journal year of the
 # bibliography entry; the same seven names Table 1 lists
 RULE_LABEL_SHORT = {
-    "labbe23": "Labbé+23",
+    "labbe23": "Labbé+25",
     "kokorev24": "Kokorev+24",
-    "kocevski24": "Kocevski+24",
+    "kocevski24": "Kocevski+25",
     "perezgonzalez24": "Pérez-González+24",
-    "barro23": "Barro+23",
+    "barro23": "Barro+24b",
     "greene24": "Greene+24",
-    "akins24": "Akins+24",
+    "akins24": "Akins+25",
 }
 
 # ================================================================== Figure 1: pipeline schematic
@@ -383,7 +383,7 @@ ax.scatter(
     edgecolor=C_UNION,
     lw=0.8,
     zorder=5,
-    label="union of eight (with Barro+24b)",
+    label="union of eight (with Barro+24a)",
 )
 ax.scatter(
     [CURVE["union8"]["rows"]],
@@ -511,6 +511,17 @@ clab = ["< 0.5", "0.5 to 1.0", "1.0 to 1.5", "1.5 to 2.0", "> 2.0"]
 mbins = [0, 24, 25, 26, 27, 40]
 mlab = ["< 24", "24 to 25", "25 to 26", "26 to 27", "> 27"]
 GAIN_COUNTS = {}
+
+def _wilson(k, n, z=1.959964):
+    """Wilson 95% interval for k of n, as (lower, upper) fractions."""
+    k = np.asarray(k, float)
+    n = np.asarray(n, float)
+    p = k / n
+    d = 1.0 + z * z / n
+    c = (p + z * z / (2.0 * n)) / d
+    h = z * np.sqrt(p * (1.0 - p) / n + z * z / (4.0 * n * n)) / d
+    return c - h, c + h
+
 for k, (ax, col, bins, labels, xl) in enumerate(
     (
         (axes[0], "c_ab_f277w_f444w", cbins, clab, "F277W $-$ F444W (AB mag)"),
@@ -544,10 +555,25 @@ for k, (ax, col, bins, labels, xl) in enumerate(
         lw=0.3,
         label="learned selection",
     )
+    # Round 10: Wilson 95% intervals on every bar, so the small bins carry their
+    # uncertainty on the figure and not only in the caption.
+    ulo, uhi = _wilson(u, nn)
+    mlo, mhi = _wilson(m, nn)
+    for xx, frac, lo, hi in ((x - 0.19, u / nn, ulo, uhi), (x + 0.19, m / nn, mlo, mhi)):
+        ax.errorbar(
+            xx,
+            frac,
+            yerr=[np.clip(frac - lo, 0, None), np.clip(hi - frac, 0, None)],
+            fmt="none",
+            ecolor=K,
+            elinewidth=0.6,
+            capsize=1.6,
+            zorder=4,
+        )
     for i in range(len(labels)):
         ax.text(
             x[i] - 0.19,
-            u[i] / nn[i] + 0.022,
+            uhi[i] + 0.022,
             "%d" % u[i],
             ha="center",
             fontsize=SMALL,
@@ -555,7 +581,7 @@ for k, (ax, col, bins, labels, xl) in enumerate(
         )
         ax.text(
             x[i] + 0.19,
-            m[i] / nn[i] + 0.022,
+            mhi[i] + 0.022,
             "%d" % m[i],
             ha="center",
             fontsize=SMALL,
@@ -573,7 +599,7 @@ for k, (ax, col, bins, labels, xl) in enumerate(
     ax.set_xticks(x)
     ax.set_xticklabels(labels, fontsize=BASE)
     ax.set_xlim(-0.6, len(labels) - 0.4)
-    ax.set_ylim(0, 1.16)
+    ax.set_ylim(0, 1.24)
     ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])
     ax.xaxis.set_minor_locator(NullLocator())
     ax.tick_params(axis="x", length=0)
@@ -724,7 +750,7 @@ axa.add_artist(
 axa.text(
     21.16,
     -1.34,
-    "Kocevski+24 selects on continuum slope: no color threshold",
+    "Kocevski+25 selects on continuum slope: no color threshold",
     fontsize=SMALL,
     color=RULE_TEXT["kocevski24"],
     ha="left",
@@ -846,7 +872,7 @@ ax.set_xticklabels(
     linespacing=1.35,
 )
 ax.set_xlim(-0.6, 4.6)
-ax.set_ylim(0, 88)
+ax.set_ylim(0, 55)
 ax.xaxis.set_minor_locator(NullLocator())
 ax.tick_params(axis="x", length=0)
 ax.set_ylabel("LRDs recovered at the union's\nrow count in the region", linespacing=1.3)

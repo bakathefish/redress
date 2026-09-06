@@ -13,7 +13,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CLONE = ROOT
+CLONE = ROOT  # the release tables live beside the script
 sys.path.insert(0, os.path.join(CLONE, "selections", "spectra"))
 import census3  # noqa: E402
 import slopefit  # noqa: E402

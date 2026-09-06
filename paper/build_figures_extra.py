@@ -49,7 +49,7 @@ for _d in (FIG, STAMPS, SPECD):
     os.makedirs(_d, exist_ok=True)
 
 # the seven re-implemented selections, as published modules (staged public copy)
-REDRESS = os.path.join(os.path.dirname(ROOT), "redress", "selections")
+REDRESS = os.path.join(ROOT, "selections")
 sys.path.insert(0, REDRESS)
 from redress.cuts import _shared as sh  # noqa: E402
 from redress.cuts import (  # noqa: E402
@@ -82,13 +82,13 @@ RULE_ORDER = [
     "akins24",
 ]
 RULE_LABEL = {
-    "labbe23": "Labbé+23",
+    "labbe23": "Labbé+25",
     "kokorev24": "Kokorev+24",
-    "kocevski24": "Kocevski+24",
+    "kocevski24": "Kocevski+25",
     "perezgonzalez24": "Pérez-González+24",
-    "barro23": "Barro+23",
+    "barro23": "Barro+24b",
     "greene24": "Greene+24",
-    "akins24": "Akins+24",
+    "akins24": "Akins+25",
 }
 
 # ------------------------------------------------------------------ house style
@@ -658,6 +658,12 @@ sup = sup.merge(
     oof[["source_id", "score_mean", "t_burden"]], on="source_id", how="left"
 )
 sup["rank_all"] = sup.score_mean.rank(ascending=False, method="min").astype(int)
+# Round 10: the five fold models' scores are not on one scale, so the rank the
+# figure prints is the rank within the object's own region.
+sup["rank_region"] = (
+    sup.groupby("region").score_mean.rank(ascending=False, method="min").astype(int)
+)
+N_REGION = sup.groupby("region").size().to_dict()
 N_SUPPORT = len(sup)
 print(f"support rows {N_SUPPORT:,}")
 
@@ -1388,7 +1394,7 @@ for i in range(len(rows3)):
         N2_LEFT,
         a2.get_position().y1 + (0.027 if i == 0 else 0.007),
         f"{r.field} {int(r.id)}\nranking score {s.score_mean:.2f}, "
-        f"rank {int(s.rank_all)} of {N_SUPPORT:,}",
+        f"rank {int(s.rank_region)} of {N_REGION[s.region]:,} in {s.region}",
         fontsize=FS,
         color=K,
         ha="left",
@@ -1401,6 +1407,8 @@ for i in range(len(rows3)):
             id=int(r.id),
             score=float(s.score_mean),
             rank=int(s.rank_all),
+            rank_region=int(s.rank_region),
+            region=str(s.region),
             ab_c277_444=ab_colour(r, "f277w", "f444w"),
             slope_uv=uv,
             slope_opt=opt,
@@ -1527,7 +1535,7 @@ for j, reg in enumerate(REGIONS):
         linespacing=1.3,
     )
     ax.annotate(
-        f"{len(g):,} rows\n{len(gl)} LRDs\n{len(gn):,} anchors\n{len(gc)} candidates",
+        f"{len(g):,} rows\n{len(gl)} LRDs\n{len(gn):,} comparison\nobjects, {len(gc)} candidates",
         xy=(0.5, 0.0),
         xycoords="axes fraction",
         xytext=(0, -32),
