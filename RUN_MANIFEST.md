@@ -260,3 +260,5 @@ aperture protocol of step 14, `selections/redress/folds.py` builds the sky group
 and `selections/spectra/` is the frozen spectral-refit engine `v4_refit_archive.py` calls in
 step 13. `selections/tests/` pins all of them; run `python -m pytest selections -q` from the
 repository root.
+
+The tagged release of record for the manuscript of 2026-09-07 is `v0.10.0` (this commit); `SHA256SUMS` at the root is its digest.
