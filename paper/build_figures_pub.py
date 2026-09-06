@@ -1094,15 +1094,14 @@ for r, xmax, ymin, lbl in WIN:
 # plotted marker nor another label, and label_collisions() fails the build if none does.
 _win_rows = []
 for _r, _xmax, _ymin, _lbl in WIN:
+    # Round 9c: one line per window. Two lines per window made the block tall enough to
+    # touch a marker at every upper-left anchor, and it fell to the bottom of the panel.
     _win_rows.append(
-        VPacker(
-            children=[
-                _row([(_lbl, RULE_TEXT[_r])]),
-                _row([("$<%.1f$, $>%.1f$" % (_xmax, _ymin), RULE_TEXT[_r])]),
-            ],
-            pad=0,
-            sep=0.5,
-            align="left",
+        _row(
+            [
+                (_lbl + "  ", RULE_TEXT[_r]),
+                ("$<%.1f$, $>%.1f$" % (_xmax, _ymin), RULE_TEXT[_r]),
+            ]
         )
     )
 PENDING_B.append(

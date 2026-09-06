@@ -421,15 +421,17 @@ ax.scatter(
     zorder=6,
     label="imitation, own realized burden",
 )
-ax.fill_between(
-    [800, 1700],
-    N["shuffledMin"],
-    N["shuffledMax"],
+# Round 9c: the shuffled-label range is a vertical bar at the union's row count, not a
+# box; the box sat under the rule key's leader lines.
+ax.plot(
+    [N["unionSelected"], N["unionSelected"]],
+    [N["shuffledMin"], N["shuffledMax"]],
     color=C_MISS,
-    alpha=0.16,
-    lw=0,
+    alpha=0.55,
+    lw=3.0,
+    solid_capstyle="butt",
     label="shuffled labels (%d)" % N["shuffledN"],
-    zorder=7.5,
+    zorder=3.5,
 )
 ax.axhline(N["nPosSupport"], color=C_UNION, lw=0.5, ls=":", zorder=2)
 ax.text(
@@ -603,7 +605,7 @@ save(fig, "fig_gain_by_colour_mag", 178.0)
 # in which every published threshold is written, and panel (b) is the pair of asinh colors
 # the model actually sees. That is why the shaded regions appear on panel (a) only: drawing a
 # threshold published in AB magnitudes onto an asinh axis would misstate it.
-CP_W, CP_H = 178.0, 88.0
+CP_W, CP_H = 178.0, 79.0
 CP_L, CP_PW, CP_MID = (
     13.0,
     68.0,
@@ -613,7 +615,7 @@ CP_CGAP, CP_CW, CP_R = 2.0, 3.0, 10.0  # color-bar gap, bar width, right tick st
 assert abs(CP_L + CP_PW + CP_MID + CP_PW + CP_CGAP + CP_CW + CP_R - CP_W) < 1e-9, (
     "color-plane geometry does not add up to 178 mm"
 )
-CP_PH, CP_BOT = 60.0, 23.0  # panel height, and the height of the strip below the panels
+CP_PH, CP_BOT = 60.0, 15.5  # panel height, and the height of the strip below the panels
 fig = plt.figure(figsize=(COL2, CP_H * MM))
 
 
@@ -817,7 +819,7 @@ save(fig, "fig_colour_planes", 178.0)
 
 # ================================================================== Figure 5: per region
 fig, ax = plt.subplots(figsize=(COL2, 66 * MM))
-fig.subplots_adjust(left=0.07, right=0.975, top=0.985, bottom=0.20)
+fig.subplots_adjust(left=0.085, right=0.975, top=0.985, bottom=0.20)
 x = np.arange(5)
 u = [N["unionRegion" + r.replace("-", "")] for r in REG]
 m = [N9["matchedRegion" + r.replace("-", "")] for r in REG]
@@ -847,7 +849,7 @@ ax.set_xlim(-0.6, 4.6)
 ax.set_ylim(0, 88)
 ax.xaxis.set_minor_locator(NullLocator())
 ax.tick_params(axis="x", length=0)
-ax.set_ylabel("LRDs recovered at the union's row count in the region")
+ax.set_ylabel("LRDs recovered at the union's\nrow count in the region", linespacing=1.3)
 ax.legend(
     handles=[h_t, b_u, b_m],
     labels=[
@@ -909,11 +911,11 @@ save(fig, "fig_importance", 84.0)
 # The axes are placed by hand in figure fractions so that the tiles are provably equal: the
 # three sets of row labels have different widths, and any automatic layout would trade tile
 # size against label width.
-CONF_H = 56.0
+CONF_H = 48.0
 fig = plt.figure(figsize=(COL2, CONF_H * MM))
 RAMP = LinearSegmentedColormap.from_list("ramp", ["#ffffff", C_MODEL])
 AX_W, AX_H = 38.0 / 178.0, 34.0 / CONF_H
-AX_Y = 15.0 / CONF_H
+AX_Y = 9.0 / CONF_H
 AX_X = [26.0 / 178.0, 67.0 / 178.0, 136.0 / 178.0]
 
 
@@ -1303,6 +1305,9 @@ def draw_gallery(name, sections):
                 ims6 = load_bands6(os.path.join(FIG, "stamps", stem + "_6band.fits"))
                 row_top = cursor + r * G_ROW
                 x0 = G_MARGIN + c * (G_STRIP + G_PAIRGAP)
+                if len(d) > 1 and len(d) % 2 == 1 and k == len(d) - 1:
+                    # Round 9c: an odd last object is centered rather than left in a hole
+                    x0 = G_MARGIN + 0.5 * (G_STRIP + G_PAIRGAP)
                 y_st = row_top + G_ABOVE
                 for j, b in enumerate(BANDS6):
                     ax = stamp_axes(x0 + j * (G_STAMP + G_INGAP), y_st, GCOL[g])
@@ -1413,7 +1418,9 @@ draw_gallery("fig_gallery_known", KNOWN)
 draw_gallery("fig_gallery_cand", CAND)
 
 # ================================================================== Figure 10: candidates
-fig, axes = plt.subplots(1, 3, figsize=(COL2, 62 * MM), layout="constrained")
+fig, axes = plt.subplots(
+    1, 3, figsize=(COL2, 62 * MM), layout="constrained", width_ratios=[1.0, 1.0, 1.3]
+)
 fig.get_layout_engine().set(w_pad=0.03, h_pad=0.02, wspace=0.06, hspace=0.0)
 ax = axes[0]
 bins = np.arange(22, 29.5, 0.5)
@@ -1487,8 +1494,8 @@ panel(ax, "b")
 ax = axes[2]
 sets = [
     ("all\n%d" % N["candTotal"], cand),
-    ("equal-burden\n%d" % N["candEqualBurden"], eb),
-    ("follow-up\n%d" % N["followupN"], fu),
+    ("equal-burden\ntier\n%d" % N["candEqualBurden"], eb),
+    ("follow-up\ntier\n%d" % N["followupN"], fu),
 ]
 x = np.arange(3)
 hs = []
@@ -1540,7 +1547,7 @@ save(fig, "fig_candidates", 178.0)
 # used to be printed on the rows is in Table 3 and in Section 4.4; a figure shows the shape.
 ROB_H = 96.0
 fig = plt.figure(figsize=(COL2, ROB_H * MM))
-ROB_LEFT = 48.0  # millimetres kept for the row labels and the group headings
+ROB_LEFT = 55.0  # millimetres kept for the row labels and the group headings
 ax = fig.add_axes(
     [
         ROB_LEFT / 178.0,
